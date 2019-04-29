@@ -3,7 +3,24 @@ entries:
   ceph-csi-cephfs:
   - apiVersion: v1
     appVersion: 1.0.0
-    created: 2019-04-29T11:19:33.287048662Z
+    created: 2019-04-29T11:19:35.718400826Z
+    description: Container Storage Interface (CSI) driver, provisioner, and attacher
+      for Ceph cephfs
+    digest: be9a82ec2dcd529f747fee39abaea0c0acd5ef8305224a5f8c8bf2741352d29e
+    home: https://github.com/ceph/ceph-csi
+    keywords:
+    - ceph
+    - cephfs
+    - ceph-csi
+    name: ceph-csi-cephfs
+    sources:
+    - https://github.com/ceph/ceph-csi/tree/csi-v1.0/deploy/cephfs/helm
+    urls:
+    - cephfs/ceph-csi-cephfs-0.5.3.tgz
+    version: 0.5.3
+  - apiVersion: v1
+    appVersion: 1.0.0
+    created: 2019-04-29T11:19:35.717997734Z
     description: Container Storage Interface (CSI) driver, provisioner, and attacher
       for Ceph cephfs
     digest: 0f5bd8542139951d93ac26fef23011eb8a0d789c9d25aeca137ea47f3bc6d56f
@@ -20,7 +37,7 @@ entries:
     version: 0.5.1
   - apiVersion: v1
     appVersion: 1.0.0
-    created: 2019-04-29T11:19:33.286211595Z
+    created: 2019-04-29T11:19:35.717588221Z
     description: Container Storage Interface (CSI) driver, provisioner, and attacher
       for Ceph cephfs
     digest: 3b1a8129b85b09146c33454a8817fa6362a866be947478224d1ccbdff9a6c2b3
@@ -37,7 +54,7 @@ entries:
     version: 0.5.0
   - apiVersion: v1
     appVersion: 1.0.0
-    created: 2019-04-29T11:19:33.285341983Z
+    created: 2019-04-29T11:19:35.717151627Z
     description: Container Storage Interface (CSI) driver, provisioner, and attacher
       for Ceph cephfs
     digest: f9afd37af2b5d38a2580324e13ab4ed8f637baf9c14ef93bdb920d8fa5b11a62
@@ -55,7 +72,7 @@ entries:
   ceph-csi-rbd:
   - apiVersion: v1
     appVersion: 1.0.0
-    created: 2019-04-29T11:19:33.290329695Z
+    created: 2019-04-29T11:19:35.720417688Z
     description: Container Storage Interface (CSI) driver, provisioner, snapshotter,
       and attacher for Ceph RBD
     digest: 58337406cd84d9974a2fa7b0f0c84983f89bcb623c6955d3b81681554476daf4
@@ -72,7 +89,7 @@ entries:
     version: 0.5.3
   - apiVersion: v1
     appVersion: 1.0.0
-    created: 2019-04-29T11:19:33.289901332Z
+    created: 2019-04-29T11:19:35.720016141Z
     description: Container Storage Interface (CSI) driver, provisioner, snapshotter,
       and attacher for Ceph RBD
     digest: e3b5114baafabbfc1c044b23d1c7f8fd15b07b458cf22eb0940e5fcc51b86a8f
@@ -89,7 +106,7 @@ entries:
     version: 0.5.1
   - apiVersion: v1
     appVersion: 1.0.0
-    created: 2019-04-29T11:19:33.289430398Z
+    created: 2019-04-29T11:19:35.719614134Z
     description: Container Storage Interface (CSI) driver, provisioner, snapshotter,
       and attacher for Ceph RBD
     digest: e55e224cb2b1f0eaa310ddba13685d123a147065c4f88c0a21492bd60c5631aa
@@ -106,7 +123,7 @@ entries:
     version: 0.5.0
   - apiVersion: v1
     appVersion: 1.0.0
-    created: 2019-04-29T11:19:33.288845578Z
+    created: 2019-04-29T11:19:35.719194858Z
     description: Container Storage Interface (CSI) driver, provisioner, snapshotter,
       and attacher for Ceph RBD
     digest: 78b19238decf920aed0cd3c389c32df3036d85282cfca1a39eadd2ceeb89610c
@@ -123,7 +140,7 @@ entries:
     version: 0.4.0
   - apiVersion: v1
     appVersion: 1.0.0
-    created: 2019-04-29T11:19:33.287853375Z
+    created: 2019-04-29T11:19:35.718794919Z
     description: Container Storage Interface (CSI) driver, provisioner, and attacher
       for Ceph RBD
     digest: 39a8db5450bf0b01f33600d617841a7374a69892a87ccd66dd3af3595831764a
@@ -138,4 +155,4 @@ entries:
     urls:
     - rbd/ceph-csi-rbd-0.3.0.tgz
     version: 0.3.0
-generated: 2019-04-29T11:19:33.284163533Z
+generated: 2019-04-29T11:19:35.716422679Z
