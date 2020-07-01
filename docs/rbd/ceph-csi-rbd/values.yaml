@@ -107,6 +107,15 @@ provisioner:
   replicaCount: 3
   # Timeout for waiting for creation or deletion of a volume
   timeout: 60s
+  # Hard limit for maximum number of nested volume clones that are taken before
+  # a flatten occurs
+  hardMaxCloneDepth: 8
+  # Soft limit for maximum number of nested volume clones that are taken before
+  # a flatten occurs
+  softMaxCloneDepth: 4
+  # skip image flattening if kernel support mapping of rbd images
+  # which has the deep-flatten feature
+  # skipForceFlatten: false
 
   httpMetrics:
     # Metrics only available for cephcsi/cephcsi => 1.2.0
