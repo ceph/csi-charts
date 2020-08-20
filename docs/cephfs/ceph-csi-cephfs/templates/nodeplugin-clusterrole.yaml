@@ -10,9 +10,10 @@ metadata:
     component: {{ .Values.nodeplugin.name }}
     release: {{ .Release.Name }}
     heritage: {{ .Release.Service }}
-rules:
-  - apiGroups: [""]
-    resources: ["nodes"]
-    verbs: ["get"]
+aggregationRule:
+  clusterRoleSelectors:
+    - matchLabels:
+        rbac.cephfs.csi.ceph.com/aggregate-to-{{ include "ceph-csi-cephfs.nodeplugin.fullname" . }}: "true"
+rules: []
 {{- end }}
 {{- end -}}
