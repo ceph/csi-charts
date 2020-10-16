@@ -1,4 +1,7 @@
 ---
+# Supported values from 0 to 5. 0 for general useful logs, 5 for trace level verbosity.
+logLevel: 5
+
 rbac:
   # Specifies whether RBAC resources should be created
   create: true
