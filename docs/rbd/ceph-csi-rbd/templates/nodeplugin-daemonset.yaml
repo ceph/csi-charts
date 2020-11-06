@@ -42,9 +42,21 @@ spec:
           image: "{{ .Values.nodeplugin.registrar.image.repository }}:{{ .Values.nodeplugin.registrar.image.tag }}"
           imagePullPolicy: {{ .Values.nodeplugin.registrar.image.pullPolicy }}
           args:
-            - "--v={{ .Values.logLevel }}"
+            - "--v=5"
             - "--csi-address=/csi/{{ .Values.pluginSocketFile }}"
             - "--kubelet-registration-path={{ .Values.socketDir }}/{{ .Values.pluginSocketFile }}"
+          lifecycle:
+            preStop:
+              exec:
+                {{- /*
+                NOTE(wilmardo): The replace functions ensures there are no spaces in the string.
+                To avoid `rm -rf /registration/driver name`
+                */}}
+                command: [
+                  "/bin/sh", "-c",
+                  "rm -rf /registration/{{ .Values.driverName | replace " " "" }} \
+                  /registration/{{ .Values.driverName | replace " " "" }}-reg.sock"
+                ]
           env:
             - name: KUBE_NODE_NAME
               valueFrom:
@@ -66,7 +78,7 @@ spec:
             - "--nodeserver=true"
             - "--pidlimit=-1"
             - "--endpoint=$(CSI_ENDPOINT)"
-            - "--v={{ .Values.logLevel }}"
+            - "--v=5"
             - "--drivername=$(DRIVER_NAME)"
 {{- if .Values.topology.enabled }}
             - "--domainlabels={{ .Values.topology.domainLabels | join "," }}"
