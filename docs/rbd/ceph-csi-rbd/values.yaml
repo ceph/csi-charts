@@ -41,11 +41,6 @@ csiConfig: []
 #     vaultCAVerify: "false"
 encryptionKMSConfig: {}
 
-# Set logging level for csi containers.
-# Supported values from 0 to 5. 0 for general useful logs,
-# 5 for trace level verbosity.
-logLevel: 5
-
 nodeplugin:
   name: nodeplugin
   # if you are using rbd-nbd client set this value to OnDelete
@@ -84,7 +79,7 @@ nodeplugin:
 
   registrar:
     image:
-      repository: k8s.gcr.io/sig-storage/csi-node-driver-registrar
+      repository: quay.io/k8scsi/csi-node-driver-registrar
       tag: v1.3.0
       pullPolicy: IfNotPresent
     resources: {}
@@ -92,7 +87,7 @@ nodeplugin:
   plugin:
     image:
       repository: quay.io/cephcsi/cephcsi
-      tag: canary
+      tag: v3.1-canary
       pullPolicy: IfNotPresent
     resources: {}
 
@@ -159,7 +154,7 @@ provisioner:
 
   provisioner:
     image:
-      repository: k8s.gcr.io/sig-storage/csi-provisioner
+      repository: quay.io/k8scsi/csi-provisioner
       tag: v1.6.0
       pullPolicy: IfNotPresent
     resources: {}
@@ -168,8 +163,8 @@ provisioner:
     name: attacher
     enabled: true
     image:
-      repository: k8s.gcr.io/sig-storage/csi-attacher
-      tag: v2.2.0
+      repository: quay.io/k8scsi/csi-attacher
+      tag: v2.1.1
       pullPolicy: IfNotPresent
     resources: {}
 
@@ -177,14 +172,14 @@ provisioner:
     name: resizer
     enabled: true
     image:
-      repository: k8s.gcr.io/sig-storage/csi-resizer
+      repository: quay.io/k8scsi/csi-resizer
       tag: v0.5.0
       pullPolicy: IfNotPresent
     resources: {}
 
   snapshotter:
     image:
-      repository: k8s.gcr.io/sig-storage/csi-snapshotter
+      repository: quay.io/k8scsi/csi-snapshotter
       tag: v2.1.0
       pullPolicy: IfNotPresent
     resources: {}
@@ -229,7 +224,7 @@ pluginDir: /var/lib/kubelet/plugins
 # Name of the csi-driver
 driverName: rbd.csi.ceph.com
 # Name of the configmap used for state
-configMapName: ceph-csi-config
+configMapName: ceph-csi-config-rbd
 # Key to use in the Configmap if not config.json
 # configMapKey:
 # Use an externally provided configmap
