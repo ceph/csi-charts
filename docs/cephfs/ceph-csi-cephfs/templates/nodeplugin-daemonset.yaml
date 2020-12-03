@@ -41,9 +41,21 @@ spec:
           image: "{{ .Values.nodeplugin.registrar.image.repository }}:{{ .Values.nodeplugin.registrar.image.tag }}"
           imagePullPolicy: {{ .Values.nodeplugin.registrar.image.pullPolicy }}
           args:
-            - "--v={{ .Values.logLevel }}"
+            - "--v=5"
             - "--csi-address=/csi/{{ .Values.pluginSocketFile }}"
-            - "--kubelet-registration-path={{ .Values.kubeletDir }}/{{ .Values.driverName }}/{{ .Values.pluginSocketFile }}"
+            - "--kubelet-registration-path={{ .Values.socketDir }}/{{ .Values.pluginSocketFile }}"
+          lifecycle:
+            preStop:
+              exec:
+                {{- /*
+                NOTE(wilmardo): The replace functions ensures there are no spaces in the string.
+                To avoid `rm -rf /registration/driver name`
+                */}}
+                command: [
+                  "/bin/sh", "-c",
+                  "rm -rf /registration/{{ .Values.driverName | replace " " "" }} \
+                  /registration/{{ .Values.driverName | replace " " "" }}-reg.sock"
+                ]
           env:
             - name: KUBE_NODE_NAME
               valueFrom:
@@ -68,7 +80,7 @@ spec:
             - "--forcecephkernelclient={{ .Values.nodeplugin.forcecephkernelclient }}"
 {{- end }}
             - "--endpoint=$(CSI_ENDPOINT)"
-            - "--v={{ .Values.logLevel }}"
+            - "--v=5"
             - "--drivername=$(DRIVER_NAME)"
 {{- if .Values.topology.enabled }}
             - "--domainlabels={{ .Values.topology.domainLabels | join "," }}"
@@ -95,10 +107,10 @@ spec:
             - name: socket-dir
               mountPath: /csi
             - name: mountpoint-dir
-              mountPath: {{ .Values.kubeletDir }}/pods
+              mountPath: /var/lib/kubelet/pods
               mountPropagation: Bidirectional
             - name: plugin-dir
-              mountPath: {{ .Values.kubeletDir }}/plugins
+              mountPath: /var/lib/kubelet/plugins
               mountPropagation: "Bidirectional"
             - mountPath: /dev
               name: host-dev
@@ -144,19 +156,19 @@ spec:
       volumes:
         - name: socket-dir
           hostPath:
-            path: "{{ .Values.kubeletDir }}/{{ .Values.driverName }}"
+            path: {{ .Values.socketDir }}
             type: DirectoryOrCreate
         - name: registration-dir
           hostPath:
-            path: {{ .Values.kubeletDir }}/plugins_registry
+            path: {{ .Values.registrationDir }}
             type: Directory
         - name: mountpoint-dir
           hostPath:
-            path: {{ .Values.kubeletDir }}/pods
+            path: /var/lib/kubelet/pods
             type: DirectoryOrCreate
         - name: plugin-dir
           hostPath:
-            path: {{ .Values.kubeletDir }}/plugins
+            path: /var/lib/kubelet/plugins
             type: Directory
         - name: host-sys
           hostPath:
