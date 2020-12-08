@@ -25,6 +25,22 @@ spec:
         release: {{ .Release.Name }}
         heritage: {{ .Release.Service }}
     spec:
+{{- if gt (int .Values.provisioner.replicaCount) 1 }}
+      affinity:
+        podAntiAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+            - labelSelector:
+                matchExpressions:
+                  - key: app
+                    operator: In
+                    values:
+                      - {{ include "ceph-csi-rbd.name" . }}
+                  - key: component
+                    operator: In
+                    values:
+                      - {{ .Values.provisioner.name }}
+              topologyKey: "kubernetes.io/hostname"
+{{- end }}
       serviceAccountName: {{ include "ceph-csi-rbd.serviceAccountName.provisioner" . }}
       containers:
         - name: csi-provisioner
@@ -32,10 +48,9 @@ spec:
           imagePullPolicy: {{ .Values.provisioner.provisioner.image.pullPolicy }}
           args:
             - "--csi-address=$(ADDRESS)"
-            - "--v=5"
+            - "--v={{ .Values.logLevel }}"
             - "--timeout={{ .Values.provisioner.timeout }}"
-            - "--enable-leader-election=true"
-            - "--leader-election-type=leases"
+            - "--leader-election=true"
             - "--retry-interval-start=500ms"
 {{- if .Values.topology.enabled }}
             - "--feature-gates=Topology=true"
@@ -53,11 +68,12 @@ spec:
           image: "{{ .Values.provisioner.resizer.image.repository }}:{{ .Values.provisioner.resizer.image.tag }}"
           imagePullPolicy: {{ .Values.provisioner.resizer.image.pullPolicy }}
           args:
-            - "--v=5"
+            - "--v={{ .Values.logLevel }}"
             - "--csi-address=$(ADDRESS)"
-            - "--csiTimeout={{ .Values.provisioner.timeout }}"
+            - "--timeout={{ .Values.provisioner.timeout }}"
             - "--leader-election"
             - "--retry-interval-start=500ms"
+            - "--handle-volume-inuse-error=false"
           env:
             - name: ADDRESS
               value: "unix:///csi/{{ .Values.provisionerSocketFile }}"
@@ -72,7 +88,7 @@ spec:
           imagePullPolicy: {{ .Values.provisioner.snapshotter.image.pullPolicy }}
           args:
             - "--csi-address=$(ADDRESS)"
-            - "--v=5"
+            - "--v={{ .Values.logLevel }}"
             - "--timeout={{ .Values.provisioner.timeout }}"
             - "--leader-election=true"
           env:
@@ -90,7 +106,7 @@ spec:
           image: "{{ .Values.provisioner.attacher.image.repository }}:{{ .Values.provisioner.attacher.image.tag }}"
           imagePullPolicy: {{ .Values.provisioner.attacher.image.pullPolicy }}
           args:
-            - "--v=5"
+            - "--v={{ .Values.logLevel }}"
             - "--csi-address=$(ADDRESS)"
             - "--leader-election=true"
             - "--retry-interval-start=500ms"
@@ -112,7 +128,7 @@ spec:
             - "--controllerserver=true"
             - "--pidlimit=-1"
             - "--endpoint=$(CSI_ENDPOINT)"
-            - "--v=5"
+            - "--v={{ .Values.logLevel }}"
             - "--drivername=$(DRIVER_NAME)"
             - "--rbdhardmaxclonedepth={{ .Values.provisioner.hardMaxCloneDepth }}"
             - "--rbdsoftmaxclonedepth={{ .Values.provisioner.softMaxCloneDepth }}"
@@ -157,6 +173,35 @@ spec:
               mountPath: /tmp/csi/keys
           resources:
 {{ toYaml .Values.nodeplugin.plugin.resources | indent 12 }}
+{{- if .Values.provisioner.deployController }}
+        - name: csi-rbdplugin-controller
+          image: "{{ .Values.nodeplugin.plugin.image.repository }}:{{ .Values.nodeplugin.plugin.image.tag }}"
+          imagePullPolicy: {{ .Values.nodeplugin.plugin.image.pullPolicy }}
+          args:
+            - "--type=controller"
+            - "--v={{ .Values.logLevel }}"
+            - "--drivername=$(DRIVER_NAME)"
+            - "--drivernamespace=$(DRIVER_NAMESPACE)"
+          env:
+            - name: DRIVER_NAMESPACE
+              valueFrom:
+                fieldRef:
+                  fieldPath: metadata.namespace
+            - name: DRIVER_NAME
+              value: {{ .Values.driverName }}
+          securityContext:
+            privileged: true
+            capabilities:
+              add: ["SYS_ADMIN"]
+            allowPrivilegeEscalation: true
+          volumeMounts:
+            - name: ceph-csi-config
+              mountPath: /etc/ceph-csi-config/
+            - name: keys-tmp-dir
+              mountPath: /tmp/csi/keys
+          resources:
+{{ toYaml .Values.nodeplugin.plugin.resources | indent 12 }}
+{{- end }}
 {{- if .Values.provisioner.httpMetrics.enabled }}
         - name: liveness-prometheus
           image: "{{ .Values.nodeplugin.plugin.image.repository }}:{{ .Values.nodeplugin.plugin.image.tag }}"
