@@ -42,9 +42,6 @@ spec:
               topologyKey: "kubernetes.io/hostname"
 {{- end }}
       serviceAccountName: {{ include "ceph-csi-rbd.serviceAccountName.provisioner" . }}
-{{- if .Values.provisioner.priorityClassName }}
-      priorityClassName: {{ .Values.provisioner.priorityClassName }}
-{{- end }}
       containers:
         - name: csi-provisioner
           image: "{{ .Values.provisioner.provisioner.image.repository }}:{{ .Values.provisioner.provisioner.image.tag }}"
@@ -56,7 +53,6 @@ spec:
             - "--leader-election=true"
             - "--retry-interval-start=500ms"
             - "--default-fstype={{ .Values.provisioner.defaultFSType }}"
-            - "--extra-create-metadata=true"
 {{- if .Values.topology.enabled }}
             - "--feature-gates=Topology=true"
 {{- end }}
