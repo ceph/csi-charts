@@ -35,7 +35,7 @@ To install the Chart into your Kubernetes cluster
     Create the namespace where Helm should install the components with
 
     ```bash
-    kubectl create namespace ceph-csi-cephfs
+     create namespace ceph-csi-cephfs
     ```
 
     Run the installation
