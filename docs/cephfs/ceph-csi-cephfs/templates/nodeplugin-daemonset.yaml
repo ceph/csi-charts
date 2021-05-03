@@ -27,6 +27,9 @@ spec:
         heritage: {{ .Release.Service }}
     spec:
       serviceAccountName: {{ include "ceph-csi-cephfs.serviceAccountName.nodeplugin" . }}
+{{- if .Values.nodeplugin.priorityClassName }}
+      priorityClassName: {{ .Values.nodeplugin.priorityClassName }}
+{{- end }}
       hostNetwork: true
       # to use e.g. Rook orchestrated cluster, and mons' FQDN is
       # resolved through k8s service, set dns policy to cluster first
@@ -43,7 +46,7 @@ spec:
           args:
             - "--v={{ .Values.logLevel }}"
             - "--csi-address=/csi/{{ .Values.pluginSocketFile }}"
-            - "--kubelet-registration-path={{ .Values.kubeletDir }}/{{ .Values.driverName }}/{{ .Values.pluginSocketFile }}"
+            - "--kubelet-registration-path={{ .Values.kubeletDir }}/plugins/{{ .Values.driverName }}/{{ .Values.pluginSocketFile }}"
           env:
             - name: KUBE_NODE_NAME
               valueFrom:
@@ -144,7 +147,7 @@ spec:
       volumes:
         - name: socket-dir
           hostPath:
-            path: "{{ .Values.kubeletDir }}/{{ .Values.driverName }}"
+            path: "{{ .Values.kubeletDir }}/plugins/{{ .Values.driverName }}"
             type: DirectoryOrCreate
         - name: registration-dir
           hostPath:
