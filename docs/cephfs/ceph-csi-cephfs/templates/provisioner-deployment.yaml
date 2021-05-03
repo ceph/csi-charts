@@ -42,9 +42,6 @@ spec:
               topologyKey: "kubernetes.io/hostname"
 {{- end }}
       serviceAccountName: {{ include "ceph-csi-cephfs.serviceAccountName.provisioner" . }}
-{{- if .Values.provisioner.priorityClassName }}
-      priorityClassName: {{ .Values.provisioner.priorityClassName }}
-{{- end }}
       containers:
         - name: csi-provisioner
           image: "{{ .Values.provisioner.provisioner.image.repository }}:{{ .Values.provisioner.provisioner.image.tag }}"
@@ -55,7 +52,6 @@ spec:
             - "--timeout={{ .Values.provisioner.timeout }}"
             - "--leader-election=true"
             - "--retry-interval-start=500ms"
-            - "--extra-create-metadata=true"
 {{- if .Values.topology.enabled }}
             - "--feature-gates=Topology=true"
 {{- end }}
@@ -103,7 +99,7 @@ spec:
           resources:
 {{ toYaml .Values.nodeplugin.plugin.resources | indent 12 }}
 {{- end }}
-{{- if semverCompare ">=1.15" .Capabilities.KubeVersion.Version -}}
+{{- if semverCompare ">=1.15" .Capabilities.KubeVersion.GitVersion -}}
 {{- if .Values.provisioner.resizer.enabled }}
         - name: csi-resizer
           image: "{{ .Values.provisioner.resizer.image.repository }}:{{ .Values.provisioner.resizer.image.tag }}"
