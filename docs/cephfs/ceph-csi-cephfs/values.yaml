@@ -84,7 +84,7 @@ nodeplugin:
   plugin:
     image:
       repository: quay.io/cephcsi/cephcsi
-      tag: v3.3-canary
+      tag: canary
       pullPolicy: IfNotPresent
     resources: {}
 
@@ -172,7 +172,7 @@ provisioner:
   snapshotter:
     image:
       repository: k8s.gcr.io/sig-storage/csi-snapshotter
-      tag: v3.0.2
+      tag: v4.0.0
       pullPolicy: IfNotPresent
     resources: {}
 
