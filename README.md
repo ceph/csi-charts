@@ -1,1 +1,1 @@
-# Helm Charts repo for Ceph CSI Drivers
+# Helm Chart repo for Ceph CSI Drivers
