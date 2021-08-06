@@ -27,16 +27,6 @@ serviceAccounts:
 #       - "<MONValue2>"
 csiConfig: []
 
-# Configuration details of clusterID,PoolID and FscID mapping
-# csiMapping:
-#  - clusterIDMapping:
-#     clusterID on site1: clusterID on site2
-#    RBDPoolIDMapping:
-#    - poolID on site1: poolID on site2
-#    CephFSFscIDMapping:
-#    - CephFS FscID on site1: CephFS FscID on site2
-csiMapping: []
-
 # Configuration for the encryption KMS
 # Ref: https://github.com/ceph/ceph-csi/blob/devel/docs/deploy-rbd.md
 # Example:
@@ -109,7 +99,7 @@ nodeplugin:
   plugin:
     image:
       repository: quay.io/cephcsi/cephcsi
-      tag: canary
+      tag: v3.4-canary
       pullPolicy: IfNotPresent
     resources: {}
 
@@ -127,14 +117,6 @@ nodeplugin:
 provisioner:
   name: provisioner
   replicaCount: 3
-  strategy:
-    # RollingUpdate strategy replaces old pods with new ones gradually,
-    # without incurring downtime.
-    type: RollingUpdate
-    rollingUpdate:
-      # maxUnavailable is the maximum number of pods that can be
-      # unavailable during the update process.
-      maxUnavailable: 50%
   # if fstype is not specified in storageclass, ext4 is default
   defaultFSType: ext4
   # deployController to enable or disable the deployment of controller which
