@@ -181,8 +181,6 @@ spec:
               readOnly: true
             - name: ceph-csi-config
               mountPath: /etc/ceph-csi-config/
-            - name: ceph-config
-              mountPath: /etc/ceph/
             - name: ceph-csi-encryption-kms-config
               mountPath: /etc/ceph-csi-encryption-kms-config/
             - name: keys-tmp-dir
@@ -215,8 +213,6 @@ spec:
               mountPath: /etc/ceph-csi-config/
             - name: keys-tmp-dir
               mountPath: /tmp/csi/keys
-            - name: ceph-config
-              mountPath: /etc/ceph/
           resources:
 {{ toYaml .Values.nodeplugin.plugin.resources | indent 12 }}
 {{- end }}
@@ -258,9 +254,6 @@ spec:
         - name: lib-modules
           hostPath:
             path: /lib/modules
-        - name: ceph-config
-          configMap:
-            name: ceph-config
         - name: ceph-csi-config
           configMap:
             name: {{ .Values.configMapName | quote }}
