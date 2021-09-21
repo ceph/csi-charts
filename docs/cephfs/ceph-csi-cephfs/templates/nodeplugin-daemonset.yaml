@@ -76,9 +76,6 @@ spec:
 {{- if .Values.topology.enabled }}
             - "--domainlabels={{ .Values.topology.domainLabels | join "," }}"
 {{- end }}
-{{- if .Values.nodeplugin.profiling.enabled }}
-            - "--enableprofiling={{ .Values.nodeplugin.profiling.enabled }}"
-{{- end }}
           env:
             - name: POD_IP
               valueFrom:
@@ -112,14 +109,9 @@ spec:
               name: host-mount
             - mountPath: /sys
               name: host-sys
-            - mountPath: /etc/selinux
-              name: etc-selinux
-              readOnly: true
             - mountPath: /lib/modules
               name: lib-modules
               readOnly: true
-            - name: ceph-config
-              mountPath: /etc/ceph/
             - name: ceph-csi-config
               mountPath: /etc/ceph-csi-config/
             - name: keys-tmp-dir
@@ -172,9 +164,6 @@ spec:
         - name: host-sys
           hostPath:
             path: /sys
-        - name: etc-selinux
-          hostPath:
-            path: /etc/selinux
         - name: host-mount
           hostPath:
             path: /run/mount
@@ -184,9 +173,6 @@ spec:
         - name: host-dev
           hostPath:
             path: /dev
-        - name: ceph-config
-          configMap:
-            name: ceph-config
         - name: ceph-csi-config
           configMap:
             name: {{ .Values.configMapName | quote }}

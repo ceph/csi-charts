@@ -74,20 +74,17 @@ nodeplugin:
       loadBalancerIP: ""
       loadBalancerSourceRanges: []
 
-  profiling:
-    enabled: false
-
   registrar:
     image:
       repository: k8s.gcr.io/sig-storage/csi-node-driver-registrar
-      tag: v2.3.0
+      tag: v2.0.1
       pullPolicy: IfNotPresent
     resources: {}
 
   plugin:
     image:
       repository: quay.io/cephcsi/cephcsi
-      tag: canary
+      tag: v3.3-canary
       pullPolicy: IfNotPresent
     resources: {}
 
@@ -109,14 +106,6 @@ nodeplugin:
 provisioner:
   name: provisioner
   replicaCount: 3
-  strategy:
-    # RollingUpdate strategy replaces old pods with new ones gradually,
-    # without incurring downtime.
-    type: RollingUpdate
-    rollingUpdate:
-      # maxUnavailable is the maximum number of pods that can be
-      # unavailable during the update process.
-      maxUnavailable: 50%
   # Timeout for waiting for creation or deletion of a volume
   timeout: 60s
 
@@ -155,13 +144,10 @@ provisioner:
       loadBalancerIP: ""
       loadBalancerSourceRanges: []
 
-  profiling:
-    enabled: false
-
   provisioner:
     image:
       repository: k8s.gcr.io/sig-storage/csi-provisioner
-      tag: v3.0.0
+      tag: v2.0.4
       pullPolicy: IfNotPresent
     resources: {}
 
@@ -170,7 +156,7 @@ provisioner:
     enabled: true
     image:
       repository: k8s.gcr.io/sig-storage/csi-attacher
-      tag: v3.3.0
+      tag: v3.0.2
       pullPolicy: IfNotPresent
     resources: {}
 
@@ -179,14 +165,14 @@ provisioner:
     enabled: true
     image:
       repository: k8s.gcr.io/sig-storage/csi-resizer
-      tag: v1.3.0
+      tag: v1.0.1
       pullPolicy: IfNotPresent
     resources: {}
 
   snapshotter:
     image:
       repository: k8s.gcr.io/sig-storage/csi-snapshotter
-      tag: v4.2.0
+      tag: v3.0.2
       pullPolicy: IfNotPresent
     resources: {}
 
@@ -212,88 +198,6 @@ topology:
   domainLabels:
     - failure-domain/region
     - failure-domain/zone
-
-storageClass:
-  # Specifies whether the Storage class should be created
-  create: false
-  name: csi-cephfs-sc
-  # String representing a Ceph cluster to provision storage from.
-  # Should be unique across all Ceph clusters in use for provisioning,
-  # cannot be greater than 36 bytes in length, and should remain immutable for
-  # the lifetime of the StorageClass in use.
-  clusterID: <cluster-ID>
-  # (required) CephFS filesystem name into which the volume shall be created
-  # eg: fsName: myfs
-  fsName: myfs
-  # (optional) Ceph pool into which volume data shall be stored
-  # pool: <cephfs-data-pool>
-  # For eg:
-  # pool: "replicapool"
-  pool: ""
-  # (optional) Comma separated string of Ceph-fuse mount options.
-  # For eg:
-  # fuseMountOptions: debug
-  fuseMountOptions: ""
-  # (optional) Comma separated string of Cephfs kernel mount options.
-  # Check man mount.ceph for mount options. For eg:
-  # kernelMountOptions: readdir_max_bytes=1048576,norbytes
-  kernelMountOptions: ""
-  # (optional) The driver can use either ceph-fuse (fuse) or
-  # ceph kernelclient (kernel).
-  # If omitted, default volume mounter will be used - this is
-  # determined by probing for ceph-fuse and mount.ceph
-  # mounter: kernel
-  mounter: ""
-  # (optional) Prefix to use for naming subvolumes.
-  # If omitted, defaults to "csi-vol-".
-  # volumeNamePrefix: "foo-bar-"
-  volumeNamePrefix: ""
-  # The secrets have to contain user and/or Ceph admin credentials.
-  provisionerSecret: csi-cephfs-secret
-  # If the Namespaces are not specified, the secrets are assumed to
-  # be in the Release namespace.
-  provisionerSecretNamespace: ""
-  controllerExpandSecret: csi-cephfs-secret
-  controllerExpandSecretNamespace: ""
-  nodeStageSecret: csi-cephfs-secret
-  nodeStageSecretNamespace: ""
-  reclaimPolicy: Delete
-  allowVolumeExpansion: true
-  mountOptions: []
-  # Mount Options
-  # Example:
-  # mountOptions:
-  #   - discard
-
-secret:
-  # Specifies whether the secret should be created
-  create: false
-  name: csi-cephfs-secret
-  # Key values correspond to a user name and its key, as defined in the
-  # ceph cluster. User ID should have required access to the 'pool'
-  # specified in the storage class
-  adminID: <plaintext ID>
-  adminKey: <Ceph auth key corresponding to ID above>
-
-# This is a sample configmap that helps define a Ceph configuration as required
-# by the CSI plugins.
-# Sample ceph.conf available at
-# https://github.com/ceph/ceph/blob/master/src/sample.ceph.conf Detailed
-# documentation is available at
-# https://docs.ceph.com/en/latest/rados/configuration/ceph-conf/
-cephconf: |
-  [global]
-    auth_cluster_required = cephx
-    auth_service_required = cephx
-    auth_client_required = cephx
-
-    # Workaround for http://tracker.ceph.com/issues/23446
-    fuse_set_user_groups = false
-
-    # ceph-fuse which uses libfuse2 by default has write buffer size of 2KiB
-    # adding 'fuse_big_writes = true' option by default to override this limit
-    # see https://github.com/ceph/ceph-csi/issues/1928
-    fuse_big_writes = true
 
 #########################################################
 # Variables for 'internal' use please use with caution! #
