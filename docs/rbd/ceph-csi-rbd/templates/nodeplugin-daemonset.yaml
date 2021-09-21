@@ -65,8 +65,6 @@ spec:
           imagePullPolicy: {{ .Values.nodeplugin.plugin.image.pullPolicy }}
           args:
             - "--nodeid=$(NODE_ID)"
-            - "--pluginpath={{ .Values.kubeletDir }}/plugins"
-            - "--stagingpath={{ .Values.kubeletDir }}/plugins/kubernetes.io/csi/pv/"
             - "--type=rbd"
             - "--nodeserver=true"
             - "--pidlimit=-1"
@@ -75,9 +73,6 @@ spec:
             - "--drivername=$(DRIVER_NAME)"
 {{- if .Values.topology.enabled }}
             - "--domainlabels={{ .Values.topology.domainLabels | join "," }}"
-{{- end }}
-{{- if .Values.nodeplugin.profiling.enabled }}
-            - "--enableprofiling={{ .Values.nodeplugin.profiling.enabled }}"
 {{- end }}
           env:
             - name: POD_IP
@@ -106,16 +101,11 @@ spec:
               name: host-mount
             - mountPath: /sys
               name: host-sys
-            - mountPath: /etc/selinux
-              name: etc-selinux
-              readOnly: true
             - mountPath: /lib/modules
               name: lib-modules
               readOnly: true
             - name: ceph-csi-config
               mountPath: /etc/ceph-csi-config/
-            - name: ceph-config
-              mountPath: /etc/ceph/
             - name: ceph-csi-encryption-kms-config
               mountPath: /etc/ceph-csi-encryption-kms-config/
             - name: plugin-dir
@@ -126,8 +116,6 @@ spec:
               mountPropagation: "Bidirectional"
             - name: keys-tmp-dir
               mountPath: /tmp/csi/keys
-            - name: ceph-logdir
-              mountPath: /var/log/ceph
           resources:
 {{ toYaml .Values.nodeplugin.plugin.resources | indent 12 }}
 {{- if .Values.nodeplugin.httpMetrics.enabled }}
@@ -173,10 +161,6 @@ spec:
           hostPath:
             path: {{ .Values.kubeletDir }}/pods
             type: DirectoryOrCreate
-        - name: ceph-logdir
-          hostPath:
-            path: {{ .Values.cephLogDirHostPath }}
-            type: DirectoryOrCreate
         - name: host-dev
           hostPath:
             path: /dev
@@ -186,15 +170,9 @@ spec:
         - name: host-sys
           hostPath:
             path: /sys
-        - name: etc-selinux
-          hostPath:
-            path: /etc/selinux
         - name: lib-modules
           hostPath:
             path: /lib/modules
-        - name: ceph-config
-          configMap:
-            name: ceph-config
         - name: ceph-csi-config
           configMap:
             name: {{ .Values.configMapName | quote }}
