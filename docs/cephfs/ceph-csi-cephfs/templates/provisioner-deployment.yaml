@@ -11,6 +11,12 @@ metadata:
     heritage: {{ .Release.Service }}
 spec:
   replicas: {{ .Values.provisioner.replicaCount }}
+  strategy:
+    type: {{ .Values.provisioner.strategy.type }}
+{{- if eq .Values.provisioner.strategy.type "RollingUpdate" }}
+    rollingUpdate:
+      maxUnavailable: {{ .Values.provisioner.strategy.rollingUpdate.maxUnavailable }}
+{{- end }}
   selector:
     matchLabels:
       app: {{ include "ceph-csi-cephfs.name" . }}
@@ -78,8 +84,6 @@ spec:
           env:
             - name: ADDRESS
               value: "unix:///csi/{{ .Values.provisionerSocketFile }}"
-          securityContext:
-            privileged: true
           volumeMounts:
             - name: socket-dir
               mountPath: /csi
@@ -103,7 +107,7 @@ spec:
           resources:
 {{ toYaml .Values.nodeplugin.plugin.resources | indent 12 }}
 {{- end }}
-{{- if semverCompare ">=1.15" .Capabilities.KubeVersion.GitVersion -}}
+{{- if semverCompare ">=1.15" .Capabilities.KubeVersion.Version -}}
 {{- if .Values.provisioner.resizer.enabled }}
         - name: csi-resizer
           image: "{{ .Values.provisioner.resizer.image.repository }}:{{ .Values.provisioner.resizer.image.tag }}"
@@ -136,6 +140,9 @@ spec:
             - "--endpoint=$(CSI_ENDPOINT)"
             - "--v={{ .Values.logLevel }}"
             - "--drivername=$(DRIVER_NAME)"
+{{- if .Values.provisioner.profiling.enabled }}
+            - "--enableprofiling={{ .Values.provisioner.profiling.enabled }}"
+{{- end }}
           env:
             - name: POD_IP
               valueFrom:
@@ -149,11 +156,6 @@ spec:
                   fieldPath: spec.nodeName
             - name: CSI_ENDPOINT
               value: "unix:///csi/{{ .Values.provisionerSocketFile }}"
-          securityContext:
-            privileged: true
-            capabilities:
-              add: ["SYS_ADMIN"]
-            allowPrivilegeEscalation: true
           volumeMounts:
             - name: socket-dir
               mountPath: /csi
@@ -164,6 +166,8 @@ spec:
               readOnly: true
             - name: host-dev
               mountPath: /dev
+            - name: ceph-config
+              mountPath: /etc/ceph/
             - name: ceph-csi-config
               mountPath: /etc/ceph-csi-config/
             - name: keys-tmp-dir
@@ -208,6 +212,9 @@ spec:
         - name: host-dev
           hostPath:
             path: /dev
+        - name: ceph-config
+          configMap:
+            name: ceph-config
         - name: ceph-csi-config
           configMap:
             name: {{ .Values.configMapName | quote }}
