@@ -29,7 +29,6 @@ spec:
     - 'emptyDir'
     - 'projected'
     - 'secret'
-    - 'downwardAPI'
     - 'hostPath'
   allowedHostPaths:
     - pathPrefix: '/dev'
@@ -42,6 +41,8 @@ spec:
       readOnly: true
     - pathPrefix: '/lib/modules'
       readOnly: true
+    - pathPrefix: '{{ .Values.cephLogDirHostPath }}'
+      readOnly: false
     - pathPrefix: '{{ .Values.kubeletDir }}'
       readOnly: false
 {{- end }}
