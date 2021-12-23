@@ -71,7 +71,6 @@ spec:
             - "--nodeserver=true"
             - "--pidlimit=-1"
             - "--endpoint=$(CSI_ENDPOINT)"
-            - "--csi-addons-endpoint=$(CSI_ADDONS_ENDPOINT)"
             - "--v={{ .Values.logLevel }}"
             - "--drivername=$(DRIVER_NAME)"
 {{- if .Values.topology.enabled }}
@@ -93,8 +92,6 @@ spec:
                   fieldPath: spec.nodeName
             - name: CSI_ENDPOINT
               value: "unix:///csi/{{ .Values.pluginSocketFile }}"
-            - name: CSI_ADDONS_ENDPOINT
-              value: "unix:///csi/csi-addons.sock"
           securityContext:
             privileged: true
             capabilities:
@@ -117,8 +114,6 @@ spec:
               readOnly: true
             - name: ceph-csi-config
               mountPath: /etc/ceph-csi-config/
-            - name: ceph-config
-              mountPath: /etc/ceph/
             - name: ceph-csi-encryption-kms-config
               mountPath: /etc/ceph-csi-encryption-kms-config/
             - name: plugin-dir
@@ -129,8 +124,6 @@ spec:
               mountPropagation: "Bidirectional"
             - name: keys-tmp-dir
               mountPath: /tmp/csi/keys
-            - name: ceph-logdir
-              mountPath: /var/log/ceph
           resources:
 {{ toYaml .Values.nodeplugin.plugin.resources | indent 12 }}
 {{- if .Values.nodeplugin.httpMetrics.enabled }}
@@ -176,10 +169,6 @@ spec:
           hostPath:
             path: {{ .Values.kubeletDir }}/pods
             type: DirectoryOrCreate
-        - name: ceph-logdir
-          hostPath:
-            path: {{ .Values.cephLogDirHostPath }}
-            type: DirectoryOrCreate
         - name: host-dev
           hostPath:
             path: /dev
@@ -195,9 +184,6 @@ spec:
         - name: lib-modules
           hostPath:
             path: /lib/modules
-        - name: ceph-config
-          configMap:
-            name: ceph-config
         - name: ceph-csi-config
           configMap:
             name: {{ .Values.configMapName | quote }}

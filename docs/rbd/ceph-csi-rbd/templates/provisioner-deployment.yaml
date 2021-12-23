@@ -105,6 +105,8 @@ spec:
           env:
             - name: ADDRESS
               value: "unix:///csi/{{ .Values.provisionerSocketFile }}"
+          securityContext:
+            privileged: true
           volumeMounts:
             - name: socket-dir
               mountPath: /csi
@@ -137,7 +139,6 @@ spec:
             - "--controllerserver=true"
             - "--pidlimit=-1"
             - "--endpoint=$(CSI_ENDPOINT)"
-            - "--csi-addons-endpoint=$(CSI_ADDONS_ENDPOINT)"
             - "--v={{ .Values.logLevel }}"
             - "--drivername=$(DRIVER_NAME)"
             - "--rbdhardmaxclonedepth={{ .Values.provisioner.hardMaxCloneDepth }}"
@@ -163,8 +164,11 @@ spec:
                   fieldPath: spec.nodeName
             - name: CSI_ENDPOINT
               value: "unix:///csi/{{ .Values.provisionerSocketFile }}"
-            - name: CSI_ADDONS_ENDPOINT
-              value: "unix:///csi/csi-addons.sock"
+          securityContext:
+            privileged: true
+            capabilities:
+              add: ["SYS_ADMIN"]
+            allowPrivilegeEscalation: true
           volumeMounts:
             - name: socket-dir
               mountPath: /csi
@@ -177,8 +181,6 @@ spec:
               readOnly: true
             - name: ceph-csi-config
               mountPath: /etc/ceph-csi-config/
-            - name: ceph-config
-              mountPath: /etc/ceph/
             - name: ceph-csi-encryption-kms-config
               mountPath: /etc/ceph-csi-encryption-kms-config/
             - name: keys-tmp-dir
@@ -201,13 +203,16 @@ spec:
                   fieldPath: metadata.namespace
             - name: DRIVER_NAME
               value: {{ .Values.driverName }}
+          securityContext:
+            privileged: true
+            capabilities:
+              add: ["SYS_ADMIN"]
+            allowPrivilegeEscalation: true
           volumeMounts:
             - name: ceph-csi-config
               mountPath: /etc/ceph-csi-config/
             - name: keys-tmp-dir
               mountPath: /tmp/csi/keys
-            - name: ceph-config
-              mountPath: /etc/ceph/
           resources:
 {{ toYaml .Values.nodeplugin.plugin.resources | indent 12 }}
 {{- end }}
@@ -249,9 +254,6 @@ spec:
         - name: lib-modules
           hostPath:
             path: /lib/modules
-        - name: ceph-config
-          configMap:
-            name: ceph-config
         - name: ceph-csi-config
           configMap:
             name: {{ .Values.configMapName | quote }}
