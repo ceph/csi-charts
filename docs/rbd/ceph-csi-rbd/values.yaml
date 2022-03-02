@@ -109,7 +109,7 @@ nodeplugin:
   plugin:
     image:
       repository: quay.io/cephcsi/cephcsi
-      tag: canary
+      tag: v3.5-canary
       pullPolicy: IfNotPresent
     resources: {}
 
@@ -216,7 +216,7 @@ provisioner:
     enabled: true
     image:
       repository: k8s.gcr.io/sig-storage/csi-resizer
-      tag: v1.4.0
+      tag: v1.3.0
       pullPolicy: IfNotPresent
     resources: {}
 
@@ -279,10 +279,14 @@ storageClass:
   # eg: pool: replicapool
   pool: replicapool
 
-  # (optional) RBD image features, CSI creates image with image-format 2 CSI
-  # RBD currently supports `layering`, `journaling`, `exclusive-lock`,
-  # `object-map`, `fast-diff`, `deep-flatten` features. If `journaling` is
-  # enabled, must enable `exclusive-lock` too.
+  # Set thickProvision to true if you want RBD images to be fully allocated on
+  # creation (thin provisioning is the default).
+  thickProvision: false
+
+  # (required) RBD image features, CSI creates image with image-format 2
+  # CSI RBD currently supports `layering`, `journaling`, `exclusive-lock`,
+  # `object-map`, `fast-diff` features. If `journaling` is enabled, must
+  # enable `exclusive-lock` too.
   # imageFeatures: layering,journaling,exclusive-lock,object-map,fast-diff
   imageFeatures: "layering"
 
@@ -399,10 +403,6 @@ storageClass:
   # mountOptions:
   #   - discard
 
-# Mount the host /etc/selinux inside pods to support
-# selinux-enabled filesystems
-selinuxMount: true
-
 secret:
   # Specifies whether the secret should be created
   create: false
@@ -427,6 +427,14 @@ cephconf: |
     auth_service_required = cephx
     auth_client_required = cephx
 
+    # Workaround for http://tracker.ceph.com/issues/23446
+    fuse_set_user_groups = false
+
+    # ceph-fuse which uses libfuse2 by default has write buffer size of 2KiB
+    # adding 'fuse_big_writes = true' option by default to override this limit
+    # see https://github.com/ceph/ceph-csi/issues/1928
+    fuse_big_writes = true
+
 #########################################################
 # Variables for 'internal' use please use with caution! #
 #########################################################
@@ -447,7 +455,5 @@ configMapName: ceph-csi-config
 # configMapKey:
 # Use an externally provided configmap
 externallyManagedConfigmap: false
-# Name of the configmap used for ceph.conf
-cephConfConfigMapName: ceph-config
 # Name of the configmap used for encryption kms configuration
 kmsConfigMapName: ceph-csi-encryption-kms-config
