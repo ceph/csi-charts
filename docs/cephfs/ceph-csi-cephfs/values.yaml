@@ -87,7 +87,7 @@ nodeplugin:
   plugin:
     image:
       repository: quay.io/cephcsi/cephcsi
-      tag: canary
+      tag: v3.5-canary
       pullPolicy: IfNotPresent
     resources: {}
 
@@ -179,7 +179,7 @@ provisioner:
     enabled: true
     image:
       repository: k8s.gcr.io/sig-storage/csi-resizer
-      tag: v1.4.0
+      tag: v1.3.0
       pullPolicy: IfNotPresent
     resources: {}
 
@@ -200,10 +200,6 @@ provisioner:
   # https://kubernetes.io/docs/concepts/policy/pod-security-policy/
   podSecurityPolicy:
     enabled: false
-
-# Mount the host /etc/selinux inside pods to support
-# selinux-enabled filesystems
-selinuxMount: true
 
 topology:
   # Specifies whether topology based provisioning support should
@@ -323,5 +319,3 @@ configMapName: ceph-csi-config
 # configMapKey:
 # Use an externally provided configmap
 externallyManagedConfigmap: false
-# Name of the configmap used for ceph.conf
-cephConfConfigMapName: ceph-config
