@@ -133,6 +133,7 @@ charts and their default values.
 | `driverName`                                   | Name of the csi-driver                                                                                                                               | `cephfs.csi.ceph.com`                              |
 | `configMapName`                                | Name of the configmap which contains cluster configuration                                                                                           | `ceph-csi-config`                                  |
 | `externallyManagedConfigmap`                   | Specifies the use of an externally provided configmap                                                                                                | `false`                                            |
+| `cephConfConfigMapName`                        | Name of the configmap which contains ceph.conf configuration                                                                                           | `ceph-config`                                  |
 | `storageClass.create`                          | Specifies whether the StorageClass should be created                                                                                                 | `false`                                            |
 | `storageClass.name`                            | Specifies the cephFS StorageClass name                                                                                                               | `csi-cephfs-sc`                                    |
 | `storageClass.annotations`                     | Specifies the annotations for the cephFS storageClass                                                                                                | `[]`                                               |
@@ -156,6 +157,7 @@ charts and their default values.
 | `secret.name`                                  | Specifies the cephFS secret name                                                                                                                     | `csi-cephfs-secret`                                |
 | `secret.adminID`                               | Specifies the admin ID of the cephFS secret                                                                                                          | `<plaintext ID>`                                   |
 | `secret.adminKey`                              | Specifies the key that corresponds to the adminID                                                                                                    | `<Ceph auth key corresponding to ID above>`        |
+| `selinuxMount`                                | Mount the host /etc/selinux inside pods to support selinux-enabled filesystems                                                                                                      | `true`                                            |
 
 ### Command Line
 
