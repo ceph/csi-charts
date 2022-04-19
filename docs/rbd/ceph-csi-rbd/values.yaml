@@ -25,7 +25,8 @@ serviceAccounts:
 #     monitors:
 #       - "<MONValue1>"
 #       - "<MONValue2>"
-#     netNamespaceFilePath: "{{ .kubeletDir }}/plugins/{{ .driverName }}/net"
+#     rbd:
+#       netNamespaceFilePath: "{{ .kubeletDir }}/plugins/{{ .driverName }}/net"
 csiConfig: []
 
 # Configuration details of clusterID,PoolID and FscID mapping
@@ -110,7 +111,7 @@ nodeplugin:
   plugin:
     image:
       repository: quay.io/cephcsi/cephcsi
-      tag: v3.6-canary
+      tag: canary
       pullPolicy: IfNotPresent
     resources: {}
 
