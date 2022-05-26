@@ -103,15 +103,15 @@ nodeplugin:
 
   registrar:
     image:
-      repository: registry.k8s.io/sig-storage/csi-node-driver-registrar
-      tag: v2.5.1
+      repository: k8s.gcr.io/sig-storage/csi-node-driver-registrar
+      tag: v2.4.0
       pullPolicy: IfNotPresent
     resources: {}
 
   plugin:
     image:
       repository: quay.io/cephcsi/cephcsi
-      tag: canary
+      tag: v3.6-canary
       pullPolicy: IfNotPresent
     resources: {}
 
@@ -212,7 +212,7 @@ provisioner:
     name: attacher
     enabled: true
     image:
-      repository: registry.k8s.io/sig-storage/csi-attacher
+      repository: k8s.gcr.io/sig-storage/csi-attacher
       tag: v3.4.0
       pullPolicy: IfNotPresent
     resources: {}
@@ -221,14 +221,14 @@ provisioner:
     name: resizer
     enabled: true
     image:
-      repository: registry.k8s.io/sig-storage/csi-resizer
+      repository: k8s.gcr.io/sig-storage/csi-resizer
       tag: v1.4.0
       pullPolicy: IfNotPresent
     resources: {}
 
   snapshotter:
     image:
-      repository: registry.k8s.io/sig-storage/csi-snapshotter
+      repository: k8s.gcr.io/sig-storage/csi-snapshotter
       tag: v4.2.0
       pullPolicy: IfNotPresent
     resources: {}
