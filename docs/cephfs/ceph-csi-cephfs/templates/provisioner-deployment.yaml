@@ -62,9 +62,6 @@ spec:
             - "--leader-election=true"
             - "--retry-interval-start=500ms"
             - "--extra-create-metadata=true"
-{{- if .Values.topology.enabled }}
-            - "--feature-gates=Topology=true"
-{{- end }}
           env:
             - name: ADDRESS
               value: "unix:///csi/{{ .Values.provisionerSocketFile }}"
@@ -118,6 +115,7 @@ spec:
             - "--leader-election"
             - "--retry-interval-start=500ms"
             - "--handle-volume-inuse-error=false"
+            - "--feature-gates=RecoverVolumeExpansionFailure=true"
           env:
             - name: ADDRESS
               value: "unix:///csi/{{ .Values.provisionerSocketFile }}"
