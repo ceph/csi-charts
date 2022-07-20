@@ -103,15 +103,15 @@ nodeplugin:
 
   registrar:
     image:
-      repository: registry.k8s.io/sig-storage/csi-node-driver-registrar
-      tag: v2.5.1
+      repository: k8s.gcr.io/sig-storage/csi-node-driver-registrar
+      tag: v2.4.0
       pullPolicy: IfNotPresent
     resources: {}
 
   plugin:
     image:
       repository: quay.io/cephcsi/cephcsi
-      tag: canary
+      tag: v3.6-canary
       pullPolicy: IfNotPresent
     resources: {}
 
@@ -144,8 +144,6 @@ provisioner:
   deployController: true
   # Timeout for waiting for creation or deletion of a volume
   timeout: 60s
-  # cluster name to set on the RBD image
-  # clustername: "k8s-cluster-1"
   # Hard limit for maximum number of nested volume clones that are taken before
   # a flatten occurs
   hardMaxCloneDepth: 8
@@ -163,10 +161,6 @@ provisioner:
   # set user created priorityclassName for csi provisioner pods. default is
   # system-cluster-critical which is less priority than system-node-critical
   priorityClassName: system-cluster-critical
-
-  # enable hostnetwork for provisioner pod. default is false
-  # useful for deployments where the podNetwork has no access to ceph
-  enableHostNetwork: false
 
   httpMetrics:
     # Metrics only available for cephcsi/cephcsi => 1.2.0
@@ -205,20 +199,21 @@ provisioner:
 
   provisioner:
     image:
+      # TODO: replace with released image version.
+      # canary image is being to be used to test pvc-pvc clone
+      # with differe sc feature.
+      # see: https://github.com/kubernetes-csi/external-provisioner/pull/699
       repository: gcr.io/k8s-staging-sig-storage/csi-provisioner
-      tag: v3.2.1
+      tag: canary
       pullPolicy: IfNotPresent
     resources: {}
-
-  # set metadata on volume
-  setmetadata: true
 
   attacher:
     name: attacher
     enabled: true
     image:
-      repository: registry.k8s.io/sig-storage/csi-attacher
-      tag: v3.5.0
+      repository: k8s.gcr.io/sig-storage/csi-attacher
+      tag: v3.4.0
       pullPolicy: IfNotPresent
     resources: {}
 
@@ -226,15 +221,15 @@ provisioner:
     name: resizer
     enabled: true
     image:
-      repository: registry.k8s.io/sig-storage/csi-resizer
-      tag: v1.5.0
+      repository: k8s.gcr.io/sig-storage/csi-resizer
+      tag: v1.4.0
       pullPolicy: IfNotPresent
     resources: {}
 
   snapshotter:
     image:
-      repository: registry.k8s.io/sig-storage/csi-snapshotter
-      tag: v6.0.1
+      repository: k8s.gcr.io/sig-storage/csi-snapshotter
+      tag: v4.2.0
       pullPolicy: IfNotPresent
     resources: {}
 
