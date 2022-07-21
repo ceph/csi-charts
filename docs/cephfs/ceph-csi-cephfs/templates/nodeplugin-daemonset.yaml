@@ -72,12 +72,11 @@ spec:
 {{- if .Values.nodeplugin.forcecephkernelclient }}
             - "--forcecephkernelclient={{ .Values.nodeplugin.forcecephkernelclient }}"
 {{- end }}
+            - "--kernelmountoptions={{ .Values.nodeplugin.kernelmountoptions }}"
+            - "--fusemountoptions={{ .Values.nodeplugin.fusemountoptions }}"
             - "--endpoint=$(CSI_ENDPOINT)"
             - "--v={{ .Values.logLevel }}"
             - "--drivername=$(DRIVER_NAME)"
-{{- if .Values.topology.enabled }}
-            - "--domainlabels={{ .Values.topology.domainLabels | join "," }}"
-{{- end }}
 {{- if .Values.nodeplugin.profiling.enabled }}
             - "--enableprofiling={{ .Values.nodeplugin.profiling.enabled }}"
 {{- end }}

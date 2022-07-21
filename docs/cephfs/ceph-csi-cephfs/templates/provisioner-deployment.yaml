@@ -48,6 +48,7 @@ spec:
               topologyKey: "kubernetes.io/hostname"
 {{- end }}
       serviceAccountName: {{ include "ceph-csi-cephfs.serviceAccountName.provisioner" . }}
+      hostNetwork: {{ .Values.provisioner.enableHostNetwork }}
 {{- if .Values.provisioner.priorityClassName }}
       priorityClassName: {{ .Values.provisioner.priorityClassName }}
 {{- end }}
@@ -62,9 +63,8 @@ spec:
             - "--leader-election=true"
             - "--retry-interval-start=500ms"
             - "--extra-create-metadata=true"
-{{- if .Values.topology.enabled }}
-            - "--feature-gates=Topology=true"
-{{- end }}
+            - "--feature-gates=HonorPVReclaimPolicy=true"
+            - "--prevent-volume-mode-conversion=true"
           env:
             - name: ADDRESS
               value: "unix:///csi/{{ .Values.provisionerSocketFile }}"
@@ -89,24 +89,6 @@ spec:
               mountPath: /csi
           resources:
 {{ toYaml .Values.provisioner.snapshotter.resources | indent 12 }}
-{{- if .Values.provisioner.attacher.enabled }}
-        - name: csi-attacher
-          image: "{{ .Values.provisioner.attacher.image.repository }}:{{ .Values.provisioner.attacher.image.tag }}"
-          imagePullPolicy: {{ .Values.provisioner.attacher.image.pullPolicy }}
-          args:
-            - "--v={{ .Values.logLevel }}"
-            - "--csi-address=$(ADDRESS)"
-            - "--leader-election=true"
-            - "--retry-interval-start=500ms"
-          env:
-            - name: ADDRESS
-              value: "unix:///csi/{{ .Values.provisionerSocketFile }}"
-          volumeMounts:
-            - name: socket-dir
-              mountPath: /csi
-          resources:
-{{ toYaml .Values.nodeplugin.plugin.resources | indent 12 }}
-{{- end }}
 {{- if .Values.provisioner.resizer.enabled }}
         - name: csi-resizer
           image: "{{ .Values.provisioner.resizer.image.repository }}:{{ .Values.provisioner.resizer.image.tag }}"
@@ -118,6 +100,7 @@ spec:
             - "--leader-election"
             - "--retry-interval-start=500ms"
             - "--handle-volume-inuse-error=false"
+            - "--feature-gates=RecoverVolumeExpansionFailure=true"
           env:
             - name: ADDRESS
               value: "unix:///csi/{{ .Values.provisionerSocketFile }}"
