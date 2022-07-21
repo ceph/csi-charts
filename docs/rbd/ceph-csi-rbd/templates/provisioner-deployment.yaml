@@ -48,6 +48,7 @@ spec:
               topologyKey: "kubernetes.io/hostname"
 {{- end }}
       serviceAccountName: {{ include "ceph-csi-rbd.serviceAccountName.provisioner" . }}
+      hostNetwork: {{ .Values.provisioner.enableHostNetwork }}
 {{- if .Values.provisioner.priorityClassName }}
       priorityClassName: {{ .Values.provisioner.priorityClassName }}
 {{- end }}
@@ -63,6 +64,8 @@ spec:
             - "--retry-interval-start=500ms"
             - "--default-fstype={{ .Values.provisioner.defaultFSType }}"
             - "--extra-create-metadata=true"
+            - "--feature-gates=HonorPVReclaimPolicy=true"
+            - "--prevent-volume-mode-conversion=true"
 {{- if .Values.topology.enabled }}
             - "--feature-gates=Topology=true"
 {{- end }}
@@ -85,6 +88,7 @@ spec:
             - "--leader-election"
             - "--retry-interval-start=500ms"
             - "--handle-volume-inuse-error=false"
+            - "--feature-gates=RecoverVolumeExpansionFailure=true"
           env:
             - name: ADDRESS
               value: "unix:///csi/{{ .Values.provisionerSocketFile }}"
@@ -102,6 +106,7 @@ spec:
             - "--v={{ .Values.logLevel }}"
             - "--timeout={{ .Values.provisioner.timeout }}"
             - "--leader-election=true"
+            - "--extra-create-metadata=true"
           env:
             - name: ADDRESS
               value: "unix:///csi/{{ .Values.provisionerSocketFile }}"
@@ -150,6 +155,10 @@ spec:
             {{- if .Values.provisioner.profiling.enabled }}
             - "--enableprofiling={{ .Values.provisioner.profiling.enabled }}"
             {{- end }}
+            {{- if .Values.provisioner.clustername }}
+            - "--clustername={{ .Values.provisioner.clustername }}"
+            {{- end }}
+            - "--setmetadata={{ .Values.provisioner.setmetadata }}"
           env:
             - name: POD_IP
               valueFrom:
@@ -197,6 +206,10 @@ spec:
             - "--v={{ .Values.logLevel }}"
             - "--drivername=$(DRIVER_NAME)"
             - "--drivernamespace=$(DRIVER_NAMESPACE)"
+            {{- if .Values.provisioner.clustername }}
+            - "--clustername={{ .Values.provisioner.clustername }}"
+            {{- end }}
+            - "--setmetadata={{ .Values.provisioner.setmetadata }}"
           env:
             - name: DRIVER_NAMESPACE
               valueFrom:
