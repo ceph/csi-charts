@@ -80,15 +80,15 @@ nodeplugin:
 
   registrar:
     image:
-      repository: k8s.gcr.io/sig-storage/csi-node-driver-registrar
-      tag: v2.4.0
+      repository: registry.k8s.io/sig-storage/csi-node-driver-registrar
+      tag: v2.5.1
       pullPolicy: IfNotPresent
     resources: {}
 
   plugin:
     image:
       repository: quay.io/cephcsi/cephcsi
-      tag: v3.6-canary
+      tag: canary
       pullPolicy: IfNotPresent
     resources: {}
 
@@ -101,6 +101,11 @@ nodeplugin:
   # Set to true to enable Ceph Kernel clients
   # on kernel < 4.17 which support quotas
   # forcecephkernelclient: true
+
+  # common mount options to apply all mounting
+  # example: kernelmountoptions: "recover_session=clean"
+  kernelmountoptions: ""
+  fusemountoptions: ""
 
   # If true, create & use Pod Security Policy resources
   # https://kubernetes.io/docs/concepts/policy/pod-security-policy/
@@ -120,10 +125,16 @@ provisioner:
       maxUnavailable: 50%
   # Timeout for waiting for creation or deletion of a volume
   timeout: 60s
+  # cluster name to set on the subvolume
+  # clustername: "k8s-cluster-1"
 
   # set user created priorityclassName for csi provisioner pods. default is
   # system-cluster-critical which is less priority than system-node-critical
   priorityClassName: system-cluster-critical
+
+  # enable hostnetwork for provisioner pod. default is false
+  # useful for deployments where the podNetwork has no access to ceph
+  enableHostNetwork: false
 
   httpMetrics:
     # Metrics only available for cephcsi/cephcsi => 1.2.0
@@ -161,17 +172,8 @@ provisioner:
 
   provisioner:
     image:
-      repository: k8s.gcr.io/sig-storage/csi-provisioner
-      tag: v3.1.0
-      pullPolicy: IfNotPresent
-    resources: {}
-
-  attacher:
-    name: attacher
-    enabled: true
-    image:
-      repository: k8s.gcr.io/sig-storage/csi-attacher
-      tag: v3.4.0
+      repository: registry.k8s.io/sig-storage/csi-provisioner
+      tag: v3.2.1
       pullPolicy: IfNotPresent
     resources: {}
 
@@ -179,15 +181,15 @@ provisioner:
     name: resizer
     enabled: true
     image:
-      repository: k8s.gcr.io/sig-storage/csi-resizer
-      tag: v1.4.0
+      repository: registry.k8s.io/sig-storage/csi-resizer
+      tag: v1.5.0
       pullPolicy: IfNotPresent
     resources: {}
 
   snapshotter:
     image:
-      repository: k8s.gcr.io/sig-storage/csi-snapshotter
-      tag: v4.2.0
+      repository: registry.k8s.io/sig-storage/csi-snapshotter
+      tag: v6.0.1
       pullPolicy: IfNotPresent
     resources: {}
 
@@ -205,18 +207,6 @@ provisioner:
 # Mount the host /etc/selinux inside pods to support
 # selinux-enabled filesystems
 selinuxMount: true
-
-topology:
-  # Specifies whether topology based provisioning support should
-  # be exposed by CSI
-  enabled: false
-  # domainLabels define which node labels to use as domains
-  # for CSI nodeplugins to advertise their domains
-  # NOTE: the value here serves as an example and needs to be
-  # updated with node labels that define domains of interest
-  domainLabels:
-    - failure-domain/region
-    - failure-domain/zone
 
 storageClass:
   # Specifies whether the Storage class should be created
