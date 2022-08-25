@@ -114,7 +114,7 @@ nodeplugin:
   plugin:
     image:
       repository: quay.io/cephcsi/cephcsi
-      tag: v3.7-canary
+      tag: canary
       pullPolicy: IfNotPresent
     resources: {}
 
@@ -123,11 +123,6 @@ nodeplugin:
   tolerations: []
 
   affinity: {}
-
-  # If true, create & use Pod Security Policy resources
-  # https://kubernetes.io/docs/concepts/policy/pod-security-policy/
-  podSecurityPolicy:
-    enabled: false
 
 provisioner:
   name: provisioner
@@ -246,11 +241,6 @@ provisioner:
   tolerations: []
 
   affinity: {}
-
-  # If true, create & use Pod Security Policy resources
-  # https://kubernetes.io/docs/concepts/policy/pod-security-policy/
-  podSecurityPolicy:
-    enabled: false
 
 topology:
   # Specifies whether topology based provisioning support should
