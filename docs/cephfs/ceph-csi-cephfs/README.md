@@ -158,6 +158,7 @@ charts and their default values.
 | `secret.adminID`                               | Specifies the admin ID of the cephFS secret                                                                                                          | `<plaintext ID>`                                   |
 | `secret.adminKey`                              | Specifies the key that corresponds to the adminID                                                                                                    | `<Ceph auth key corresponding to ID above>`        |
 | `selinuxMount`                                | Mount the host /etc/selinux inside pods to support selinux-enabled filesystems                                                                                                      | `true`                                            |
+| `topology.enabled`                            | Enable topology aware volume creation                                                                                                                                              | `false`                                            |
 
 ### Command Line
 
