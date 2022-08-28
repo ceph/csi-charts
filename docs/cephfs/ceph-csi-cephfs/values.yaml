@@ -273,7 +273,10 @@ secret:
   # specified in the storage class
   adminID: <plaintext ID>
   adminKey: <Ceph auth key corresponding to ID above>
-
+  
+topology:
+  enabled: false
+  
 # This is a sample configmap that helps define a Ceph configuration as required
 # by the CSI plugins.
 # Sample ceph.conf available at
