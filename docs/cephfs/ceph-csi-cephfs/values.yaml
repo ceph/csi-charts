@@ -91,7 +91,7 @@ nodeplugin:
   plugin:
     image:
       repository: quay.io/cephcsi/cephcsi
-      tag: v3.7-canary
+      tag: canary
       pullPolicy: IfNotPresent
     resources: {}
 
@@ -109,11 +109,6 @@ nodeplugin:
   # example: kernelmountoptions: "recover_session=clean"
   kernelmountoptions: ""
   fusemountoptions: ""
-
-  # If true, create & use Pod Security Policy resources
-  # https://kubernetes.io/docs/concepts/policy/pod-security-policy/
-  podSecurityPolicy:
-    enabled: false
 
 provisioner:
   name: provisioner
@@ -204,11 +199,6 @@ provisioner:
   tolerations: []
 
   affinity: {}
-
-  # If true, create & use Pod Security Policy resources
-  # https://kubernetes.io/docs/concepts/policy/pod-security-policy/
-  podSecurityPolicy:
-    enabled: false
 
 # Mount the host /etc/selinux inside pods to support
 # selinux-enabled filesystems
