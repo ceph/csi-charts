@@ -14,7 +14,6 @@ metadata:
     component: {{ .Values.nodeplugin.name }}
     release: {{ .Release.Name }}
     heritage: {{ .Release.Service }}
-    {{- with .Values.commonLabels }}{{ toYaml . | trim | nindent 4 }}{{- end }}
 spec:
 {{- if .Values.nodeplugin.httpMetrics.service.clusterIP }}
   clusterIP: "{{ .Values.nodeplugin.httpMetrics.service.clusterIP }}"
