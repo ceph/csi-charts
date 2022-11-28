@@ -9,7 +9,6 @@ metadata:
     component: {{ .Values.provisioner.name }}
     release: {{ .Release.Name }}
     heritage: {{ .Release.Service }}
-    {{- with .Values.commonLabels }}{{ toYaml . | trim | nindent 4 }}{{- end }}
 spec:
   replicas: {{ .Values.provisioner.replicaCount }}
   strategy:
@@ -31,7 +30,6 @@ spec:
         component: {{ .Values.provisioner.name }}
         release: {{ .Release.Name }}
         heritage: {{ .Release.Service }}
-        {{- with .Values.commonLabels }}{{ toYaml . | trim | nindent 8 }}{{- end }}
     spec:
 {{- if gt (int .Values.provisioner.replicaCount) 1 }}
       affinity:
@@ -126,7 +124,6 @@ spec:
             - "--csi-address=$(ADDRESS)"
             - "--leader-election=true"
             - "--retry-interval-start=500ms"
-            - "--default-fstype=ext4"
           env:
             - name: ADDRESS
               value: "unix:///csi/{{ .Values.provisionerSocketFile }}"
