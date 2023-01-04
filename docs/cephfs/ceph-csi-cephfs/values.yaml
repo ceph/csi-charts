@@ -30,6 +30,9 @@ serviceAccounts:
 #       netNamespaceFilePath: "{{ .kubeletDir }}/plugins/{{ .driverName }}/net"
 csiConfig: []
 
+# Labels to apply to all resources
+commonLabels: {}
+
 # Set logging level for csi containers.
 # Supported values from 0 to 5. 0 for general useful logs,
 # 5 for trace level verbosity.
@@ -84,14 +87,14 @@ nodeplugin:
   registrar:
     image:
       repository: registry.k8s.io/sig-storage/csi-node-driver-registrar
-      tag: v2.5.1
+      tag: v2.6.2
       pullPolicy: IfNotPresent
     resources: {}
 
   plugin:
     image:
       repository: quay.io/cephcsi/cephcsi
-      tag: v3.7-canary
+      tag: canary
       pullPolicy: IfNotPresent
     resources: {}
 
@@ -171,7 +174,7 @@ provisioner:
   provisioner:
     image:
       repository: registry.k8s.io/sig-storage/csi-provisioner
-      tag: v3.2.1
+      tag: v3.3.0
       pullPolicy: IfNotPresent
     resources: {}
 
@@ -183,14 +186,14 @@ provisioner:
     enabled: true
     image:
       repository: registry.k8s.io/sig-storage/csi-resizer
-      tag: v1.5.0
+      tag: v1.6.0
       pullPolicy: IfNotPresent
     resources: {}
 
   snapshotter:
     image:
       repository: registry.k8s.io/sig-storage/csi-snapshotter
-      tag: v6.0.1
+      tag: v6.1.0
       pullPolicy: IfNotPresent
     resources: {}
 
@@ -283,9 +286,6 @@ cephconf: |
     auth_cluster_required = cephx
     auth_service_required = cephx
     auth_client_required = cephx
-
-    # Workaround for http://tracker.ceph.com/issues/23446
-    fuse_set_user_groups = false
 
     # ceph-fuse which uses libfuse2 by default has write buffer size of 2KiB
     # adding 'fuse_big_writes = true' option by default to override this limit
