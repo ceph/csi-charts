@@ -99,7 +99,7 @@ nodeplugin:
   plugin:
     image:
       repository: quay.io/cephcsi/cephcsi
-      tag: v3.10.0
+      tag: canary
       pullPolicy: IfNotPresent
     resources: {}
 
@@ -198,7 +198,7 @@ provisioner:
     name: resizer
     enabled: true
     image:
-      repository: gcr.io/k8s-staging-sig-storage/csi-resizer
+      repository: registry.k8s.io/sig-storage/csi-resizer
       tag: v1.9.2
       pullPolicy: IfNotPresent
     resources: {}
