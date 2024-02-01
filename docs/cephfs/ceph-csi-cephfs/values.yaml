@@ -41,6 +41,23 @@ logLevel: 5
 # sidecarLogLevel is the variable for Kubernetes sidecar container's log level
 sidecarLogLevel: 1
 
+# Set fsGroupPolicy for CSI Driver object spec
+# https://kubernetes-csi.github.io/docs/support-fsgroup.html
+# The following modes are supported:
+# - None: Indicates that volumes will be mounted with no modifications, as the
+#   CSI volume driver does not support these operations.
+# - File: Indicates that the CSI volume driver supports volume ownership and
+#   permission change via fsGroup, and Kubernetes may use fsGroup to change
+#   permissions and ownership of the volume to match user requested fsGroup in
+#   the pod's SecurityPolicy regardless of fstype or access mode.
+# - ReadWriteOnceWithFSType: Indicates that volumes will be examined to
+#   determine if volume ownership and permissions should be modified to match
+#   the pod's security policy.
+# Changes will only occur if the fsType is defined and the persistent volume's
+# accessModes contains ReadWriteOnce.
+CSIDriver:
+  fsGroupPolicy: "File"
+
 nodeplugin:
   name: nodeplugin
   # if you are using ceph-fuse client set this value to OnDelete
@@ -92,14 +109,14 @@ nodeplugin:
   registrar:
     image:
       repository: registry.k8s.io/sig-storage/csi-node-driver-registrar
-      tag: v2.9.1
+      tag: v2.9.3
       pullPolicy: IfNotPresent
     resources: {}
 
   plugin:
     image:
       repository: quay.io/cephcsi/cephcsi
-      tag: v3.10-canary
+      tag: canary
       pullPolicy: IfNotPresent
     resources: {}
 
@@ -184,7 +201,7 @@ provisioner:
   provisioner:
     image:
       repository: registry.k8s.io/sig-storage/csi-provisioner
-      tag: v3.6.2
+      tag: v3.6.3
       pullPolicy: IfNotPresent
     resources: {}
     ## For further options, check
@@ -199,7 +216,7 @@ provisioner:
     enabled: true
     image:
       repository: registry.k8s.io/sig-storage/csi-resizer
-      tag: v1.9.2
+      tag: v1.9.3
       pullPolicy: IfNotPresent
     resources: {}
     ## For further options, check
@@ -209,7 +226,7 @@ provisioner:
   snapshotter:
     image:
       repository: registry.k8s.io/sig-storage/csi-snapshotter
-      tag: v6.3.2
+      tag: v6.3.3
       pullPolicy: IfNotPresent
     resources: {}
     ## For further options, check
