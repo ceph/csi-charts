@@ -5,5 +5,5 @@ metadata:
 spec:
   attachRequired: false
   podInfoOnMount: false
-  fsGroupPolicy: {{ default "File" .Values.CSIDriver.fsGroupPolicy }}
+  fsGroupPolicy: File
   seLinuxMount: true
