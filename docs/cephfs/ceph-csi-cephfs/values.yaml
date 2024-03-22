@@ -57,6 +57,7 @@ sidecarLogLevel: 1
 # accessModes contains ReadWriteOnce.
 CSIDriver:
   fsGroupPolicy: "File"
+  seLinuxMount: true
 
 nodeplugin:
   name: nodeplugin
@@ -109,14 +110,14 @@ nodeplugin:
   registrar:
     image:
       repository: registry.k8s.io/sig-storage/csi-node-driver-registrar
-      tag: v2.9.1
+      tag: v2.10.0
       pullPolicy: IfNotPresent
     resources: {}
 
   plugin:
     image:
       repository: quay.io/cephcsi/cephcsi
-      tag: v3.10-canary
+      tag: canary
       pullPolicy: IfNotPresent
     resources: {}
 
@@ -201,7 +202,7 @@ provisioner:
   provisioner:
     image:
       repository: registry.k8s.io/sig-storage/csi-provisioner
-      tag: v3.6.2
+      tag: v4.0.0
       pullPolicy: IfNotPresent
     resources: {}
     ## For further options, check
@@ -216,7 +217,7 @@ provisioner:
     enabled: true
     image:
       repository: registry.k8s.io/sig-storage/csi-resizer
-      tag: v1.9.2
+      tag: v1.10.0
       pullPolicy: IfNotPresent
     resources: {}
     ## For further options, check
@@ -226,12 +227,16 @@ provisioner:
   snapshotter:
     image:
       repository: registry.k8s.io/sig-storage/csi-snapshotter
-      tag: v6.3.2
+      tag: v7.0.0
       pullPolicy: IfNotPresent
     resources: {}
     ## For further options, check
     ## https://github.com/kubernetes-csi/external-snapshotter#csi-external-snapshotter-sidecar-command-line-options
     extraArgs: []
+
+    args:
+      # enableVolumeGroupSnapshots enables support for volume group snapshots
+      enableVolumeGroupSnapshots: false
 
   nodeSelector: {}
 
