@@ -27,7 +27,6 @@ serviceAccounts:
 #       - "<MONValue2>"
 #     rbd:
 #       netNamespaceFilePath: "{{ .kubeletDir }}/plugins/{{ .driverName }}/net"
-#       mirrorDaemonCount: 1
 #     readAffinity:
 #       enabled: true
 #       crushLocationLabels:
@@ -139,14 +138,14 @@ nodeplugin:
   registrar:
     image:
       repository: registry.k8s.io/sig-storage/csi-node-driver-registrar
-      tag: v2.10.1
+      tag: v2.10.0
       pullPolicy: IfNotPresent
     resources: {}
 
   plugin:
     image:
       repository: quay.io/cephcsi/cephcsi
-      tag: canary
+      tag: v3.11-canary
       pullPolicy: IfNotPresent
     resources: {}
 
@@ -241,7 +240,7 @@ provisioner:
   provisioner:
     image:
       repository: registry.k8s.io/sig-storage/csi-provisioner
-      tag: v4.0.1
+      tag: v4.0.0
       pullPolicy: IfNotPresent
     resources: {}
     ## For further options, check
@@ -256,7 +255,7 @@ provisioner:
     enabled: true
     image:
       repository: registry.k8s.io/sig-storage/csi-attacher
-      tag: v4.5.1
+      tag: v4.5.0
       pullPolicy: IfNotPresent
     resources: {}
     ## For further options, check
@@ -268,7 +267,7 @@ provisioner:
     enabled: true
     image:
       repository: registry.k8s.io/sig-storage/csi-resizer
-      tag: v1.10.1
+      tag: v1.10.0
       pullPolicy: IfNotPresent
     resources: {}
     ## For further options, check
@@ -278,7 +277,7 @@ provisioner:
   snapshotter:
     image:
       repository: registry.k8s.io/sig-storage/csi-snapshotter
-      tag: v7.0.2
+      tag: v7.0.0
       pullPolicy: IfNotPresent
     resources: {}
     ## For further options, check
