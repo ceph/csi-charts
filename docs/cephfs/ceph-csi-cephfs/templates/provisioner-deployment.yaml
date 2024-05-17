@@ -67,6 +67,73 @@ spec:
 {{ toYaml .Values.provisioner.imagePullSecrets | indent 8 -}}
 {{- end }}
       containers:
+        - name: csi-provisioner
+          image: "{{ .Values.provisioner.provisioner.image.repository }}:{{ .Values.provisioner.provisioner.image.tag }}"
+          imagePullPolicy: {{ .Values.provisioner.provisioner.image.pullPolicy }}
+          args:
+            - "--csi-address=$(ADDRESS)"
+            - "--v={{ .Values.sidecarLogLevel }}"
+            - "--timeout={{ .Values.provisioner.timeout }}"
+            - "--leader-election=true"
+            - "--retry-interval-start=500ms"
+            - "--extra-create-metadata=true"
+            - "--feature-gates=HonorPVReclaimPolicy=true"
+            - "--prevent-volume-mode-conversion=true"
+{{- range .Values.provisioner.provisioner.extraArgs }}
+            - "--{{ . }}"
+{{- end }}
+          env:
+            - name: ADDRESS
+              value: "unix:///csi/{{ .Values.provisionerSocketFile }}"
+          volumeMounts:
+            - name: socket-dir
+              mountPath: /csi
+          resources:
+{{ toYaml .Values.provisioner.provisioner.resources | indent 12 }}
+        - name: csi-snapshotter
+          image: {{ .Values.provisioner.snapshotter.image.repository }}:{{ .Values.provisioner.snapshotter.image.tag }}
+          imagePullPolicy: {{ .Values.provisioner.snapshotter.image.pullPolicy }}
+          args:
+            - "--csi-address=$(ADDRESS)"
+            - "--v={{ .Values.sidecarLogLevel }}"
+            - "--timeout={{ .Values.provisioner.timeout }}"
+            - "--leader-election=true"
+            - "--extra-create-metadata=true"
+{{- range .Values.provisioner.snapshotter.extraArgs }}
+            - "--{{ . }}"
+{{- end }}
+          env:
+            - name: ADDRESS
+              value: "unix:///csi/{{ .Values.provisionerSocketFile }}"
+          volumeMounts:
+            - name: socket-dir
+              mountPath: /csi
+          resources:
+{{ toYaml .Values.provisioner.snapshotter.resources | indent 12 }}
+{{- if .Values.provisioner.resizer.enabled }}
+        - name: csi-resizer
+          image: "{{ .Values.provisioner.resizer.image.repository }}:{{ .Values.provisioner.resizer.image.tag }}"
+          imagePullPolicy: {{ .Values.provisioner.resizer.image.pullPolicy }}
+          args:
+            - "--v={{ .Values.sidecarLogLevel }}"
+            - "--csi-address=$(ADDRESS)"
+            - "--timeout={{ .Values.provisioner.timeout }}"
+            - "--leader-election"
+            - "--retry-interval-start=500ms"
+            - "--handle-volume-inuse-error=false"
+            - "--feature-gates=RecoverVolumeExpansionFailure=true"
+{{- range .Values.provisioner.resizer.extraArgs }}
+            - "--{{ . }}"
+{{- end }}
+          env:
+            - name: ADDRESS
+              value: "unix:///csi/{{ .Values.provisionerSocketFile }}"
+          volumeMounts:
+            - name: socket-dir
+              mountPath: /csi
+          resources:
+{{ toYaml .Values.provisioner.resizer.resources | indent 12 }}
+{{- end }}
         - name: csi-cephfsplugin
           image: "{{ .Values.nodeplugin.plugin.image.repository }}:{{ .Values.nodeplugin.plugin.image.tag }}"
           imagePullPolicy: {{ .Values.nodeplugin.plugin.image.pullPolicy }}
@@ -116,74 +183,6 @@ spec:
               mountPath: /tmp/csi/keys
           resources:
 {{ toYaml .Values.nodeplugin.plugin.resources | indent 12 }}
-        - name: csi-provisioner
-          image: "{{ .Values.provisioner.provisioner.image.repository }}:{{ .Values.provisioner.provisioner.image.tag }}"
-          imagePullPolicy: {{ .Values.provisioner.provisioner.image.pullPolicy }}
-          args:
-            - "--csi-address=$(ADDRESS)"
-            - "--v={{ .Values.sidecarLogLevel }}"
-            - "--timeout={{ .Values.provisioner.timeout }}"
-            - "--leader-election=true"
-            - "--retry-interval-start=500ms"
-            - "--extra-create-metadata=true"
-            - "--feature-gates=HonorPVReclaimPolicy=true"
-            - "--prevent-volume-mode-conversion=true"
-{{- range .Values.provisioner.provisioner.extraArgs }}
-            - "--{{ . }}"
-{{- end }}
-          env:
-            - name: ADDRESS
-              value: "unix:///csi/{{ .Values.provisionerSocketFile }}"
-          volumeMounts:
-            - name: socket-dir
-              mountPath: /csi
-          resources:
-{{ toYaml .Values.provisioner.provisioner.resources | indent 12 }}
-        - name: csi-snapshotter
-          image: {{ .Values.provisioner.snapshotter.image.repository }}:{{ .Values.provisioner.snapshotter.image.tag }}
-          imagePullPolicy: {{ .Values.provisioner.snapshotter.image.pullPolicy }}
-          args:
-            - "--csi-address=$(ADDRESS)"
-            - "--v={{ .Values.sidecarLogLevel }}"
-            - "--timeout={{ .Values.provisioner.timeout }}"
-            - "--leader-election=true"
-            - "--extra-create-metadata=true"
-            - "--enable-volume-group-snapshots={{.Values.provisioner.snapshotter.args.enableVolumeGroupSnapshots }}"
-{{- range .Values.provisioner.snapshotter.extraArgs }}
-            - "--{{ . }}"
-{{- end }}
-          env:
-            - name: ADDRESS
-              value: "unix:///csi/{{ .Values.provisionerSocketFile }}"
-          volumeMounts:
-            - name: socket-dir
-              mountPath: /csi
-          resources:
-{{ toYaml .Values.provisioner.snapshotter.resources | indent 12 }}
-{{- if .Values.provisioner.resizer.enabled }}
-        - name: csi-resizer
-          image: "{{ .Values.provisioner.resizer.image.repository }}:{{ .Values.provisioner.resizer.image.tag }}"
-          imagePullPolicy: {{ .Values.provisioner.resizer.image.pullPolicy }}
-          args:
-            - "--v={{ .Values.sidecarLogLevel }}"
-            - "--csi-address=$(ADDRESS)"
-            - "--timeout={{ .Values.provisioner.timeout }}"
-            - "--leader-election"
-            - "--retry-interval-start=500ms"
-            - "--handle-volume-inuse-error=false"
-            - "--feature-gates=RecoverVolumeExpansionFailure=true"
-{{- range .Values.provisioner.resizer.extraArgs }}
-            - "--{{ . }}"
-{{- end }}
-          env:
-            - name: ADDRESS
-              value: "unix:///csi/{{ .Values.provisionerSocketFile }}"
-          volumeMounts:
-            - name: socket-dir
-              mountPath: /csi
-          resources:
-{{ toYaml .Values.provisioner.resizer.resources | indent 12 }}
-{{- end }}
 {{- if .Values.provisioner.httpMetrics.enabled }}
         - name: liveness-prometheus
           image: "{{ .Values.nodeplugin.plugin.image.repository }}:{{ .Values.nodeplugin.plugin.image.tag }}"
