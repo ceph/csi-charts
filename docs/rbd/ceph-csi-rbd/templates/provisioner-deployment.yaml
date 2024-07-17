@@ -57,6 +57,7 @@ spec:
 {{ toYaml .Values.provisioner.affinity | indent 8 -}}
 {{- end -}}
 {{- end }}
+      securityContext: {{ toYaml .Values.provisioner.podSecurityContext | nindent 8 }}
       serviceAccountName: {{ include "ceph-csi-rbd.serviceAccountName.provisioner" . }}
       hostNetwork: {{ .Values.provisioner.enableHostNetwork }}
 {{- if .Values.provisioner.priorityClassName }}
@@ -85,6 +86,9 @@ spec:
             - "--minsnapshotsonimage={{ .Values.provisioner.minSnapshotsOnImage }}"
             {{- if .Values.provisioner.skipForceFlatten }}
             - "--skipforceflatten={{ .Values.provisioner.skipForceFlatten }}"
+            {{- end }}
+            {{- if .Values.instanceID }}
+            - "--instanceid={{ .Values.instanceID }}"
             {{- end }}
             {{- if .Values.provisioner.profiling.enabled }}
             - "--enableprofiling={{ .Values.provisioner.profiling.enabled }}"
@@ -144,9 +148,6 @@ spec:
             - "--extra-create-metadata=true"
             - "--feature-gates=HonorPVReclaimPolicy=true"
             - "--prevent-volume-mode-conversion=true"
-{{- if .Values.topology.enabled }}
-            - "--feature-gates=Topology=true"
-{{- end }}
 {{- range .Values.provisioner.provisioner.extraArgs }}
             - "--{{ . }}"
 {{- end }}

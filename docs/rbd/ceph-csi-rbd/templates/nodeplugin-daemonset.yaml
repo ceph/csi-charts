@@ -28,6 +28,7 @@ spec:
         heritage: {{ .Release.Service }}
         {{- with .Values.commonLabels }}{{ toYaml . | trim | nindent 8 }}{{- end }}
     spec:
+      securityContext: {{ toYaml .Values.nodeplugin.podSecurityContext | nindent 8 }}
       serviceAccountName: {{ include "ceph-csi-rbd.serviceAccountName.nodeplugin" . }}
       hostNetwork: true
       hostPID: true
@@ -56,8 +57,11 @@ spec:
             - "--csi-addons-endpoint=$(CSI_ADDONS_ENDPOINT)"
             - "--v={{ .Values.logLevel }}"
             - "--drivername=$(DRIVER_NAME)"
-{{- if .Values.topology.enabled }}
+{{- if .Values.topology.domainLabels }}
             - "--domainlabels={{ .Values.topology.domainLabels | join "," }}"
+{{- end }}
+{{- if .Values.instanceID }}
+            - "--instanceid={{ .Values.instanceID }}"
 {{- end }}
 {{- if .Values.nodeplugin.profiling.enabled }}
             - "--enableprofiling={{ .Values.nodeplugin.profiling.enabled }}"
