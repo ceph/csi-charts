@@ -14,14 +14,10 @@ rules:
   - apiGroups: [""]
     resources: ["nodes"]
     verbs: ["get"]
-  # allow to read Vault Token and connection options from the Tenants namespace
   - apiGroups: [""]
     resources: ["configmaps"]
     verbs: ["get"]
-{{- if and .Values.encryptionKMSConfig .Values.encryptionKMSConfig.secretNamespace (not .Values.rbac.leastPrivileges) }}
-  # allow to read the encryption key used with the metadata KMS
   - apiGroups: [""]
     resources: ["secrets"]
     verbs: ["get"]
-{{- end -}}
 {{- end -}}
