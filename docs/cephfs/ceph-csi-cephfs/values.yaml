@@ -2,9 +2,6 @@
 rbac:
   # Specifies whether RBAC resources should be created
   create: true
-  # When possible try and reduce the scope of permission to only give
-  # access to resources defined in the config. See the README for more info
-  leastPrivileges: true
 
 serviceAccounts:
   nodeplugin:
@@ -31,22 +28,7 @@ serviceAccounts:
 #     cephFS:
 #       subvolumeGroup: "csi"
 #       netNamespaceFilePath: "{{ .kubeletDir }}/plugins/{{ .driverName }}/net"
-#       radosNamespace: "csi"
 csiConfig: []
-
-# Configuration for the encryption KMS
-# yamllint disable-line rule:line-length
-# Ref: https://github.com/ceph/ceph-csi/blob/devel/docs/deploy-cephfs.md#cephfs-volume-encryption
-# Example:
-#   encryptionKMSConfig:
-#     encryptionKMSType: vault
-#     vaultAddress: https://vault.example.com
-#     vaultAuthPath: /v1/auth/kubernetes/login
-#     vaultRole: csi-kubernetes
-#     vaultPassphraseRoot: /v1/secret
-#     vaultPassphrasePath: ceph-csi/
-#     vaultCAVerify: "true"
-encryptionKMSConfig: {}
 
 # Labels to apply to all resources
 commonLabels: {}
@@ -58,9 +40,6 @@ commonLabels: {}
 logLevel: 5
 # sidecarLogLevel is the variable for Kubernetes sidecar container's log level
 sidecarLogLevel: 1
-# Log slow operations at the specified rate.
-# Operation is considered slow if it outlives its deadline.
-logSlowOperationInterval: 30s
 
 # Set fsGroupPolicy for CSI Driver object spec
 # https://kubernetes-csi.github.io/docs/support-fsgroup.html
@@ -138,7 +117,7 @@ nodeplugin:
   plugin:
     image:
       repository: quay.io/cephcsi/cephcsi
-      tag: canary
+      tag: v3.12-canary
       pullPolicy: IfNotPresent
     resources: {}
 
@@ -148,11 +127,7 @@ nodeplugin:
 
   affinity: {}
 
-  annotations: {}
-
   podSecurityContext: {}
-
-  podAnnotations: {}
 
   # Set to true to enable Ceph Kernel clients
   # on kernel < 4.17 which support quotas
@@ -232,11 +207,6 @@ provisioner:
       tag: v5.0.1
       pullPolicy: IfNotPresent
     resources: {}
-    args:
-    #   # httpEndpointPort specifies the http server port for
-    #   # diagnostics, health checks and metrics.
-    #   # Uncomment below line to enable the `http-endpoint` arg for sidecar
-    #   httpEndpointPort: 8090
     ## For further options, check
     ## https://github.com/kubernetes-csi/external-provisioner#command-line-options
     extraArgs: []
@@ -252,11 +222,6 @@ provisioner:
       tag: v1.11.1
       pullPolicy: IfNotPresent
     resources: {}
-    args:
-    #   # httpEndpointPort specifies the http server port for
-    #   # diagnostics, health checks and metrics.
-    #   # Uncomment below line to enable the `http-endpoint` arg for sidecar
-    #   httpEndpointPort: 8091
     ## For further options, check
     ## https://github.com/kubernetes-csi/external-resizer#recommended-optional-arguments
     extraArgs: []
@@ -267,16 +232,13 @@ provisioner:
       tag: v8.0.1
       pullPolicy: IfNotPresent
     resources: {}
-    args:
-      # enableVolumeGroupSnapshots enables support for volume group snapshots
-      enableVolumeGroupSnapshots: false
-      # httpEndpointPort specifies the http server port for
-      # diagnostics, health checks and metrics.
-      # Uncomment below line to enable the `http-endpoint` arg for sidecar
-      # httpEndpointPort: 8092
     ## For further options, check
     ## https://github.com/kubernetes-csi/external-snapshotter#csi-external-snapshotter-sidecar-command-line-options
     extraArgs: []
+
+    args:
+      # enableVolumeGroupSnapshots enables support for volume group snapshots
+      enableVolumeGroupSnapshots: false
 
   nodeSelector: {}
 
@@ -284,11 +246,7 @@ provisioner:
 
   affinity: {}
 
-  annotations: {}
-
   podSecurityContext: {}
-
-  podAnnotations: {}
 
 # readAffinity:
 # Enable read affinity for CephFS subvolumes. Recommended to
@@ -346,18 +304,6 @@ storageClass:
   # If omitted, defaults to "csi-vol-".
   # volumeNamePrefix: "foo-bar-"
   volumeNamePrefix: ""
-
-  # (optional) Instruct the plugin it has to encrypt the volume
-  # By default it is disabled. Valid values are "true" or "false".
-  # A string is expected here, i.e. "true", not true.
-  # encrypted: "true"
-  encrypted: ""
-
-  # (optional) Use external key management system for encryption passphrases by
-  # specifying a unique ID matching KMS ConfigMap. The ID is only used for
-  # correlation to configmap entry.
-  encryptionKMSID: ""
-
   # The secrets have to contain user and/or Ceph admin credentials.
   provisionerSecret: csi-cephfs-secret
   # If the Namespaces are not specified, the secrets are assumed to
@@ -385,9 +331,6 @@ secret:
   # specified in the storage class
   adminID: <plaintext ID>
   adminKey: <Ceph auth key corresponding to ID above>
-  # User credentials are required for the static provisioned PVC.
-  userID: ""
-  userKey: ""
 
 # This is a sample configmap that helps define a Ceph configuration as required
 # by the CSI plugins.
@@ -429,8 +372,6 @@ configMapName: ceph-csi-config
 externallyManagedConfigmap: false
 # Name of the configmap used for ceph.conf
 cephConfConfigMapName: ceph-config
-# Name of the configmap used for encryption kms configuration
-kmsConfigMapName: ceph-csi-encryption-kms-config
 # CephFS RadosNamespace used to store CSI specific objects and keys.
 # radosNamespaceCephFS: csi
 # Unique ID distinguishing this instance of Ceph CSI among other instances,
