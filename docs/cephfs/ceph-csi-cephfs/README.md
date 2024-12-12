@@ -66,6 +66,33 @@ version.
 We recommend not to use `--reuse-values` in case there are new defaults AND
 compare your currently used values with the new default values.
 
+### Enabling encryption support
+
+To enable FSCrypt support, you will need to include the KMS configuration in
+`encryptionKMSConfig`.
+
+Here is a `values.yaml` example using a Kubernetes secret (`kubernetes` KMS)
+
+```yaml
+encryptionKMSConfig:
+    encryptionKMSType: "metadata"
+    secretName: "cephfs-encryption-passphrase" # This secret needs to contain the passphrase as the key `encryptionPassphrase`
+    secretNamespace: "my-namespace"
+storageClass:
+    encrypted: true
+    encryptionKMSID: kubernetes
+```
+
+#### Least privilege secret access
+
+If you use the `metadata` and let RBAC created by the chart, permissions
+will be given to access **only** the secret referenced in the
+`encryptionKMSConfig`. This is something important to keep in mind, as a
+manual change to the config to point to another secret or add further KMS
+config will not be authorized. If you wish to give CephCSI a global secret
+access to the cluster, you may set `rbac.leastPrivileges` to `false`, and
+permissions will be granted globally via a *ClusterRole*.
+
 #### Known Issues Upgrading
 
 - When upgrading to version >=3.7.0, you might encounter an error that the
@@ -110,14 +137,17 @@ charts and their default values.
 | Parameter                                      | Description                                                                                                                                          | Default                                            |
 | ---------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------- |
 | `rbac.create`                                  | Specifies whether RBAC resources should be created                                                                                                   | `true`                                             |
+| `rbac.leastPrivileges`                         | Specifies whether RBAC resources should be created with a restricted scope when supported (only secrets supported currently)                         | `true`                                             |
 | `serviceAccounts.nodeplugin.create`            | Specifies whether a nodeplugin ServiceAccount should be created                                                                                      | `true`                                             |
 | `serviceAccounts.nodeplugin.name`              | The name of the nodeplugin ServiceAccount to use. If not set and create is true, a name is generated using the fullname                              | ""                                                 |
 | `serviceAccounts.provisioner.create`           | Specifies whether a provisioner ServiceAccount should be created                                                                                     | `true`                                             |
 | `serviceAccounts.provisioner.name`             | The name of the provisioner ServiceAccount of provisioner to use. If not set and create is true, a name is generated using the fullname              | ""                                                 |
 | `csiConfig`                                    | Configuration for the CSI to connect to the cluster                                                                                                  | []                                                 |
+| `encryptionKMSConfig`                          | Configuration for the encryption KMS                                                                                                                 | `{}`                                               |
 | `commonLabels`                                 | Labels to apply to all resources                                                               | `{}`                                                  |
 | `logLevel`                                     | Set logging level for csi containers. Supported values from 0 to 5. 0 for general useful logs, 5 for trace level verbosity.                          | `5`                                                |
 | `sidecarLogLevel`                              | Set logging level for csi sidecar containers. Supported values from 0 to 5. 0 for general useful logs, 5 for trace level verbosity.                  | `1`                                                |
+| `logSlowOperationInterval`                     | Log slow operations at the specified rate. Operation is considered slow if it outlives its deadline.                                                 | `30s`                                              |
 | `nodeplugin.name`                              | Specifies the nodeplugin name                                                                                                                        | `nodeplugin`                                       |
 | `nodeplugin.updateStrategy`                    | Specifies the update Strategy. If you are using ceph-fuse client set this value to OnDelete                                                          | `RollingUpdate`                                    |
 | `nodeplugin.priorityClassName`                 | Set user created priorityClassName for csi plugin pods. default is system-node-critical which is highest priority                                    | `system-node-critical`                             |
@@ -130,6 +160,8 @@ charts and their default values.
 | `nodeplugin.plugin.image.tag`                  | Image tag                                                                                                                                            | `canary`                                           |
 | `nodeplugin.plugin.image.pullPolicy`           | Image pull policy                                                                                                                                    | `IfNotPresent`                                     |
 | `nodeplugin.podSecurityContext`                | Specifies pod-level security context.                                                                                                                | `{}`                                               |
+| `nodeplugin.annotations`                       | Specifies DaemonSet level annotations.                                                                                                               | `{}`                                               |
+| `nodeplugin.podAnnotations`                    | Specifies pod-level annotations.                                                                                                                     | `{}`                                               |
 | `nodeplugin.nodeSelector`                      | Kubernetes `nodeSelector` to add to the Daemonset                                                                                                    | `{}`                                               |
 | `nodeplugin.tolerations`                       | List of Kubernetes `tolerations` to add to the Daemonset                                                                                             | `{}`                                               |
 | `nodeplugin.forcecephkernelclient`             | Set to true to enable Ceph Kernel clients on kernel < 4.17 which support quotas                                                                      | `true`                                             |
@@ -147,26 +179,31 @@ charts and their default values.
 | `provisioner.provisioner.image.repository`     | Specifies the csi-provisioner image repository URL                                                                                                   | `registry.k8s.io/sig-storage/csi-provisioner`      |
 | `provisioner.provisioner.image.tag`            | Specifies image tag                                                                                                                                  | `v5.0.1`                                           |
 | `provisioner.provisioner.image.pullPolicy`     | Specifies pull policy                                                                                                                                | `IfNotPresent`                                     |
-| `provisioner.provisioner.image.extraArgs`      | Specifies extra arguments for the provisioner sidecar                                                                                                                                | `[]`                                     |
+| `provisioner.provisioner.args.httpEndpointPort`    | Specifies http server port for diagnostics, health checks and metrics                                                                                    | `""`                                               |
+| `provisioner.provisioner.extraArgs`            | Specifies extra arguments for the provisioner sidecar                                                                                                | `[]`                                               |
+| `provisioner.resizer.name`                     | Specifies the name of csi-resizer sidecar                                                                                                            | `resizer`                                          |
+| `provisioner.resizer.enabled`                  | Specifies whether resizer sidecar is enabled                                                                                                         | `true`                                             |
 | `provisioner.resizer.image.repository`         | Specifies the csi-resizer image repository URL                                                                                                       | `registry.k8s.io/sig-storage/csi-resizer`          |
 | `provisioner.resizer.image.tag`                | Specifies image tag                                                                                                                                  | `v1.11.1`                                           |
 | `provisioner.resizer.image.pullPolicy`         | Specifies pull policy                                                                                                                                | `IfNotPresent`                                     |
-| `provisioner.resizer.image.extraArgs`          | Specifies extra arguments for the resizer sidecar                                                                                                                                | `[]`                                     |
-| `provisioner.resizer.name`                     | Specifies the name of csi-resizer sidecar                                                                                                            | `resizer`                                          |
-| `provisioner.resizer.enabled`                  | Specifies whether resizer sidecar is enabled                                                                                                         | `true`                                             |
+| `provisioner.resizer.args.httpEndpointPort`        | Specifies http server port for diagnostics, health checks and metrics                                                                                    | `""`                                               |
+| `provisioner.resizer.extraArgs`                | Specifies extra arguments for the resizer sidecar                                                                                                    | `[]`                                               |
 | `provisioner.snapshotter.image.repository`     | Specifies the csi-snapshotter image repository URL                                                                                                   | `registry.k8s.io/sig-storage/csi-snapshotter`      |
 | `provisioner.snapshotter.image.tag`            | Specifies image tag                                                                                                                                  | `v8.0.1`                                           |
 | `provisioner.snapshotter.image.pullPolicy`     | Specifies pull policy                                                                                                                                | `IfNotPresent`                                     |
-| `provisioner.snapshotter.image.extraArgs`      | Specifies extra arguments for the snapshotter sidecar                                                                                                                                | `[]`                                     |
-| `provisioner.snapshotter.args.enableVolumeGroupSnapshots`      | enables the creation of volume group snapshots                                                                                                                                | `false`                                     |
+| `provisioner.snapshotter.args.enableVolumeGroupSnapshots`  | enables the creation of volume group snapshots                                                                                           | `false`                                            |
+| `provisioner.snapshotter.args.httpEndpointPort`    | Specifies http server port for diagnostics, health checks and metrics                                                                                    | `""`                                               |
+| `provisioner.snapshotter.extraArgs`            | Specifies extra arguments for the snapshotter sidecar                                                                                                | `[]`                                               |
 | `provisioner.nodeSelector`                     | Specifies the node selector for provisioner deployment                                                                                               | `{}`                                               |
 | `provisioner.tolerations`                      | Specifies the tolerations for provisioner deployment                                                                                                 | `{}`                                               |
 | `provisioner.affinity`                         | Specifies the affinity for provisioner deployment                                                                                                    | `{}`                                               |
 | `provisioner.podSecurityContext`               | Specifies pod-level security context.                                                                                                                | `{}`                                               |
+| `provisioner.annotations`                      | Specifies Deployment level annotations.                                                                                                              | `{}`                                               |
+| `provisioner.podAnnotations`                   | Specifies pod-level annotations.                                                                                                                     | `{}`                                               |
 | `provisionerSocketFile`                        | The filename of the provisioner socket                                                                                                               | `csi-provisioner.sock`                             |
 | `pluginSocketFile`                             | The filename of the plugin socket                                                                                                                    | `csi.sock`                                         |
 | `readAffinity.enabled` | Enable read affinity for CephFS subvolumes. Recommended to set to true if running kernel 5.8 or newer. | `false` |
-| `readAffinity.crushLocationLabels` | Define which node labels to use as CRUSH location. This should correspond to the values set in the CRUSH map. For more information, click [here](https://github.com/ceph/ceph-csi/blob/v3.9.0/docs/deploy-cephfs.md#read-affinity-using-crush-locations-for-cephfs-subvolumes)| `[]` |
+| `readAffinity.crushLocationLabels` | Define which node labels to use as CRUSH location. This should correspond to the values set in the CRUSH map. For more information, click [here](https://github.com/ceph/ceph-csi/blob/devel/docs/cephfs/deploy.md#read-affinity-using-crush-locations-for-cephfs-subvolumes)| `[]` |
 | `kubeletDir`                                   | Kubelet working directory                                                                                                                            | `/var/lib/kubelet`                                 |
 | `driverName`                                   | Name of the csi-driver                                                                                                                               | `cephfs.csi.ceph.com`                              |
 | `configMapName`                                | Name of the configmap which contains cluster configuration                                                                                           | `ceph-csi-config`                                  |
@@ -176,6 +213,8 @@ charts and their default values.
 | `storageClass.name`                            | Specifies the cephFS StorageClass name                                                                                                               | `csi-cephfs-sc`                                    |
 | `storageClass.annotations`                     | Specifies the annotations for the cephFS storageClass                                                                                                | `[]`                                               |
 | `storageClass.clusterID`                       | String representing a Ceph cluster to provision storage from                                                                                         | `<cluster-ID>`                                     |
+| `storageClass.encrypted`                       | Specifies whether volume should be encrypted. Set it to true if you want to enable encryption                                                        | `""`                                               |
+| `storageClass.encryptionKMSID`                 | Specifies the encryption kms id                                                                                                                      | `""`                                               |
 | `storageClass.fsName`                          | CephFS filesystem name into which the volume shall be created                                                                                        | `myfs`                                             |
 | `storageClass.pool`                            | Ceph pool into which volume data shall be stored                                                                                                     | `""`                                               |
 | `storageClass.fuseMountOptions`                | Comma separated string of Ceph-fuse mount options                                                                                                    | `""`                                               |
@@ -194,7 +233,9 @@ charts and their default values.
 | `secret.create`                                | Specifies whether the secret should be created                                                                                                       | `false`                                            |
 | `secret.name`                                  | Specifies the cephFS secret name                                                                                                                     | `csi-cephfs-secret`                                |
 | `secret.adminID`                               | Specifies the admin ID of the cephFS secret                                                                                                          | `<plaintext ID>`                                   |
-| `secret.adminKey`                              | Specifies the key that corresponds to the adminID                                                                                                    | `<Ceph auth key corresponding to ID above>`        |
+| `secret.adminKey`                              | Specifies the key that corresponds to the adminID                                                                                                    | `""`                                               |
+| `secret.userID`                                | Specifies the user ID of the cephFS secret. Optional, used for static provisioned PVC.                                                               | `""`                                               |
+| `secret.userKey`                               | Specifies the key that corresponds to the userID. Optional, used for static  provisioned PVC.                                                        | `<Ceph auth key corresponding to ID above>`        |
 | `selinuxMount`                                | Mount the host /etc/selinux inside pods to support selinux-enabled filesystems                                                                                                      | `true`                                            |
 | `CSIDriver.fsGroupPolicy` | Specifies the fsGroupPolicy for the CSI driver object | `File` |
 | `CSIDriver.seLinuxMount` | Specify for efficient SELinux volume relabeling | `true` |
