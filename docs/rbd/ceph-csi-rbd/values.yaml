@@ -46,7 +46,7 @@ csiConfig: []
 csiMapping: []
 
 # Configuration for the encryption KMS
-# Ref: https://github.com/ceph/ceph-csi/blob/devel/docs/rbd/deploy.md
+# Ref: https://github.com/ceph/ceph-csi/blob/devel/docs/deploy-rbd.md
 # Example:
 # encryptionKMSConfig:
 #   vault-unique-id-1:
@@ -69,9 +69,6 @@ commonLabels: {}
 logLevel: 5
 # sidecarLogLevel is the variable for Kubernetes sidecar container's log level
 sidecarLogLevel: 1
-# Log slow operations at the specified rate.
-# Operation is considered slow if it outlives its deadline.
-logSlowOperationInterval: 30s
 
 # Set fsGroupPolicy for CSI Driver object spec
 # https://kubernetes-csi.github.io/docs/support-fsgroup.html
@@ -149,7 +146,7 @@ nodeplugin:
   plugin:
     image:
       repository: quay.io/cephcsi/cephcsi
-      tag: canary
+      tag: v3.12-canary
       pullPolicy: IfNotPresent
     resources: {}
 
@@ -159,11 +156,7 @@ nodeplugin:
 
   affinity: {}
 
-  annotations: {}
-
   podSecurityContext: {}
-
-  podAnnotations: {}
 
 provisioner:
   name: provisioner
@@ -253,11 +246,6 @@ provisioner:
       tag: v5.0.1
       pullPolicy: IfNotPresent
     resources: {}
-    args:
-    #   # httpEndpointPort specifies the http server port for
-    #   # diagnostics, health checks and metrics.
-    #   # Uncomment below line to enable the `http-endpoint` arg for sidecar
-    #   httpEndpointPort: 8090
     ## For further options, check
     ## https://github.com/kubernetes-csi/external-provisioner#command-line-options
     extraArgs: []
@@ -273,11 +261,6 @@ provisioner:
       tag: v4.6.1
       pullPolicy: IfNotPresent
     resources: {}
-    args:
-    #   # httpEndpointPort specifies the http server port for
-    #   # diagnostics, health checks and metrics.
-    #   # Uncomment below line to enable the `http-endpoint` arg for sidecar
-    #   httpEndpointPort: 8093
     ## For further options, check
     ## https://github.com/kubernetes-csi/external-attacher#command-line-options
     extraArgs: []
@@ -290,11 +273,6 @@ provisioner:
       tag: v1.11.1
       pullPolicy: IfNotPresent
     resources: {}
-    args:
-    #   # httpEndpointPort specifies the http server port for
-    #   # diagnostics, health checks and metrics.
-    #   # Uncomment below line to enable the `http-endpoint` arg for sidecar
-    #   httpEndpointPort: 8091
     ## For further options, check
     ## https://github.com/kubernetes-csi/external-resizer#recommended-optional-arguments
     extraArgs: []
@@ -305,16 +283,13 @@ provisioner:
       tag: v8.0.1
       pullPolicy: IfNotPresent
     resources: {}
-    args:
-      # enableVolumeGroupSnapshots enables support for volume group snapshots
-      enableVolumeGroupSnapshots: false
-      # httpEndpointPort specifies the http server port for
-      # diagnostics, health checks and metrics.
-      # Uncomment below line to enable the `http-endpoint` arg for sidecar
-      # httpEndpointPort: 8092
     ## For further options, check
     ## https://github.com/kubernetes-csi/external-snapshotter#csi-external-snapshotter-sidecar-command-line-options
     extraArgs: []
+
+    args:
+      # enableVolumeGroupSnapshots enables support for volume group snapshots
+      enableVolumeGroupSnapshots: false
 
   nodeSelector: {}
 
@@ -322,11 +297,7 @@ provisioner:
 
   affinity: {}
 
-  annotations: {}
-
   podSecurityContext: {}
-
-  podAnnotations: {}
 
 topology:
   # domainLabels define which node labels to use as domains
@@ -415,7 +386,7 @@ storageClass:
   # By default host-path /var/log/ceph of node is bind-mounted into
   # csi-rbdplugin pod at /var/log/ceph mount path. This is to configure
   # target bindmount path used inside container for ceph clients logging.
-  # See docs/design/proposals/rbd-nbd.md for available configuration options.
+  # See docs/rbd-nbd.md for available configuration options.
   # cephLogDir: /var/log/ceph
   cephLogDir: ""
 
