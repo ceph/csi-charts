@@ -131,14 +131,14 @@ nodeplugin:
   registrar:
     image:
       repository: registry.k8s.io/sig-storage/csi-node-driver-registrar
-      tag: v2.11.1
+      tag: v2.13.0
       pullPolicy: IfNotPresent
     resources: {}
 
   plugin:
     image:
       repository: quay.io/cephcsi/cephcsi
-      tag: v3.13-canary
+      tag: canary
       pullPolicy: IfNotPresent
     resources: {}
 
@@ -229,7 +229,7 @@ provisioner:
   provisioner:
     image:
       repository: registry.k8s.io/sig-storage/csi-provisioner
-      tag: v5.0.1
+      tag: v5.1.0
       pullPolicy: IfNotPresent
     resources: {}
     args:
@@ -249,7 +249,7 @@ provisioner:
     enabled: true
     image:
       repository: registry.k8s.io/sig-storage/csi-resizer
-      tag: v1.11.1
+      tag: v1.13.1
       pullPolicy: IfNotPresent
     resources: {}
     args:
@@ -383,11 +383,9 @@ secret:
   # Key values correspond to a user name and its key, as defined in the
   # ceph cluster. User ID should have required access to the 'pool'
   # specified in the storage class
-  adminID: <plaintext ID>
-  adminKey: <Ceph auth key corresponding to ID above>
-  # User credentials are required for the static provisioned PVC.
-  userID: ""
-  userKey: ""
+  # The userID must not include the "client." prefix!
+  userID: <plaintext ID>
+  userKey: <Ceph auth key corresponding to the userID above>
 
 # This is a sample configmap that helps define a Ceph configuration as required
 # by the CSI plugins.
