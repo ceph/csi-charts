@@ -3,7 +3,7 @@ entries:
   ceph-csi-cephfs:
   - apiVersion: v1
     appVersion: 3.13.0
-    created: "2025-02-13T10:30:03.294007474Z"
+    created: "2025-02-13T10:44:31.270783539Z"
     description: Container Storage Interface (CSI) driver, provisioner, snapshotter
       and resizer for Ceph cephfs
     digest: 63c39b6ae0d99e5cadfd31dbf597ee35798689a0d36d961eee1a3ae00917072e
@@ -17,11 +17,11 @@ entries:
     sources:
     - https://github.com/ceph/ceph-csi/tree/v3.13.0/charts/ceph-csi-cephfs
     urls:
-    - cephfs/ceph-csi-cephfs-3.13.0.tgz
+    - https://ceph.github.io/csi-charts/cephfs/ceph-csi-cephfs-3.13.0.tgz
     version: 3.13.0
   - apiVersion: v1
     appVersion: 3.13-canary
-    created: "2025-02-13T10:30:03.292261329Z"
+    created: "2025-02-13T10:44:31.26981135Z"
     description: Container Storage Interface (CSI) driver, provisioner, snapshotter
       and resizer for Ceph cephfs
     digest: c5ed71a726280505938e4efe2a54f137f30ede971b8bed0beadaebe0077ccf4f
@@ -35,11 +35,11 @@ entries:
     sources:
     - https://github.com/ceph/ceph-csi/tree/release-v3.13/charts/ceph-csi-cephfs
     urls:
-    - cephfs/ceph-csi-cephfs-3.13-canary.tgz
+    - https://ceph.github.io/csi-charts/cephfs/ceph-csi-cephfs-3.13-canary.tgz
     version: 3.13-canary
   - apiVersion: v1
     appVersion: 3.12.3
-    created: "2025-02-13T10:30:03.291294361Z"
+    created: "2025-02-13T10:44:31.268840405Z"
     description: Container Storage Interface (CSI) driver, provisioner, snapshotter
       and resizer for Ceph cephfs
     digest: 635ffec67d0a95a8bffc430826b4b9d8abd99e82cffe76c7613812553ac9d8d7
@@ -53,11 +53,11 @@ entries:
     sources:
     - https://github.com/ceph/ceph-csi/tree/v3.12.3/charts/ceph-csi-cephfs
     urls:
-    - cephfs/ceph-csi-cephfs-3.12.3.tgz
+    - https://ceph.github.io/csi-charts/cephfs/ceph-csi-cephfs-3.12.3.tgz
     version: 3.12.3
   - apiVersion: v1
     appVersion: 3.12.2
-    created: "2025-02-13T10:30:03.290396122Z"
+    created: "2025-02-13T10:44:31.267980967Z"
     description: Container Storage Interface (CSI) driver, provisioner, snapshotter
       and resizer for Ceph cephfs
     digest: 3bfaa683c37666467942339e123eccd08c9d768c1d0f5ddb586b8cc7d4add485
@@ -71,11 +71,11 @@ entries:
     sources:
     - https://github.com/ceph/ceph-csi/tree/v3.12.2/charts/ceph-csi-cephfs
     urls:
-    - cephfs/ceph-csi-cephfs-3.12.2.tgz
+    - https://ceph.github.io/csi-charts/cephfs/ceph-csi-cephfs-3.12.2.tgz
     version: 3.12.2
   - apiVersion: v1
     appVersion: 3.12.1
-    created: "2025-02-13T10:30:03.289520604Z"
+    created: "2025-02-13T10:44:31.267098257Z"
     description: Container Storage Interface (CSI) driver, provisioner, snapshotter
       and resizer for Ceph cephfs
     digest: 686a8c11ea334dbb9f9ab2247154b7d59d81c4fb0f30d65497ff7da030e51356
@@ -89,11 +89,11 @@ entries:
     sources:
     - https://github.com/ceph/ceph-csi/tree/v3.12.1/charts/ceph-csi-cephfs
     urls:
-    - cephfs/ceph-csi-cephfs-3.12.1.tgz
+    - https://ceph.github.io/csi-charts/cephfs/ceph-csi-cephfs-3.12.1.tgz
     version: 3.12.1
   - apiVersion: v1
     appVersion: 3.12.0
-    created: "2025-02-13T10:30:03.288641861Z"
+    created: "2025-02-13T10:44:31.26619126Z"
     description: Container Storage Interface (CSI) driver, provisioner, snapshotter
       and resizer for Ceph cephfs
     digest: a84b881dbcaf44ce2db56a22b0f6467bc6c5d94b9f39af08a4a3df436e3ac7bd
@@ -107,11 +107,11 @@ entries:
     sources:
     - https://github.com/ceph/ceph-csi/tree/v3.12.0/charts/ceph-csi-cephfs
     urls:
-    - cephfs/ceph-csi-cephfs-3.12.0.tgz
+    - https://ceph.github.io/csi-charts/cephfs/ceph-csi-cephfs-3.12.0.tgz
     version: 3.12.0
   - apiVersion: v1
     appVersion: 3.12-canary
-    created: "2025-02-13T10:30:03.287672329Z"
+    created: "2025-02-13T10:44:31.264869646Z"
     description: Container Storage Interface (CSI) driver, provisioner, snapshotter
       and resizer for Ceph cephfs
     digest: 50da4d8946f2c10830d39912ca53a78399fd1f39109a97ffcb84394d99868fdf
@@ -125,11 +125,11 @@ entries:
     sources:
     - https://github.com/ceph/ceph-csi/tree/release-v3.12/charts/ceph-csi-cephfs
     urls:
-    - cephfs/ceph-csi-cephfs-3.12-canary.tgz
+    - https://ceph.github.io/csi-charts/cephfs/ceph-csi-cephfs-3.12-canary.tgz
     version: 3.12-canary
   - apiVersion: v1
     appVersion: 3.11.0
-    created: "2025-02-13T10:30:03.286292825Z"
+    created: "2025-02-13T10:44:31.263613958Z"
     description: Container Storage Interface (CSI) driver, provisioner, snapshotter
       and resizer for Ceph cephfs
     digest: 56c5d5fc9574746eb25d37861d752bdd8ce7a6b77b3362c3b77d15146c4c255e
@@ -143,11 +143,11 @@ entries:
     sources:
     - https://github.com/ceph/ceph-csi/tree/v3.11.0/charts/ceph-csi-cephfs
     urls:
-    - cephfs/ceph-csi-cephfs-3.11.0.tgz
+    - https://ceph.github.io/csi-charts/cephfs/ceph-csi-cephfs-3.11.0.tgz
     version: 3.11.0
   - apiVersion: v1
     appVersion: 3.11-canary
-    created: "2025-02-13T10:30:03.285114836Z"
+    created: "2025-02-13T10:44:31.262720457Z"
     description: Container Storage Interface (CSI) driver, provisioner, snapshotter
       and resizer for Ceph cephfs
     digest: 0904370096e5b52adaabbaf6eee408f4225dff6cda12a4687ed0bc525deaa17c
@@ -161,11 +161,11 @@ entries:
     sources:
     - https://github.com/ceph/ceph-csi/tree/release-v3.11/charts/ceph-csi-cephfs
     urls:
-    - cephfs/ceph-csi-cephfs-3.11-canary.tgz
+    - https://ceph.github.io/csi-charts/cephfs/ceph-csi-cephfs-3.11-canary.tgz
     version: 3.11-canary
   - apiVersion: v1
     appVersion: 3.10.2
-    created: "2025-02-13T10:30:03.284255298Z"
+    created: "2025-02-13T10:44:31.261804314Z"
     description: Container Storage Interface (CSI) driver, provisioner, snapshotter
       and resizer for Ceph cephfs
     digest: 277b10f03f773501bdf1fa7ee894234a54a22b65f1a20e005eb834c2ef61e8a4
@@ -179,11 +179,11 @@ entries:
     sources:
     - https://github.com/ceph/ceph-csi/tree/v3.10.2/charts/ceph-csi-cephfs
     urls:
-    - cephfs/ceph-csi-cephfs-3.10.2.tgz
+    - https://ceph.github.io/csi-charts/cephfs/ceph-csi-cephfs-3.10.2.tgz
     version: 3.10.2
   - apiVersion: v1
     appVersion: 3.10.1
-    created: "2025-02-13T10:30:03.283435494Z"
+    created: "2025-02-13T10:44:31.260985563Z"
     description: Container Storage Interface (CSI) driver, provisioner, snapshotter
       and resizer for Ceph cephfs
     digest: f6523ac579952f1b145d5ebf6d84ceb2df2362e80ba9095f50564fd8fba42d65
@@ -197,11 +197,11 @@ entries:
     sources:
     - https://github.com/ceph/ceph-csi/tree/v3.10.1/charts/ceph-csi-cephfs
     urls:
-    - cephfs/ceph-csi-cephfs-3.10.1.tgz
+    - https://ceph.github.io/csi-charts/cephfs/ceph-csi-cephfs-3.10.1.tgz
     version: 3.10.1
   - apiVersion: v1
     appVersion: 3.10.0
-    created: "2025-02-13T10:30:03.282600963Z"
+    created: "2025-02-13T10:44:31.260136034Z"
     description: Container Storage Interface (CSI) driver, provisioner, snapshotter
       and resizer for Ceph cephfs
     digest: 4695907280172a1cf249e4967a1fb5995e4e2fa1ebc67dc0daa48b7abe3eb1b3
@@ -215,11 +215,11 @@ entries:
     sources:
     - https://github.com/ceph/ceph-csi/tree/v3.10.0/charts/ceph-csi-cephfs
     urls:
-    - cephfs/ceph-csi-cephfs-3.10.0.tgz
+    - https://ceph.github.io/csi-charts/cephfs/ceph-csi-cephfs-3.10.0.tgz
     version: 3.10.0
   - apiVersion: v1
     appVersion: 3.10-canary
-    created: "2025-02-13T10:30:03.281762374Z"
+    created: "2025-02-13T10:44:31.259251339Z"
     description: Container Storage Interface (CSI) driver, provisioner, snapshotter
       and resizer for Ceph cephfs
     digest: c3126250263f85dc1717036283077dc57255f3ad199c7ed18c156b330f3aedb8
@@ -233,11 +233,11 @@ entries:
     sources:
     - https://github.com/ceph/ceph-csi/tree/release-v3.10/charts/ceph-csi-cephfs
     urls:
-    - cephfs/ceph-csi-cephfs-3.10-canary.tgz
+    - https://ceph.github.io/csi-charts/cephfs/ceph-csi-cephfs-3.10-canary.tgz
     version: 3.10-canary
   - apiVersion: v1
     appVersion: 3.9.0
-    created: "2025-02-13T10:30:03.314755179Z"
+    created: "2025-02-13T10:44:31.292195441Z"
     description: Container Storage Interface (CSI) driver, provisioner, snapshotter
       and resizer for Ceph cephfs
     digest: 7b009a58cb94f07f8a6d37543605aa0bd7bdfaa00a5231b16fe2c10ba1da6eb9
@@ -251,11 +251,11 @@ entries:
     sources:
     - https://github.com/ceph/ceph-csi/tree/v3.9.0/charts/ceph-csi-cephfs
     urls:
-    - cephfs/ceph-csi-cephfs-3.9.0.tgz
+    - https://ceph.github.io/csi-charts/cephfs/ceph-csi-cephfs-3.9.0.tgz
     version: 3.9.0
   - apiVersion: v1
     appVersion: 3.9-canary
-    created: "2025-02-13T10:30:03.31319672Z"
+    created: "2025-02-13T10:44:31.290583697Z"
     description: Container Storage Interface (CSI) driver, provisioner, snapshotter
       and resizer for Ceph cephfs
     digest: 178ddf40ddb2be1676841fee9a192a51a299b0a19d0f6b48379fcc3c670a7baa
@@ -269,11 +269,11 @@ entries:
     sources:
     - https://github.com/ceph/ceph-csi/tree/release-v3.9/charts/ceph-csi-cephfs
     urls:
-    - cephfs/ceph-csi-cephfs-3.9-canary.tgz
+    - https://ceph.github.io/csi-charts/cephfs/ceph-csi-cephfs-3.9-canary.tgz
     version: 3.9-canary
   - apiVersion: v1
     appVersion: 3.8.1
-    created: "2025-02-13T10:30:03.312394889Z"
+    created: "2025-02-13T10:44:31.289784042Z"
     description: Container Storage Interface (CSI) driver, provisioner, snapshotter
       and resizer for Ceph cephfs
     digest: 637ef79251048617106e4ab43c08c0abec825014d1dd1187f8d1258f543b3820
@@ -287,11 +287,11 @@ entries:
     sources:
     - https://github.com/ceph/ceph-csi/tree/v3.8.1/charts/ceph-csi-cephfs
     urls:
-    - cephfs/ceph-csi-cephfs-3.8.1.tgz
+    - https://ceph.github.io/csi-charts/cephfs/ceph-csi-cephfs-3.8.1.tgz
     version: 3.8.1
   - apiVersion: v1
     appVersion: 3.8.0
-    created: "2025-02-13T10:30:03.311605702Z"
+    created: "2025-02-13T10:44:31.289016977Z"
     description: Container Storage Interface (CSI) driver, provisioner, snapshotter
       and resizer for Ceph cephfs
     digest: eb102c5970e3b036ebdf7fa54832694d94a42afe3f43b4542b6b5193d111afac
@@ -305,11 +305,11 @@ entries:
     sources:
     - https://github.com/ceph/ceph-csi/tree/v3.8.0/charts/ceph-csi-cephfs
     urls:
-    - cephfs/ceph-csi-cephfs-3.8.0.tgz
+    - https://ceph.github.io/csi-charts/cephfs/ceph-csi-cephfs-3.8.0.tgz
     version: 3.8.0
   - apiVersion: v1
     appVersion: 3.8-canary
-    created: "2025-02-13T10:30:03.310787141Z"
+    created: "2025-02-13T10:44:31.288225427Z"
     description: Container Storage Interface (CSI) driver, provisioner, snapshotter
       and resizer for Ceph cephfs
     digest: 2f8313b307c4c271838ff1432b8e2330203b04cb0be37dbf2ecc2db85d08726a
@@ -323,11 +323,11 @@ entries:
     sources:
     - https://github.com/ceph/ceph-csi/tree/release-v3.8/charts/ceph-csi-cephfs
     urls:
-    - cephfs/ceph-csi-cephfs-3.8-canary.tgz
+    - https://ceph.github.io/csi-charts/cephfs/ceph-csi-cephfs-3.8-canary.tgz
     version: 3.8-canary
   - apiVersion: v1
     appVersion: 3.7.2
-    created: "2025-02-13T10:30:03.310009085Z"
+    created: "2025-02-13T10:44:31.287429408Z"
     description: Container Storage Interface (CSI) driver, provisioner, snapshotter
       and resizer for Ceph cephfs
     digest: de1068b7ae48b12718c448c4be050a99b6ddbb5f3fc62089bf9aeb0946720c99
@@ -341,11 +341,11 @@ entries:
     sources:
     - https://github.com/ceph/ceph-csi/tree/v3.7.2/charts/ceph-csi-cephfs
     urls:
-    - cephfs/ceph-csi-cephfs-3.7.2.tgz
+    - https://ceph.github.io/csi-charts/cephfs/ceph-csi-cephfs-3.7.2.tgz
     version: 3.7.2
   - apiVersion: v1
     appVersion: 3.7.1
-    created: "2025-02-13T10:30:03.309182298Z"
+    created: "2025-02-13T10:44:31.286616879Z"
     description: Container Storage Interface (CSI) driver, provisioner, snapshotter
       and resizer for Ceph cephfs
     digest: 9b795fefc022503f4722c459155d2d5e911ee27951d9884696bc71fc1f6963d1
@@ -359,11 +359,11 @@ entries:
     sources:
     - https://github.com/ceph/ceph-csi/tree/v3.7.1/charts/ceph-csi-cephfs
     urls:
-    - cephfs/ceph-csi-cephfs-3.7.1.tgz
+    - https://ceph.github.io/csi-charts/cephfs/ceph-csi-cephfs-3.7.1.tgz
     version: 3.7.1
   - apiVersion: v1
     appVersion: 3.7.0
-    created: "2025-02-13T10:30:03.308342798Z"
+    created: "2025-02-13T10:44:31.285776637Z"
     description: Container Storage Interface (CSI) driver, provisioner, snapshotter
       and resizer for Ceph cephfs
     digest: 72d99e41d5098b6d9252337100e001c19a4e20b12d8c712a5ab982bcc8a1aaaa
@@ -377,11 +377,11 @@ entries:
     sources:
     - https://github.com/ceph/ceph-csi/tree/v3.7.0/charts/ceph-csi-cephfs
     urls:
-    - cephfs/ceph-csi-cephfs-3.7.0.tgz
+    - https://ceph.github.io/csi-charts/cephfs/ceph-csi-cephfs-3.7.0.tgz
     version: 3.7.0
   - apiVersion: v1
     appVersion: 3.7-canary
-    created: "2025-02-13T10:30:03.306771683Z"
+    created: "2025-02-13T10:44:31.28457489Z"
     description: Container Storage Interface (CSI) driver, provisioner, snapshotter
       and resizer for Ceph cephfs
     digest: bc76b315f41733cd51fbffa7f60c77eebab657b6c7b1c55ff4b7694856fdf650
@@ -395,11 +395,11 @@ entries:
     sources:
     - https://github.com/ceph/ceph-csi/tree/release-v3.7/charts/ceph-csi-cephfs
     urls:
-    - cephfs/ceph-csi-cephfs-3.7-canary.tgz
+    - https://ceph.github.io/csi-charts/cephfs/ceph-csi-cephfs-3.7-canary.tgz
     version: 3.7-canary
   - apiVersion: v1
     appVersion: 3.6.2
-    created: "2025-02-13T10:30:03.306015397Z"
+    created: "2025-02-13T10:44:31.283604054Z"
     description: Container Storage Interface (CSI) driver, provisioner, snapshotter
       and attacher for Ceph cephfs
     digest: 27b9b2a6945999e2c7b57a08c6a8b63734233f762890e7163342f408a6b44fbe
@@ -413,11 +413,11 @@ entries:
     sources:
     - https://github.com/ceph/ceph-csi/tree/v3.6.2/charts/ceph-csi-cephfs
     urls:
-    - cephfs/ceph-csi-cephfs-3.6.2.tgz
+    - https://ceph.github.io/csi-charts/cephfs/ceph-csi-cephfs-3.6.2.tgz
     version: 3.6.2
   - apiVersion: v1
     appVersion: 3.6.1
-    created: "2025-02-13T10:30:03.30518324Z"
+    created: "2025-02-13T10:44:31.282727345Z"
     description: Container Storage Interface (CSI) driver, provisioner, snapshotter
       and attacher for Ceph cephfs
     digest: 5af43bad1a30d9244ecc5f9970575e4297138c7e1b65f663afa29b70e24bd8ee
@@ -431,11 +431,11 @@ entries:
     sources:
     - https://github.com/ceph/ceph-csi/tree/v3.6.1/charts/ceph-csi-cephfs
     urls:
-    - cephfs/ceph-csi-cephfs-3.6.1.tgz
+    - https://ceph.github.io/csi-charts/cephfs/ceph-csi-cephfs-3.6.1.tgz
     version: 3.6.1
   - apiVersion: v1
     appVersion: 3.6.0
-    created: "2025-02-13T10:30:03.304353227Z"
+    created: "2025-02-13T10:44:31.281900839Z"
     description: Container Storage Interface (CSI) driver, provisioner, snapshotter
       and attacher for Ceph cephfs
     digest: 535ac099829c511cede1cd6ab142b8e88a13bf1f30afd18c0670c878237206cd
@@ -449,11 +449,11 @@ entries:
     sources:
     - https://github.com/ceph/ceph-csi/tree/v3.6.0/charts/ceph-csi-cephfs
     urls:
-    - cephfs/ceph-csi-cephfs-3.6.0.tgz
+    - https://ceph.github.io/csi-charts/cephfs/ceph-csi-cephfs-3.6.0.tgz
     version: 3.6.0
   - apiVersion: v1
     appVersion: 3.6-canary
-    created: "2025-02-13T10:30:03.303521351Z"
+    created: "2025-02-13T10:44:31.281056901Z"
     description: Container Storage Interface (CSI) driver, provisioner, snapshotter
       and attacher for Ceph cephfs
     digest: 2c19f225abd6a5bf2f9e70defe604648e5638a352e14e4cc87b3ea930e1868e4
@@ -467,11 +467,11 @@ entries:
     sources:
     - https://github.com/ceph/ceph-csi/tree/release-v3.6/charts/ceph-csi-cephfs
     urls:
-    - cephfs/ceph-csi-cephfs-3.6-canary.tgz
+    - https://ceph.github.io/csi-charts/cephfs/ceph-csi-cephfs-3.6-canary.tgz
     version: 3.6-canary
   - apiVersion: v1
     appVersion: 3.5.1
-    created: "2025-02-13T10:30:03.302680348Z"
+    created: "2025-02-13T10:44:31.28019546Z"
     description: Container Storage Interface (CSI) driver, provisioner, snapshotter
       and attacher for Ceph cephfs
     digest: ab01238df72f73e1f25ff806b391b9939b48f1dd194251539b0f9a0566465684
@@ -485,11 +485,11 @@ entries:
     sources:
     - https://github.com/ceph/ceph-csi/tree/v3.5.1/charts/ceph-csi-cephfs
     urls:
-    - cephfs/ceph-csi-cephfs-3.5.1.tgz
+    - https://ceph.github.io/csi-charts/cephfs/ceph-csi-cephfs-3.5.1.tgz
     version: 3.5.1
   - apiVersion: v1
     appVersion: 3.5.0
-    created: "2025-02-13T10:30:03.301844174Z"
+    created: "2025-02-13T10:44:31.279292591Z"
     description: Container Storage Interface (CSI) driver, provisioner, snapshotter
       and attacher for Ceph cephfs
     digest: 1c3ed3565b2c2499381e022cd0b93e81e36e57ff62965cc816f40251da0a5832
@@ -503,11 +503,11 @@ entries:
     sources:
     - https://github.com/ceph/ceph-csi/tree/v3.5.0/charts/ceph-csi-cephfs
     urls:
-    - cephfs/ceph-csi-cephfs-3.5.0.tgz
+    - https://ceph.github.io/csi-charts/cephfs/ceph-csi-cephfs-3.5.0.tgz
     version: 3.5.0
   - apiVersion: v1
     appVersion: 3.5-canary
-    created: "2025-02-13T10:30:03.30097585Z"
+    created: "2025-02-13T10:44:31.278032492Z"
     description: Container Storage Interface (CSI) driver, provisioner, snapshotter
       and attacher for Ceph cephfs
     digest: ee467188db7efd4756bd8694f3e8aa53227677092dfc5c2a49ad28d31ff90930
@@ -521,11 +521,11 @@ entries:
     sources:
     - https://github.com/ceph/ceph-csi/tree/release-v3.5/charts/ceph-csi-cephfs
     urls:
-    - cephfs/ceph-csi-cephfs-3.5-canary.tgz
+    - https://ceph.github.io/csi-charts/cephfs/ceph-csi-cephfs-3.5-canary.tgz
     version: 3.5-canary
   - apiVersion: v1
     appVersion: v3.4.0
-    created: "2025-02-13T10:30:03.299249087Z"
+    created: "2025-02-13T10:44:31.276963163Z"
     description: Container Storage Interface (CSI) driver, provisioner, snapshotter
       and attacher for Ceph cephfs
     digest: ba96da786eb51dfe7ab0107abb179e544afc532f84f094e8bbfeb89de76b1e29
@@ -539,11 +539,11 @@ entries:
     sources:
     - https://github.com/ceph/ceph-csi/tree/v3.4.0/charts/ceph-csi-cephfs
     urls:
-    - cephfs/ceph-csi-cephfs-3.4.0.tgz
+    - https://ceph.github.io/csi-charts/cephfs/ceph-csi-cephfs-3.4.0.tgz
     version: 3.4.0
   - apiVersion: v1
     appVersion: 3.4-canary
-    created: "2025-02-13T10:30:03.298467224Z"
+    created: "2025-02-13T10:44:31.276175229Z"
     description: Container Storage Interface (CSI) driver, provisioner, snapshotter
       and attacher for Ceph cephfs
     digest: bf2fe42e92543cddb474fa4de4361ef02564b5c86ac7e1a0190c56cabeef332b
@@ -557,11 +557,11 @@ entries:
     sources:
     - https://github.com/ceph/ceph-csi/tree/release-v3.4/charts/ceph-csi-cephfs
     urls:
-    - cephfs/ceph-csi-cephfs-3.4-canary.tgz
+    - https://ceph.github.io/csi-charts/cephfs/ceph-csi-cephfs-3.4-canary.tgz
     version: 3.4-canary
   - apiVersion: v1
     appVersion: v3.3.1
-    created: "2025-02-13T10:30:03.297670002Z"
+    created: "2025-02-13T10:44:31.275364643Z"
     description: Container Storage Interface (CSI) driver, provisioner, snapshotter
       and attacher for Ceph cephfs
     digest: a916607ac12a77ea8327dffdb54e3ad650e191c92fa24412c617a102a14738fd
@@ -575,11 +575,11 @@ entries:
     sources:
     - https://github.com/ceph/ceph-csi/tree/v3.3.1/charts/ceph-csi-cephfs
     urls:
-    - cephfs/ceph-csi-cephfs-3.3.1.tgz
+    - https://ceph.github.io/csi-charts/cephfs/ceph-csi-cephfs-3.3.1.tgz
     version: 3.3.1
   - apiVersion: v1
     appVersion: 3.3-canary
-    created: "2025-02-13T10:30:03.297073043Z"
+    created: "2025-02-13T10:44:31.274736248Z"
     description: Container Storage Interface (CSI) driver, provisioner, snapshotter
       and attacher for Ceph cephfs
     digest: d5c4d3b8297c61683d00457ec097b33122a2c88bcbbf82aec3e5b249e4f99358
@@ -593,11 +593,11 @@ entries:
     sources:
     - https://github.com/ceph/ceph-csi/tree//charts/ceph-csi-cephfs
     urls:
-    - cephfs/ceph-csi-cephfs-3.3-canary.tgz
+    - https://ceph.github.io/csi-charts/cephfs/ceph-csi-cephfs-3.3-canary.tgz
     version: 3.3-canary
   - apiVersion: v1
     appVersion: v3.2.2
-    created: "2025-02-13T10:30:03.296436189Z"
+    created: "2025-02-13T10:44:31.274104256Z"
     description: Container Storage Interface (CSI) driver, provisioner, snapshotter
       and attacher for Ceph cephfs
     digest: b056e11557312324c352798ed24377b64a93b15ce9a990ea157b9a571a921bc5
@@ -611,11 +611,11 @@ entries:
     sources:
     - https://github.com/ceph/ceph-csi/tree/v3.2.2/charts/ceph-csi-cephfs
     urls:
-    - cephfs/ceph-csi-cephfs-3.2.2.tgz
+    - https://ceph.github.io/csi-charts/cephfs/ceph-csi-cephfs-3.2.2.tgz
     version: 3.2.2
   - apiVersion: v1
     appVersion: v3.2.1
-    created: "2025-02-13T10:30:03.295835873Z"
+    created: "2025-02-13T10:44:31.273477815Z"
     description: Container Storage Interface (CSI) driver, provisioner, snapshotter
       and attacher for Ceph cephfs
     digest: 7e6539e74ece5e0e916916b6d365d42a7b9a963c8fc62b3d569439c41eb75fa2
@@ -629,11 +629,11 @@ entries:
     sources:
     - https://github.com/ceph/ceph-csi/tree/v3.2.1/charts/ceph-csi-cephfs
     urls:
-    - cephfs/ceph-csi-cephfs-3.2.1.tgz
+    - https://ceph.github.io/csi-charts/cephfs/ceph-csi-cephfs-3.2.1.tgz
     version: 3.2.1
   - apiVersion: v1
     appVersion: v3.2.0
-    created: "2025-02-13T10:30:03.295246307Z"
+    created: "2025-02-13T10:44:31.272806289Z"
     description: Container Storage Interface (CSI) driver, provisioner, snapshotter
       and attacher for Ceph cephfs
     digest: bc529b2ef8e498942acf4bb8451ec0fc9a4a2c7e09a660ea1564853db590ddee
@@ -647,11 +647,11 @@ entries:
     sources:
     - https://github.com/ceph/ceph-csi/tree/v3.2.0/charts/ceph-csi-cephfs
     urls:
-    - cephfs/ceph-csi-cephfs-3.2.0.tgz
+    - https://ceph.github.io/csi-charts/cephfs/ceph-csi-cephfs-3.2.0.tgz
     version: 3.2.0
   - apiVersion: v1
     appVersion: 3.2-canary
-    created: "2025-02-13T10:30:03.294629862Z"
+    created: "2025-02-13T10:44:31.272147437Z"
     description: Container Storage Interface (CSI) driver, provisioner, snapshotter
       and attacher for Ceph cephfs
     digest: d2c66f62ceaec1c7b9384bf6fca339d1f051b73e0aec4ea449d7059bf40cf113
@@ -665,11 +665,11 @@ entries:
     sources:
     - https://github.com/ceph/ceph-csi/tree/release-v3.2/charts/ceph-csi-cephfs
     urls:
-    - cephfs/ceph-csi-cephfs-3.2-canary.tgz
+    - https://ceph.github.io/csi-charts/cephfs/ceph-csi-cephfs-3.2-canary.tgz
     version: 3.2-canary
   - apiVersion: v1
     appVersion: v3.1.2
-    created: "2025-02-13T10:30:03.28086697Z"
+    created: "2025-02-13T10:44:31.257645957Z"
     description: Container Storage Interface (CSI) driver, provisioner, snapshotter
       and attacher for Ceph cephfs
     digest: b1b642888854315bcbedeb1694cf1f5f57f865a0a1a99aa0e7c728a11f9c308c
@@ -683,11 +683,11 @@ entries:
     sources:
     - https://github.com/ceph/ceph-csi/tree/v3.1.2/charts/ceph-csi-cephfs
     urls:
-    - cephfs/ceph-csi-cephfs-3.1.2.tgz
+    - https://ceph.github.io/csi-charts/cephfs/ceph-csi-cephfs-3.1.2.tgz
     version: 3.1.2
   - apiVersion: v1
     appVersion: v3.1.1
-    created: "2025-02-13T10:30:03.279602087Z"
+    created: "2025-02-13T10:44:31.257047398Z"
     description: Container Storage Interface (CSI) driver, provisioner, snapshotter
       and attacher for Ceph cephfs
     digest: 6410eb001569942872ee60124038a5de102c50095ab01fd1dea8a21920616a5b
@@ -701,11 +701,11 @@ entries:
     sources:
     - https://github.com/ceph/ceph-csi/tree/v3.1.1/charts/ceph-csi-cephfs
     urls:
-    - cephfs/ceph-csi-cephfs-3.1.1.tgz
+    - https://ceph.github.io/csi-charts/cephfs/ceph-csi-cephfs-3.1.1.tgz
     version: 3.1.1
   - apiVersion: v1
     appVersion: v3.1.0
-    created: "2025-02-13T10:30:03.279015767Z"
+    created: "2025-02-13T10:44:31.256423531Z"
     description: Container Storage Interface (CSI) driver, provisioner, snapshotter
       and attacher for Ceph cephfs
     digest: a0077a68805294d0b82288ea45a214ea10298bdbf1eaeca591891c0654eb8e9c
@@ -719,11 +719,11 @@ entries:
     sources:
     - https://github.com/ceph/ceph-csi/tree/v3.1.0/charts/ceph-csi-cephfs
     urls:
-    - cephfs/ceph-csi-cephfs-3.1.0.tgz
+    - https://ceph.github.io/csi-charts/cephfs/ceph-csi-cephfs-3.1.0.tgz
     version: 3.1.0
   - apiVersion: v1
     appVersion: 3.1-canary
-    created: "2025-02-13T10:30:03.278411804Z"
+    created: "2025-02-13T10:44:31.255791269Z"
     description: Container Storage Interface (CSI) driver, provisioner, snapshotter
       and attacher for Ceph cephfs
     digest: 2f00a983bd0d308c905cad06e38bd0a3537cc73d5e02b710e01c13bd38a89857
@@ -737,11 +737,11 @@ entries:
     sources:
     - https://github.com/ceph/ceph-csi/tree/release-v3.1/charts/ceph-csi-cephfs
     urls:
-    - cephfs/ceph-csi-cephfs-3.1-canary.tgz
+    - https://ceph.github.io/csi-charts/cephfs/ceph-csi-cephfs-3.1-canary.tgz
     version: 3.1-canary
   - apiVersion: v1
     appVersion: v3.0.0
-    created: "2025-02-13T10:30:03.277802262Z"
+    created: "2025-02-13T10:44:31.255194994Z"
     description: Container Storage Interface (CSI) driver, provisioner, and attacher
       for Ceph cephfs
     digest: 0686e5ade62d59ee5822e73ec43f2390d9f878afe516304dceba4144f549b553
@@ -755,11 +755,11 @@ entries:
     sources:
     - https://github.com/ceph/ceph-csi/tree/v3.0.0/charts/ceph-csi-cephfs
     urls:
-    - cephfs/ceph-csi-cephfs-3.0.0.tgz
+    - https://ceph.github.io/csi-charts/cephfs/ceph-csi-cephfs-3.0.0.tgz
     version: 3.0.0
   - apiVersion: v1
     appVersion: canary
-    created: "2025-02-13T10:30:03.276614985Z"
+    created: "2025-02-13T10:44:31.253978689Z"
     description: Container Storage Interface (CSI) driver, provisioner, snapshotter
       and resizer for Ceph cephfs
     digest: 41a859268de2df3e58b7e9af4d0dca81525f413171780c10f0b5d64166b0b1b3
@@ -773,11 +773,11 @@ entries:
     sources:
     - https://github.com/ceph/ceph-csi/tree/devel/charts/ceph-csi-cephfs
     urls:
-    - cephfs/ceph-csi-cephfs-3-canary.tgz
+    - https://ceph.github.io/csi-charts/cephfs/ceph-csi-cephfs-3-canary.tgz
     version: 3-canary
   - apiVersion: v1
     appVersion: 3.0-canary
-    created: "2025-02-13T10:30:03.277220711Z"
+    created: "2025-02-13T10:44:31.254575826Z"
     description: Container Storage Interface (CSI) driver, provisioner, and attacher
       for Ceph cephfs
     digest: 40f0897c6ca777a6df936862737fa2b5726969c6b705d41d57fb1e7f04a2a71d
@@ -791,11 +791,11 @@ entries:
     sources:
     - https://github.com/ceph/ceph-csi/tree/release-v3.0/charts/ceph-csi-cephfs
     urls:
-    - cephfs/ceph-csi-cephfs-3.0-canary.tgz
+    - https://ceph.github.io/csi-charts/cephfs/ceph-csi-cephfs-3.0-canary.tgz
     version: 3.0-canary
   - apiVersion: v1
     appVersion: v2.1.2
-    created: "2025-02-13T10:30:03.275630605Z"
+    created: "2025-02-13T10:44:31.25296322Z"
     description: Container Storage Interface (CSI) driver, provisioner, and attacher
       for Ceph cephfs
     digest: 22f74ef164ece766a223694223737988f682778d94e369783f135df74c70c586
@@ -809,11 +809,11 @@ entries:
     sources:
     - https://github.com/ceph/ceph-csi/tree/v2.1.2/charts/ceph-csi-cephfs
     urls:
-    - cephfs/ceph-csi-cephfs-2.1.2.tgz
+    - https://ceph.github.io/csi-charts/cephfs/ceph-csi-cephfs-2.1.2.tgz
     version: 2.1.2
   - apiVersion: v1
     appVersion: v2.1.1
-    created: "2025-02-13T10:30:03.275048123Z"
+    created: "2025-02-13T10:44:31.251891286Z"
     description: Container Storage Interface (CSI) driver, provisioner, and attacher
       for Ceph cephfs
     digest: 05efffcab7165e164ce8342a85098573fbf052e81d3802d1dbc9e0d38c0cc2e4
@@ -827,11 +827,11 @@ entries:
     sources:
     - https://github.com/ceph/ceph-csi/tree/v2.1.1/charts/ceph-csi-cephfs
     urls:
-    - cephfs/ceph-csi-cephfs-2.1.1.tgz
+    - https://ceph.github.io/csi-charts/cephfs/ceph-csi-cephfs-2.1.1.tgz
     version: 2.1.1
   - apiVersion: v1
     appVersion: 2.1.0
-    created: "2025-02-13T10:30:03.27441739Z"
+    created: "2025-02-13T10:44:31.251147516Z"
     description: Container Storage Interface (CSI) driver, provisioner, and attacher
       for Ceph cephfs
     digest: d053c122fa83e5e57ceca1a36cb9a67e326e6bf6525b28145a0f5e1150a153ce
@@ -845,11 +845,11 @@ entries:
     sources:
     - https://github.com/ceph/ceph-csi/tree/v2.1.0/charts/ceph-csi-cephfs
     urls:
-    - cephfs/ceph-csi-cephfs-2.1.0.tgz
+    - https://ceph.github.io/csi-charts/cephfs/ceph-csi-cephfs-2.1.0.tgz
     version: 2.1.0
   - apiVersion: v1
     appVersion: 2.1-canary
-    created: "2025-02-13T10:30:03.273090476Z"
+    created: "2025-02-13T10:44:31.25055119Z"
     description: Container Storage Interface (CSI) driver, provisioner, and attacher
       for Ceph cephfs
     digest: 9b03b9738c8332f41017e435d08c8c7e536fd50472ef4fe308bf019ebd22329c
@@ -863,11 +863,11 @@ entries:
     sources:
     - https://github.com/ceph/ceph-csi/tree/release-v2.1/charts/ceph-csi-cephfs
     urls:
-    - cephfs/ceph-csi-cephfs-2.1-canary.tgz
+    - https://ceph.github.io/csi-charts/cephfs/ceph-csi-cephfs-2.1-canary.tgz
     version: 2.1-canary
   - apiVersion: v1
     appVersion: v2.0.1
-    created: "2025-02-13T10:30:03.272469141Z"
+    created: "2025-02-13T10:44:31.249951929Z"
     description: Container Storage Interface (CSI) driver, provisioner, and attacher
       for Ceph cephfs
     digest: fda361984faea2304a36d23a3aa2a6d64fbdd84ca31f5322f0da167d4158f295
@@ -881,11 +881,11 @@ entries:
     sources:
     - https://github.com/ceph/ceph-csi/tree/v2.0.1/charts/ceph-csi-cephfs
     urls:
-    - cephfs/ceph-csi-cephfs-2.0.1.tgz
+    - https://ceph.github.io/csi-charts/cephfs/ceph-csi-cephfs-2.0.1.tgz
     version: 2.0.1
   - apiVersion: v1
     appVersion: v2.0.0
-    created: "2025-02-13T10:30:03.271806449Z"
+    created: "2025-02-13T10:44:31.249305571Z"
     description: Container Storage Interface (CSI) driver, provisioner, and attacher
       for Ceph cephfs
     digest: 9b0acc9caf8318bf1cdee55eab37c178dcd9bd74e7e296f9d7940616a57fa56b
@@ -899,11 +899,11 @@ entries:
     sources:
     - https://github.com/ceph/ceph-csi/tree/v2.0.0/charts/ceph-csi-cephfs
     urls:
-    - cephfs/ceph-csi-cephfs-2.0.0.tgz
+    - https://ceph.github.io/csi-charts/cephfs/ceph-csi-cephfs-2.0.0.tgz
     version: 2.0.0
   - apiVersion: v1
     appVersion: 2.0-canary
-    created: "2025-02-13T10:30:03.271206083Z"
+    created: "2025-02-13T10:44:31.248694137Z"
     description: Container Storage Interface (CSI) driver, provisioner, and attacher
       for Ceph cephfs
     digest: 573295019b7040fe1057de86f11e8b9a6b185b78619379e0db7dd74ccfbcbbc8
@@ -917,11 +917,11 @@ entries:
     sources:
     - https://github.com/ceph/ceph-csi/tree/release-v2.0/charts/ceph-csi-cephfs
     urls:
-    - cephfs/ceph-csi-cephfs-2.0-canary.tgz
+    - https://ceph.github.io/csi-charts/cephfs/ceph-csi-cephfs-2.0-canary.tgz
     version: 2.0-canary
   - apiVersion: v1
     appVersion: canary
-    created: "2025-02-13T10:30:03.270258412Z"
+    created: "2025-02-13T10:44:31.248045965Z"
     description: Container Storage Interface (CSI) driver, provisioner, snapshotter
       and attacher for Ceph cephfs
     digest: f93922b0459f89e026d2f87aa57abbcd4c00cedda8229e230ff21276b53c7af4
@@ -935,11 +935,11 @@ entries:
     sources:
     - https://github.com/ceph/ceph-csi/tree/devel/charts/ceph-csi-cephfs
     urls:
-    - cephfs/ceph-csi-cephfs-1.3.0-canary.tgz
+    - https://ceph.github.io/csi-charts/cephfs/ceph-csi-cephfs-1.3.0-canary.tgz
     version: 1.3.0-canary
   - apiVersion: v1
     appVersion: 1.2.2
-    created: "2025-02-13T10:30:03.269405526Z"
+    created: "2025-02-13T10:44:31.247059971Z"
     description: Container Storage Interface (CSI) driver, provisioner, and attacher
       for Ceph cephfs
     digest: b0447a8b2ecd5b7a175f742b9b8e53e887d0c66a0f16748f38a7f2972d788f53
@@ -953,11 +953,11 @@ entries:
     sources:
     - https://github.com/ceph/ceph-csi/tree/v1.2.2/charts/ceph-csi-cephfs
     urls:
-    - cephfs/ceph-csi-cephfs-1.2.2.tgz
+    - https://ceph.github.io/csi-charts/cephfs/ceph-csi-cephfs-1.2.2.tgz
     version: 1.2.2
   - apiVersion: v1
     appVersion: 1.2-canary
-    created: "2025-02-13T10:30:03.26880463Z"
+    created: "2025-02-13T10:44:31.246388285Z"
     description: Container Storage Interface (CSI) driver, provisioner, and attacher
       for Ceph cephfs
     digest: 0e3956c53bd6040402a7e300e88edf1d161a5b1e918d705476e7445c41af7173
@@ -971,11 +971,11 @@ entries:
     sources:
     - https://github.com/ceph/ceph-csi/tree/release-v1.2.0/charts/ceph-csi-cephfs
     urls:
-    - cephfs/ceph-csi-cephfs-1.2-canary.tgz
+    - https://ceph.github.io/csi-charts/cephfs/ceph-csi-cephfs-1.2-canary.tgz
     version: 1.2-canary
   - apiVersion: v1
     appVersion: 1.1.0
-    created: "2025-02-13T10:30:03.268202501Z"
+    created: "2025-02-13T10:44:31.24504944Z"
     description: Container Storage Interface (CSI) driver, provisioner, and attacher
       for Ceph cephfs
     digest: deefe1fa96404e011a3212bd35018a63ad71d8410bf9e7e6f0701a1f7ff54765
@@ -988,11 +988,11 @@ entries:
     sources:
     - https://github.com/ceph/ceph-csi/tree/csi-v1.0/deploy/cephfs/helm
     urls:
-    - cephfs/ceph-csi-cephfs-1.1.0.tgz
+    - https://ceph.github.io/csi-charts/cephfs/ceph-csi-cephfs-1.1.0.tgz
     version: 1.1.0
   - apiVersion: v1
     appVersion: 1.0.0
-    created: "2025-02-13T10:30:03.267625027Z"
+    created: "2025-02-13T10:44:31.24464281Z"
     description: Container Storage Interface (CSI) driver, provisioner, and attacher
       for Ceph cephfs
     digest: 08ccdad029e374e06310233134a896df0b93c6de98012968b1731b040653ca61
@@ -1005,11 +1005,11 @@ entries:
     sources:
     - https://github.com/ceph/ceph-csi/tree/csi-v1.0/deploy/cephfs/helm
     urls:
-    - cephfs/ceph-csi-cephfs-0.8.0.tgz
+    - https://ceph.github.io/csi-charts/cephfs/ceph-csi-cephfs-0.8.0.tgz
     version: 0.8.0
   - apiVersion: v1
     appVersion: 1.0.0
-    created: "2025-02-13T10:30:03.26653811Z"
+    created: "2025-02-13T10:44:31.244218116Z"
     description: Container Storage Interface (CSI) driver, provisioner, and attacher
       for Ceph cephfs
     digest: 991303608d80b49700e3ff7c38439c6e44ae1d28971dc006f3549c4d546aab6d
@@ -1022,11 +1022,11 @@ entries:
     sources:
     - https://github.com/ceph/ceph-csi/tree/csi-v1.0/deploy/cephfs/helm
     urls:
-    - cephfs/ceph-csi-cephfs-0.7.0.tgz
+    - https://ceph.github.io/csi-charts/cephfs/ceph-csi-cephfs-0.7.0.tgz
     version: 0.7.0
   - apiVersion: v1
     appVersion: 1.0.0
-    created: "2025-02-13T10:30:03.266144458Z"
+    created: "2025-02-13T10:44:31.243743769Z"
     description: Container Storage Interface (CSI) driver, provisioner, and attacher
       for Ceph cephfs
     digest: 7f3fe2e65670bb11015b0a404653c7c189198a57b00f127dc6ba8680c7c807e7
@@ -1039,11 +1039,11 @@ entries:
     sources:
     - https://github.com/ceph/ceph-csi/tree/csi-v1.0/deploy/cephfs/helm
     urls:
-    - cephfs/ceph-csi-cephfs-0.6.0.tgz
+    - https://ceph.github.io/csi-charts/cephfs/ceph-csi-cephfs-0.6.0.tgz
     version: 0.6.0
   - apiVersion: v1
     appVersion: 1.0.0
-    created: "2025-02-13T10:30:03.265725009Z"
+    created: "2025-02-13T10:44:31.243324725Z"
     description: Container Storage Interface (CSI) driver, provisioner, and attacher
       for Ceph cephfs
     digest: be9a82ec2dcd529f747fee39abaea0c0acd5ef8305224a5f8c8bf2741352d29e
@@ -1056,11 +1056,11 @@ entries:
     sources:
     - https://github.com/ceph/ceph-csi/tree/csi-v1.0/deploy/cephfs/helm
     urls:
-    - cephfs/ceph-csi-cephfs-0.5.3.tgz
+    - https://ceph.github.io/csi-charts/cephfs/ceph-csi-cephfs-0.5.3.tgz
     version: 0.5.3
   - apiVersion: v1
     appVersion: 1.0.0
-    created: "2025-02-13T10:30:03.265342988Z"
+    created: "2025-02-13T10:44:31.242902586Z"
     description: Container Storage Interface (CSI) driver, provisioner, and attacher
       for Ceph cephfs
     digest: 0f5bd8542139951d93ac26fef23011eb8a0d789c9d25aeca137ea47f3bc6d56f
@@ -1073,11 +1073,11 @@ entries:
     sources:
     - https://github.com/ceph/ceph-csi/tree/csi-v1.0/deploy/cephfs/helm
     urls:
-    - cephfs/ceph-csi-cephfs-0.5.1.tgz
+    - https://ceph.github.io/csi-charts/cephfs/ceph-csi-cephfs-0.5.1.tgz
     version: 0.5.1
   - apiVersion: v1
     appVersion: 1.0.0
-    created: "2025-02-13T10:30:03.264919581Z"
+    created: "2025-02-13T10:44:31.242363938Z"
     description: Container Storage Interface (CSI) driver, provisioner, and attacher
       for Ceph cephfs
     digest: 3b1a8129b85b09146c33454a8817fa6362a866be947478224d1ccbdff9a6c2b3
@@ -1090,11 +1090,11 @@ entries:
     sources:
     - https://github.com/ceph/ceph-csi/tree/csi-v1.0/deploy/cephfs/helm
     urls:
-    - cephfs/ceph-csi-cephfs-0.5.0.tgz
+    - https://ceph.github.io/csi-charts/cephfs/ceph-csi-cephfs-0.5.0.tgz
     version: 0.5.0
   - apiVersion: v1
     appVersion: 1.0.0
-    created: "2025-02-13T10:30:03.264501023Z"
+    created: "2025-02-13T10:44:31.241831142Z"
     description: Container Storage Interface (CSI) driver, provisioner, and attacher
       for Ceph cephfs
     digest: f9afd37af2b5d38a2580324e13ab4ed8f637baf9c14ef93bdb920d8fa5b11a62
@@ -1107,12 +1107,12 @@ entries:
     sources:
     - https://github.com/ceph/ceph-csi/tree/csi-v1.0/deploy/cephfs/helm
     urls:
-    - cephfs/ceph-csi-cephfs-0.4.0.tgz
+    - https://ceph.github.io/csi-charts/cephfs/ceph-csi-cephfs-0.4.0.tgz
     version: 0.4.0
   ceph-csi-rbd:
   - apiVersion: v1
     appVersion: 3.13.0
-    created: "2025-02-13T10:30:03.348191911Z"
+    created: "2025-02-13T10:44:31.326051375Z"
     description: Container Storage Interface (CSI) driver, provisioner, snapshotter,
       resizer and attacher for Ceph RBD
     digest: 5ff5bdd0baeadf440e5a47d0cb69de6d70b504e27edb254c7d666fb0db573044
@@ -1126,11 +1126,11 @@ entries:
     sources:
     - https://github.com/ceph/ceph-csi/tree/v3.13.0/charts/ceph-csi-rbd
     urls:
-    - rbd/ceph-csi-rbd-3.13.0.tgz
+    - https://ceph.github.io/csi-charts/rbd/ceph-csi-rbd-3.13.0.tgz
     version: 3.13.0
   - apiVersion: v1
     appVersion: 3.13-canary
-    created: "2025-02-13T10:30:03.346392173Z"
+    created: "2025-02-13T10:44:31.324323895Z"
     description: Container Storage Interface (CSI) driver, provisioner, snapshotter,
       resizer and attacher for Ceph RBD
     digest: d1fd8f7bd09dc9f235e86399307576ea6e1d7ecc984e335c38236913d0b87c11
@@ -1144,11 +1144,11 @@ entries:
     sources:
     - https://github.com/ceph/ceph-csi/tree/release-v3.13/charts/ceph-csi-rbd
     urls:
-    - rbd/ceph-csi-rbd-3.13-canary.tgz
+    - https://ceph.github.io/csi-charts/rbd/ceph-csi-rbd-3.13-canary.tgz
     version: 3.13-canary
   - apiVersion: v1
     appVersion: 3.12.3
-    created: "2025-02-13T10:30:03.345288631Z"
+    created: "2025-02-13T10:44:31.3231825Z"
     description: Container Storage Interface (CSI) driver, provisioner, snapshotter,
       resizer and attacher for Ceph RBD
     digest: 486ea9c308593989692c9d1ffedd0827c1d8f7672767838ea9f74db676218ea6
@@ -1162,11 +1162,11 @@ entries:
     sources:
     - https://github.com/ceph/ceph-csi/tree/v3.12.3/charts/ceph-csi-rbd
     urls:
-    - rbd/ceph-csi-rbd-3.12.3.tgz
+    - https://ceph.github.io/csi-charts/rbd/ceph-csi-rbd-3.12.3.tgz
     version: 3.12.3
   - apiVersion: v1
     appVersion: 3.12.2
-    created: "2025-02-13T10:30:03.344233029Z"
+    created: "2025-02-13T10:44:31.322118451Z"
     description: Container Storage Interface (CSI) driver, provisioner, snapshotter,
       resizer and attacher for Ceph RBD
     digest: 9c951dd989a2f7848db838f079c267bea03fca3888d1f75d1718f4f272bd95de
@@ -1180,11 +1180,11 @@ entries:
     sources:
     - https://github.com/ceph/ceph-csi/tree/v3.12.2/charts/ceph-csi-rbd
     urls:
-    - rbd/ceph-csi-rbd-3.12.2.tgz
+    - https://ceph.github.io/csi-charts/rbd/ceph-csi-rbd-3.12.2.tgz
     version: 3.12.2
   - apiVersion: v1
     appVersion: 3.12.1
-    created: "2025-02-13T10:30:03.34317328Z"
+    created: "2025-02-13T10:44:31.321039002Z"
     description: Container Storage Interface (CSI) driver, provisioner, snapshotter,
       resizer and attacher for Ceph RBD
     digest: b0112c133b1d19032272a16cfdb251f144a72f747f2ac711ca45e20ff4ac86b1
@@ -1198,11 +1198,11 @@ entries:
     sources:
     - https://github.com/ceph/ceph-csi/tree/v3.12.1/charts/ceph-csi-rbd
     urls:
-    - rbd/ceph-csi-rbd-3.12.1.tgz
+    - https://ceph.github.io/csi-charts/rbd/ceph-csi-rbd-3.12.1.tgz
     version: 3.12.1
   - apiVersion: v1
     appVersion: 3.12.0
-    created: "2025-02-13T10:30:03.3421026Z"
+    created: "2025-02-13T10:44:31.319943673Z"
     description: Container Storage Interface (CSI) driver, provisioner, snapshotter,
       resizer and attacher for Ceph RBD
     digest: 5d4d2562578791314cdf6c57c2c175221348e228cecb60d3ccc3678efc00ddd7
@@ -1216,11 +1216,11 @@ entries:
     sources:
     - https://github.com/ceph/ceph-csi/tree/v3.12.0/charts/ceph-csi-rbd
     urls:
-    - rbd/ceph-csi-rbd-3.12.0.tgz
+    - https://ceph.github.io/csi-charts/rbd/ceph-csi-rbd-3.12.0.tgz
     version: 3.12.0
   - apiVersion: v1
     appVersion: 3.12-canary
-    created: "2025-02-13T10:30:03.34097819Z"
+    created: "2025-02-13T10:44:31.318784786Z"
     description: Container Storage Interface (CSI) driver, provisioner, snapshotter,
       resizer and attacher for Ceph RBD
     digest: e34ccd9db82e956f630a6e83962a4aae0871ff4f706a78431647c60d8c0a0ef5
@@ -1234,11 +1234,11 @@ entries:
     sources:
     - https://github.com/ceph/ceph-csi/tree/release-v3.12/charts/ceph-csi-rbd
     urls:
-    - rbd/ceph-csi-rbd-3.12-canary.tgz
+    - https://ceph.github.io/csi-charts/rbd/ceph-csi-rbd-3.12-canary.tgz
     version: 3.12-canary
   - apiVersion: v1
     appVersion: 3.11.0
-    created: "2025-02-13T10:30:03.33906307Z"
+    created: "2025-02-13T10:44:31.316990499Z"
     description: Container Storage Interface (CSI) driver, provisioner, snapshotter,
       resizer and attacher for Ceph RBD
     digest: 512947ec22cc6360f1bf191beb4da6d1dc8552d1dcc82b2104aae737a2e904e2
@@ -1252,11 +1252,11 @@ entries:
     sources:
     - https://github.com/ceph/ceph-csi/tree/v3.11.0/charts/ceph-csi-rbd
     urls:
-    - rbd/ceph-csi-rbd-3.11.0.tgz
+    - https://ceph.github.io/csi-charts/rbd/ceph-csi-rbd-3.11.0.tgz
     version: 3.11.0
   - apiVersion: v1
     appVersion: 3.11-canary
-    created: "2025-02-13T10:30:03.337996788Z"
+    created: "2025-02-13T10:44:31.315908736Z"
     description: Container Storage Interface (CSI) driver, provisioner, snapshotter,
       resizer and attacher for Ceph RBD
     digest: 37158c914fde3aa20178eb98635ad60a1c8872192a9d32cd5be2510aa33d423a
@@ -1270,11 +1270,11 @@ entries:
     sources:
     - https://github.com/ceph/ceph-csi/tree/release-v3.11/charts/ceph-csi-rbd
     urls:
-    - rbd/ceph-csi-rbd-3.11-canary.tgz
+    - https://ceph.github.io/csi-charts/rbd/ceph-csi-rbd-3.11-canary.tgz
     version: 3.11-canary
   - apiVersion: v1
     appVersion: 3.10.2
-    created: "2025-02-13T10:30:03.336917382Z"
+    created: "2025-02-13T10:44:31.31478789Z"
     description: Container Storage Interface (CSI) driver, provisioner, snapshotter,
       resizer and attacher for Ceph RBD
     digest: 6dfc66d7da993a457a2ebc3931283b1e2fc0c39ae9178855bef7d6a2329e2585
@@ -1288,11 +1288,11 @@ entries:
     sources:
     - https://github.com/ceph/ceph-csi/tree/v3.10.2/charts/ceph-csi-rbd
     urls:
-    - rbd/ceph-csi-rbd-3.10.2.tgz
+    - https://ceph.github.io/csi-charts/rbd/ceph-csi-rbd-3.10.2.tgz
     version: 3.10.2
   - apiVersion: v1
     appVersion: 3.10.1
-    created: "2025-02-13T10:30:03.335875675Z"
+    created: "2025-02-13T10:44:31.313740551Z"
     description: Container Storage Interface (CSI) driver, provisioner, snapshotter,
       resizer and attacher for Ceph RBD
     digest: 68fd973ed1548c5175affdcbbbe0b12993f570ef20ed6917d8a0a084afc08758
@@ -1306,11 +1306,11 @@ entries:
     sources:
     - https://github.com/ceph/ceph-csi/tree/v3.10.1/charts/ceph-csi-rbd
     urls:
-    - rbd/ceph-csi-rbd-3.10.1.tgz
+    - https://ceph.github.io/csi-charts/rbd/ceph-csi-rbd-3.10.1.tgz
     version: 3.10.1
   - apiVersion: v1
     appVersion: 3.10.0
-    created: "2025-02-13T10:30:03.334807039Z"
+    created: "2025-02-13T10:44:31.312656614Z"
     description: Container Storage Interface (CSI) driver, provisioner, snapshotter,
       resizer and attacher for Ceph RBD
     digest: bc4e578197cf369fb02d52f3561641642a0694f7b3a9bad05f69d107c5f95175
@@ -1324,11 +1324,11 @@ entries:
     sources:
     - https://github.com/ceph/ceph-csi/tree/v3.10.0/charts/ceph-csi-rbd
     urls:
-    - rbd/ceph-csi-rbd-3.10.0.tgz
+    - https://ceph.github.io/csi-charts/rbd/ceph-csi-rbd-3.10.0.tgz
     version: 3.10.0
   - apiVersion: v1
     appVersion: 3.10-canary
-    created: "2025-02-13T10:30:03.333164785Z"
+    created: "2025-02-13T10:44:31.311570362Z"
     description: Container Storage Interface (CSI) driver, provisioner, snapshotter,
       resizer and attacher for Ceph RBD
     digest: 874cdd90d9b6a45260dd1d35f84908fb2df77041d1fe29c9e56623204d849836
@@ -1342,11 +1342,11 @@ entries:
     sources:
     - https://github.com/ceph/ceph-csi/tree/release-v3.10/charts/ceph-csi-rbd
     urls:
-    - rbd/ceph-csi-rbd-3.10-canary.tgz
+    - https://ceph.github.io/csi-charts/rbd/ceph-csi-rbd-3.10-canary.tgz
     version: 3.10-canary
   - apiVersion: v1
     appVersion: 3.9.0
-    created: "2025-02-13T10:30:03.372769731Z"
+    created: "2025-02-13T10:44:31.349782924Z"
     description: Container Storage Interface (CSI) driver, provisioner, snapshotter,
       resizer and attacher for Ceph RBD
     digest: bbc6e392c8f51dbf645c96b17ae10122f3c93a30154f5652e3f481e07ee8e59d
@@ -1360,11 +1360,11 @@ entries:
     sources:
     - https://github.com/ceph/ceph-csi/tree/v3.9.0/charts/ceph-csi-rbd
     urls:
-    - rbd/ceph-csi-rbd-3.9.0.tgz
+    - https://ceph.github.io/csi-charts/rbd/ceph-csi-rbd-3.9.0.tgz
     version: 3.9.0
   - apiVersion: v1
     appVersion: 3.9-canary
-    created: "2025-02-13T10:30:03.37178484Z"
+    created: "2025-02-13T10:44:31.348783735Z"
     description: Container Storage Interface (CSI) driver, provisioner, snapshotter,
       resizer and attacher for Ceph RBD
     digest: 39bec6caea73b4f496ac5ebca3bd102e695f11ee33eba40865c15021722baa90
@@ -1378,11 +1378,11 @@ entries:
     sources:
     - https://github.com/ceph/ceph-csi/tree/release-v3.9/charts/ceph-csi-rbd
     urls:
-    - rbd/ceph-csi-rbd-3.9-canary.tgz
+    - https://ceph.github.io/csi-charts/rbd/ceph-csi-rbd-3.9-canary.tgz
     version: 3.9-canary
   - apiVersion: v1
     appVersion: 3.8.1
-    created: "2025-02-13T10:30:03.370778259Z"
+    created: "2025-02-13T10:44:31.347755162Z"
     description: Container Storage Interface (CSI) driver, provisioner, snapshotter,
       resizer and attacher for Ceph RBD
     digest: ee40fbcac22e63a589b9da5c81ed5cb63f31ed99c5c322a8fec053fe290eb2eb
@@ -1396,11 +1396,11 @@ entries:
     sources:
     - https://github.com/ceph/ceph-csi/tree/v3.8.1/charts/ceph-csi-rbd
     urls:
-    - rbd/ceph-csi-rbd-3.8.1.tgz
+    - https://ceph.github.io/csi-charts/rbd/ceph-csi-rbd-3.8.1.tgz
     version: 3.8.1
   - apiVersion: v1
     appVersion: 3.8.0
-    created: "2025-02-13T10:30:03.369580962Z"
+    created: "2025-02-13T10:44:31.346116667Z"
     description: Container Storage Interface (CSI) driver, provisioner, snapshotter,
       resizer and attacher for Ceph RBD
     digest: 4b2060da0ed56ae924e53b913ceed11545eed9e0a3fa8d1e4f9b52e917b5e4c9
@@ -1414,11 +1414,11 @@ entries:
     sources:
     - https://github.com/ceph/ceph-csi/tree/v3.8.0/charts/ceph-csi-rbd
     urls:
-    - rbd/ceph-csi-rbd-3.8.0.tgz
+    - https://ceph.github.io/csi-charts/rbd/ceph-csi-rbd-3.8.0.tgz
     version: 3.8.0
   - apiVersion: v1
     appVersion: 3.8-canary
-    created: "2025-02-13T10:30:03.368096332Z"
+    created: "2025-02-13T10:44:31.345141994Z"
     description: Container Storage Interface (CSI) driver, provisioner, snapshotter,
       resizer and attacher for Ceph RBD
     digest: e0d20c196e5994e28556786e717a6cb692a780156047380c12e88a59aa7b06f3
@@ -1432,11 +1432,11 @@ entries:
     sources:
     - https://github.com/ceph/ceph-csi/tree/release-v3.8/charts/ceph-csi-rbd
     urls:
-    - rbd/ceph-csi-rbd-3.8-canary.tgz
+    - https://ceph.github.io/csi-charts/rbd/ceph-csi-rbd-3.8-canary.tgz
     version: 3.8-canary
   - apiVersion: v1
     appVersion: 3.7.2
-    created: "2025-02-13T10:30:03.367082107Z"
+    created: "2025-02-13T10:44:31.344160038Z"
     description: Container Storage Interface (CSI) driver, provisioner, snapshotter,
       resizer and attacher for Ceph RBD
     digest: 2cca33be5c98367e53ca1c1b7d936ff30d4758d92b5dcf3e58f175d577576a12
@@ -1450,11 +1450,11 @@ entries:
     sources:
     - https://github.com/ceph/ceph-csi/tree/v3.7.2/charts/ceph-csi-rbd
     urls:
-    - rbd/ceph-csi-rbd-3.7.2.tgz
+    - https://ceph.github.io/csi-charts/rbd/ceph-csi-rbd-3.7.2.tgz
     version: 3.7.2
   - apiVersion: v1
     appVersion: 3.7.1
-    created: "2025-02-13T10:30:03.366009544Z"
+    created: "2025-02-13T10:44:31.343146803Z"
     description: Container Storage Interface (CSI) driver, provisioner, snapshotter,
       resizer and attacher for Ceph RBD
     digest: ba9a142404e26544fea6b052cdfac88eff200b6c909e2112ca3fcd127ca81a6d
@@ -1468,11 +1468,11 @@ entries:
     sources:
     - https://github.com/ceph/ceph-csi/tree/v3.7.1/charts/ceph-csi-rbd
     urls:
-    - rbd/ceph-csi-rbd-3.7.1.tgz
+    - https://ceph.github.io/csi-charts/rbd/ceph-csi-rbd-3.7.1.tgz
     version: 3.7.1
   - apiVersion: v1
     appVersion: 3.7.0
-    created: "2025-02-13T10:30:03.364844198Z"
+    created: "2025-02-13T10:44:31.342158745Z"
     description: Container Storage Interface (CSI) driver, provisioner, snapshotter,
       resizer and attacher for Ceph RBD
     digest: ff377b196584db26bd458e5c7486b49f0a0a70876ef7c07e23aab59430e622a2
@@ -1486,11 +1486,11 @@ entries:
     sources:
     - https://github.com/ceph/ceph-csi/tree/v3.7.0/charts/ceph-csi-rbd
     urls:
-    - rbd/ceph-csi-rbd-3.7.0.tgz
+    - https://ceph.github.io/csi-charts/rbd/ceph-csi-rbd-3.7.0.tgz
     version: 3.7.0
   - apiVersion: v1
     appVersion: 3.7-canary
-    created: "2025-02-13T10:30:03.363677179Z"
+    created: "2025-02-13T10:44:31.341157112Z"
     description: Container Storage Interface (CSI) driver, provisioner, snapshotter,
       resizer and attacher for Ceph RBD
     digest: e87a6a47b94762b46b5b3031bf50f5ebbf294fc066152fc88c84d3377182be75
@@ -1504,11 +1504,11 @@ entries:
     sources:
     - https://github.com/ceph/ceph-csi/tree/release-v3.7/charts/ceph-csi-rbd
     urls:
-    - rbd/ceph-csi-rbd-3.7-canary.tgz
+    - https://ceph.github.io/csi-charts/rbd/ceph-csi-rbd-3.7-canary.tgz
     version: 3.7-canary
   - apiVersion: v1
     appVersion: 3.6.2
-    created: "2025-02-13T10:30:03.362513976Z"
+    created: "2025-02-13T10:44:31.340168053Z"
     description: Container Storage Interface (CSI) driver, provisioner, snapshotter,
       and attacher for Ceph RBD
     digest: 8f6f2cd49f5057910b571b2e878602d16cf07f312363a340b8460c4e4697fa6a
@@ -1522,11 +1522,11 @@ entries:
     sources:
     - https://github.com/ceph/ceph-csi/tree/v3.6.2/charts/ceph-csi-rbd
     urls:
-    - rbd/ceph-csi-rbd-3.6.2.tgz
+    - https://ceph.github.io/csi-charts/rbd/ceph-csi-rbd-3.6.2.tgz
     version: 3.6.2
   - apiVersion: v1
     appVersion: 3.6.1
-    created: "2025-02-13T10:30:03.360666523Z"
+    created: "2025-02-13T10:44:31.338525634Z"
     description: Container Storage Interface (CSI) driver, provisioner, snapshotter,
       and attacher for Ceph RBD
     digest: 289f0a8b8d354b20ddcd679bcb7fac3d4bbe645aa9d43764f20fe8b790186816
@@ -1540,11 +1540,11 @@ entries:
     sources:
     - https://github.com/ceph/ceph-csi/tree/v3.6.1/charts/ceph-csi-rbd
     urls:
-    - rbd/ceph-csi-rbd-3.6.1.tgz
+    - https://ceph.github.io/csi-charts/rbd/ceph-csi-rbd-3.6.1.tgz
     version: 3.6.1
   - apiVersion: v1
     appVersion: 3.6.0
-    created: "2025-02-13T10:30:03.359694155Z"
+    created: "2025-02-13T10:44:31.337555549Z"
     description: Container Storage Interface (CSI) driver, provisioner, snapshotter,
       and attacher for Ceph RBD
     digest: cbda2f26a603cd916ccbb0ae2e16351a0060c5f478dea01c4895e094bc7c4eba
@@ -1558,11 +1558,11 @@ entries:
     sources:
     - https://github.com/ceph/ceph-csi/tree/v3.6.0/charts/ceph-csi-rbd
     urls:
-    - rbd/ceph-csi-rbd-3.6.0.tgz
+    - https://ceph.github.io/csi-charts/rbd/ceph-csi-rbd-3.6.0.tgz
     version: 3.6.0
   - apiVersion: v1
     appVersion: 3.6-canary
-    created: "2025-02-13T10:30:03.35872278Z"
+    created: "2025-02-13T10:44:31.336583371Z"
     description: Container Storage Interface (CSI) driver, provisioner, snapshotter,
       and attacher for Ceph RBD
     digest: 7deab14b7c80af81962ed03b61fbe91e36981a439c299d1f024b6cdb93fdb9cf
@@ -1576,11 +1576,11 @@ entries:
     sources:
     - https://github.com/ceph/ceph-csi/tree/release-v3.6/charts/ceph-csi-rbd
     urls:
-    - rbd/ceph-csi-rbd-3.6-canary.tgz
+    - https://ceph.github.io/csi-charts/rbd/ceph-csi-rbd-3.6-canary.tgz
     version: 3.6-canary
   - apiVersion: v1
     appVersion: 3.5.1
-    created: "2025-02-13T10:30:03.357737448Z"
+    created: "2025-02-13T10:44:31.335600814Z"
     description: Container Storage Interface (CSI) driver, provisioner, snapshotter,
       and attacher for Ceph RBD
     digest: 8bf10cac48c9aba6a6ba8cc2938effaa54fd70f996f01a76c06aee76317e1ae2
@@ -1594,11 +1594,11 @@ entries:
     sources:
     - https://github.com/ceph/ceph-csi/tree/v3.5.1/charts/ceph-csi-rbd
     urls:
-    - rbd/ceph-csi-rbd-3.5.1.tgz
+    - https://ceph.github.io/csi-charts/rbd/ceph-csi-rbd-3.5.1.tgz
     version: 3.5.1
   - apiVersion: v1
     appVersion: 3.5.0
-    created: "2025-02-13T10:30:03.356757477Z"
+    created: "2025-02-13T10:44:31.334621923Z"
     description: Container Storage Interface (CSI) driver, provisioner, snapshotter,
       and attacher for Ceph RBD
     digest: a520279908a91bf31a6c4a09dc8c0617b738fbde840aa7c3316208af40a6575e
@@ -1612,11 +1612,11 @@ entries:
     sources:
     - https://github.com/ceph/ceph-csi/tree/v3.5.0/charts/ceph-csi-rbd
     urls:
-    - rbd/ceph-csi-rbd-3.5.0.tgz
+    - https://ceph.github.io/csi-charts/rbd/ceph-csi-rbd-3.5.0.tgz
     version: 3.5.0
   - apiVersion: v1
     appVersion: 3.5-canary
-    created: "2025-02-13T10:30:03.355745636Z"
+    created: "2025-02-13T10:44:31.333630028Z"
     description: Container Storage Interface (CSI) driver, provisioner, snapshotter,
       and attacher for Ceph RBD
     digest: 7815abeaf348d900b0ad012b4d5efc4a542ffee7e8e9171957d0fad8fbaf7fee
@@ -1630,11 +1630,11 @@ entries:
     sources:
     - https://github.com/ceph/ceph-csi/tree/release-v3.5/charts/ceph-csi-rbd
     urls:
-    - rbd/ceph-csi-rbd-3.5-canary.tgz
+    - https://ceph.github.io/csi-charts/rbd/ceph-csi-rbd-3.5-canary.tgz
     version: 3.5-canary
   - apiVersion: v1
     appVersion: v3.4.0
-    created: "2025-02-13T10:30:03.354114519Z"
+    created: "2025-02-13T10:44:31.332584533Z"
     description: Container Storage Interface (CSI) driver, provisioner, snapshotter,
       and attacher for Ceph RBD
     digest: b9ae35ea8c270dcc4740301849920a7c696c186248d1cab6fac21a72f42c3fea
@@ -1648,11 +1648,11 @@ entries:
     sources:
     - https://github.com/ceph/ceph-csi/tree/v3.4.0/charts/ceph-csi-rbd
     urls:
-    - rbd/ceph-csi-rbd-3.4.0.tgz
+    - https://ceph.github.io/csi-charts/rbd/ceph-csi-rbd-3.4.0.tgz
     version: 3.4.0
   - apiVersion: v1
     appVersion: 3.4-canary
-    created: "2025-02-13T10:30:03.353084875Z"
+    created: "2025-02-13T10:44:31.331030727Z"
     description: Container Storage Interface (CSI) driver, provisioner, snapshotter,
       and attacher for Ceph RBD
     digest: 969d6713501460cfeef948fafed9943ce4b6c8e62b545814f7f786f89e280c46
@@ -1666,11 +1666,11 @@ entries:
     sources:
     - https://github.com/ceph/ceph-csi/tree/release-v3.4/charts/ceph-csi-rbd
     urls:
-    - rbd/ceph-csi-rbd-3.4-canary.tgz
+    - https://ceph.github.io/csi-charts/rbd/ceph-csi-rbd-3.4-canary.tgz
     version: 3.4-canary
   - apiVersion: v1
     appVersion: v3.3.1
-    created: "2025-02-13T10:30:03.352163974Z"
+    created: "2025-02-13T10:44:31.33011772Z"
     description: Container Storage Interface (CSI) driver, provisioner, snapshotter,
       and attacher for Ceph RBD
     digest: ef37876240c0a2aa43eb64f6f66b33390b0bef9dea0fa2aefae205f1258f1424
@@ -1684,11 +1684,11 @@ entries:
     sources:
     - https://github.com/ceph/ceph-csi/tree/v3.3.1/charts/ceph-csi-rbd
     urls:
-    - rbd/ceph-csi-rbd-3.3.1.tgz
+    - https://ceph.github.io/csi-charts/rbd/ceph-csi-rbd-3.3.1.tgz
     version: 3.3.1
   - apiVersion: v1
     appVersion: 3.3-canary
-    created: "2025-02-13T10:30:03.3515056Z"
+    created: "2025-02-13T10:44:31.329450221Z"
     description: Container Storage Interface (CSI) driver, provisioner, snapshotter,
       and attacher for Ceph RBD
     digest: da199fcb472c9aec8036edf097d546791faabae5f65fb413fd009bc75ea38d58
@@ -1702,11 +1702,11 @@ entries:
     sources:
     - https://github.com/ceph/ceph-csi/tree//charts/ceph-csi-rbd
     urls:
-    - rbd/ceph-csi-rbd-3.3-canary.tgz
+    - https://ceph.github.io/csi-charts/rbd/ceph-csi-rbd-3.3-canary.tgz
     version: 3.3-canary
   - apiVersion: v1
     appVersion: v3.2.2
-    created: "2025-02-13T10:30:03.350788738Z"
+    created: "2025-02-13T10:44:31.328747177Z"
     description: Container Storage Interface (CSI) driver, provisioner, snapshotter,
       and attacher for Ceph RBD
     digest: 6a6edfbe1fb790b5247b6038168ed97d2594754fc7ca6e4b8357faf16cad4c15
@@ -1720,11 +1720,11 @@ entries:
     sources:
     - https://github.com/ceph/ceph-csi/tree/v3.2.2/charts/ceph-csi-rbd
     urls:
-    - rbd/ceph-csi-rbd-3.2.2.tgz
+    - https://ceph.github.io/csi-charts/rbd/ceph-csi-rbd-3.2.2.tgz
     version: 3.2.2
   - apiVersion: v1
     appVersion: v3.2.1
-    created: "2025-02-13T10:30:03.350158366Z"
+    created: "2025-02-13T10:44:31.3281074Z"
     description: Container Storage Interface (CSI) driver, provisioner, snapshotter,
       and attacher for Ceph RBD
     digest: 2553add1c06fa92431079a6c9f4b72d70212f3b01ab013a9210fa2fb84fbd90c
@@ -1738,11 +1738,11 @@ entries:
     sources:
     - https://github.com/ceph/ceph-csi/tree/v3.2.1/charts/ceph-csi-rbd
     urls:
-    - rbd/ceph-csi-rbd-3.2.1.tgz
+    - https://ceph.github.io/csi-charts/rbd/ceph-csi-rbd-3.2.1.tgz
     version: 3.2.1
   - apiVersion: v1
     appVersion: v3.2.0
-    created: "2025-02-13T10:30:03.349506735Z"
+    created: "2025-02-13T10:44:31.327452335Z"
     description: Container Storage Interface (CSI) driver, provisioner, snapshotter,
       and attacher for Ceph RBD
     digest: 9a6676ac7dc94886837b43614f2b05d17cefa257bcd6fdc896f9777d1e50cfdd
@@ -1756,11 +1756,11 @@ entries:
     sources:
     - https://github.com/ceph/ceph-csi/tree/v3.2.0/charts/ceph-csi-rbd
     urls:
-    - rbd/ceph-csi-rbd-3.2.0.tgz
+    - https://ceph.github.io/csi-charts/rbd/ceph-csi-rbd-3.2.0.tgz
     version: 3.2.0
   - apiVersion: v1
     appVersion: 3.2-canary
-    created: "2025-02-13T10:30:03.348850796Z"
+    created: "2025-02-13T10:44:31.326768056Z"
     description: Container Storage Interface (CSI) driver, provisioner, snapshotter,
       and attacher for Ceph RBD
     digest: 3d24a2c3a64489f765738c7280b520c22b47adf930680ac0e19bb6a0a9b59d42
@@ -1774,11 +1774,11 @@ entries:
     sources:
     - https://github.com/ceph/ceph-csi/tree/release-v3.2/charts/ceph-csi-rbd
     urls:
-    - rbd/ceph-csi-rbd-3.2-canary.tgz
+    - https://ceph.github.io/csi-charts/rbd/ceph-csi-rbd-3.2-canary.tgz
     version: 3.2-canary
   - apiVersion: v1
     appVersion: v3.1.2
-    created: "2025-02-13T10:30:03.332099986Z"
+    created: "2025-02-13T10:44:31.309745108Z"
     description: Container Storage Interface (CSI) driver, provisioner, snapshotter,
       and attacher for Ceph RBD
     digest: faf481365aa1e09aa2b8630f4ec48f11f10026de143337589558b8d7abd18895
@@ -1792,11 +1792,11 @@ entries:
     sources:
     - https://github.com/ceph/ceph-csi/tree/v3.1.2/charts/ceph-csi-rbd
     urls:
-    - rbd/ceph-csi-rbd-3.1.2.tgz
+    - https://ceph.github.io/csi-charts/rbd/ceph-csi-rbd-3.1.2.tgz
     version: 3.1.2
   - apiVersion: v1
     appVersion: v3.1.1
-    created: "2025-02-13T10:30:03.331460737Z"
+    created: "2025-02-13T10:44:31.309126922Z"
     description: Container Storage Interface (CSI) driver, provisioner, snapshotter,
       and attacher for Ceph RBD
     digest: a0d56e633348ecf86d71fca88443ad6f09fe7df269fe6768e9c364a4478ee2cb
@@ -1810,11 +1810,11 @@ entries:
     sources:
     - https://github.com/ceph/ceph-csi/tree/v3.1.1/charts/ceph-csi-rbd
     urls:
-    - rbd/ceph-csi-rbd-3.1.1.tgz
+    - https://ceph.github.io/csi-charts/rbd/ceph-csi-rbd-3.1.1.tgz
     version: 3.1.1
   - apiVersion: v1
     appVersion: v3.1.0
-    created: "2025-02-13T10:30:03.330803646Z"
+    created: "2025-02-13T10:44:31.308497194Z"
     description: Container Storage Interface (CSI) driver, provisioner, snapshotter,
       and attacher for Ceph RBD
     digest: 33225ca00306aba6331dedab4f66e8bdf23c55276bcf5b8378946d1f4127bffa
@@ -1828,11 +1828,11 @@ entries:
     sources:
     - https://github.com/ceph/ceph-csi/tree/v3.1.0/charts/ceph-csi-rbd
     urls:
-    - rbd/ceph-csi-rbd-3.1.0.tgz
+    - https://ceph.github.io/csi-charts/rbd/ceph-csi-rbd-3.1.0.tgz
     version: 3.1.0
   - apiVersion: v1
     appVersion: 3.1-canary
-    created: "2025-02-13T10:30:03.330194243Z"
+    created: "2025-02-13T10:44:31.30786359Z"
     description: Container Storage Interface (CSI) driver, provisioner, snapshotter,
       and attacher for Ceph RBD
     digest: 399bcaca90783835d8ab62bdfab68487133e007f9a40d659e335aa6120d47cae
@@ -1846,11 +1846,11 @@ entries:
     sources:
     - https://github.com/ceph/ceph-csi/tree/release-v3.1/charts/ceph-csi-rbd
     urls:
-    - rbd/ceph-csi-rbd-3.1-canary.tgz
+    - https://ceph.github.io/csi-charts/rbd/ceph-csi-rbd-3.1-canary.tgz
     version: 3.1-canary
   - apiVersion: v1
     appVersion: v3.0.0
-    created: "2025-02-13T10:30:03.329548724Z"
+    created: "2025-02-13T10:44:31.307237789Z"
     description: Container Storage Interface (CSI) driver, provisioner, snapshotter,
       and attacher for Ceph RBD
     digest: 12ec4b9027720cdad05579c6b43f3d423c5306b40526fbf438c380ae04470933
@@ -1864,14 +1864,14 @@ entries:
     sources:
     - https://github.com/ceph/ceph-csi/tree/v3.0.0/charts/ceph-csi-rbd
     urls:
-    - rbd/ceph-csi-rbd-3.0.0.tgz
+    - https://ceph.github.io/csi-charts/rbd/ceph-csi-rbd-3.0.0.tgz
     version: 3.0.0
   - apiVersion: v1
     appVersion: canary
-    created: "2025-02-13T10:30:03.328258125Z"
+    created: "2025-02-13T10:44:31.305952235Z"
     description: Container Storage Interface (CSI) driver, provisioner, snapshotter,
       resizer and attacher for Ceph RBD
-    digest: a278e1886856137a81233731b468ede43d9dc3b9fd1fd16cc2d73bc8d32e5b60
+    digest: 6309c6891d26ff7f960e71dec6f5a11af8ecf975754d138ecf4ae30e8094ca01
     home: https://github.com/ceph/ceph-csi
     icon: https://raw.githubusercontent.com/ceph/ceph-csi/devel/assets/ceph-logo.png
     keywords:
@@ -1882,11 +1882,11 @@ entries:
     sources:
     - https://github.com/ceph/ceph-csi/tree/devel/charts/ceph-csi-rbd
     urls:
-    - rbd/ceph-csi-rbd-3-canary.tgz
+    - https://ceph.github.io/csi-charts/rbd/ceph-csi-rbd-3-canary.tgz
     version: 3-canary
   - apiVersion: v1
     appVersion: 3.0-canary
-    created: "2025-02-13T10:30:03.328907682Z"
+    created: "2025-02-13T10:44:31.306594616Z"
     description: Container Storage Interface (CSI) driver, provisioner, snapshotter,
       and attacher for Ceph RBD
     digest: a5b0c7b0f23794c1b15726ff46c399162972bd252129fe779dc8ecc020fc109f
@@ -1900,11 +1900,11 @@ entries:
     sources:
     - https://github.com/ceph/ceph-csi/tree/release-v3.0/charts/ceph-csi-rbd
     urls:
-    - rbd/ceph-csi-rbd-3.0-canary.tgz
+    - https://ceph.github.io/csi-charts/rbd/ceph-csi-rbd-3.0-canary.tgz
     version: 3.0-canary
   - apiVersion: v1
     appVersion: v2.1.2
-    created: "2025-02-13T10:30:03.326422064Z"
+    created: "2025-02-13T10:44:31.304777428Z"
     description: Container Storage Interface (CSI) driver, provisioner, snapshotter,
       and attacher for Ceph RBD
     digest: 2fc32ce6d9560b750a7d4122a40b2491900ade0c2b4b63dab23ae5994e4ecc69
@@ -1918,11 +1918,11 @@ entries:
     sources:
     - https://github.com/ceph/ceph-csi/tree/v2.1.2/charts/ceph-csi-rbd
     urls:
-    - rbd/ceph-csi-rbd-2.1.2.tgz
+    - https://ceph.github.io/csi-charts/rbd/ceph-csi-rbd-2.1.2.tgz
     version: 2.1.2
   - apiVersion: v1
     appVersion: v2.1.1
-    created: "2025-02-13T10:30:03.32581721Z"
+    created: "2025-02-13T10:44:31.303623571Z"
     description: Container Storage Interface (CSI) driver, provisioner, snapshotter,
       and attacher for Ceph RBD
     digest: 8c3b3b84ce21f0a34d9bafb05529cf714209e437ae4b012cd1d8d6ee56976b32
@@ -1936,11 +1936,11 @@ entries:
     sources:
     - https://github.com/ceph/ceph-csi/tree/v2.1.1/charts/ceph-csi-rbd
     urls:
-    - rbd/ceph-csi-rbd-2.1.1.tgz
+    - https://ceph.github.io/csi-charts/rbd/ceph-csi-rbd-2.1.1.tgz
     version: 2.1.1
   - apiVersion: v1
     appVersion: 2.1.0
-    created: "2025-02-13T10:30:03.32522554Z"
+    created: "2025-02-13T10:44:31.302838292Z"
     description: Container Storage Interface (CSI) driver, provisioner, snapshotter,
       and attacher for Ceph RBD
     digest: 2b514e9e1301e8c87c070366d603364c6a714025dbe987c07f1879585b5c3f35
@@ -1954,11 +1954,11 @@ entries:
     sources:
     - https://github.com/ceph/ceph-csi/tree/v2.1.0/charts/ceph-csi-rbd
     urls:
-    - rbd/ceph-csi-rbd-2.1.0.tgz
+    - https://ceph.github.io/csi-charts/rbd/ceph-csi-rbd-2.1.0.tgz
     version: 2.1.0
   - apiVersion: v1
     appVersion: 2.1-canary
-    created: "2025-02-13T10:30:03.324617981Z"
+    created: "2025-02-13T10:44:31.302240505Z"
     description: Container Storage Interface (CSI) driver, provisioner, snapshotter,
       and attacher for Ceph RBD
     digest: 6057d401e20a48cf3b2786de4be2718077825ecfb9ceaffa9bf17ac46d141b5a
@@ -1972,11 +1972,11 @@ entries:
     sources:
     - https://github.com/ceph/ceph-csi/tree/release-v2.1/charts/ceph-csi-rbd
     urls:
-    - rbd/ceph-csi-rbd-2.1-canary.tgz
+    - https://ceph.github.io/csi-charts/rbd/ceph-csi-rbd-2.1-canary.tgz
     version: 2.1-canary
   - apiVersion: v1
     appVersion: v2.0.1
-    created: "2025-02-13T10:30:03.324015471Z"
+    created: "2025-02-13T10:44:31.301621527Z"
     description: Container Storage Interface (CSI) driver, provisioner, snapshotter,
       and attacher for Ceph RBD
     digest: 3eee0048b0b5f53f17bc4de94fa7f2ed37732af4d583eb76bfda17cac092bd92
@@ -1990,11 +1990,11 @@ entries:
     sources:
     - https://github.com/ceph/ceph-csi/tree/v2.0.1/charts/ceph-csi-rbd
     urls:
-    - rbd/ceph-csi-rbd-2.0.1.tgz
+    - https://ceph.github.io/csi-charts/rbd/ceph-csi-rbd-2.0.1.tgz
     version: 2.0.1
   - apiVersion: v1
     appVersion: v2.0.0
-    created: "2025-02-13T10:30:03.323373728Z"
+    created: "2025-02-13T10:44:31.300987872Z"
     description: Container Storage Interface (CSI) driver, provisioner, snapshotter,
       and attacher for Ceph RBD
     digest: b6aebdd27ab7b170d988dfd66188a339478fa7dd7f8a32fb1cb4352f58831d44
@@ -2008,11 +2008,11 @@ entries:
     sources:
     - https://github.com/ceph/ceph-csi/tree/v2.0.0/charts/ceph-csi-rbd
     urls:
-    - rbd/ceph-csi-rbd-2.0.0.tgz
+    - https://ceph.github.io/csi-charts/rbd/ceph-csi-rbd-2.0.0.tgz
     version: 2.0.0
   - apiVersion: v1
     appVersion: 2.0-canary
-    created: "2025-02-13T10:30:03.322762292Z"
+    created: "2025-02-13T10:44:31.300372391Z"
     description: Container Storage Interface (CSI) driver, provisioner, snapshotter,
       and attacher for Ceph RBD
     digest: d301d71225d11bb21582447f3c336d397de00e7cad99722058a799caa6b9c980
@@ -2026,11 +2026,11 @@ entries:
     sources:
     - https://github.com/ceph/ceph-csi/tree/release-v2.0/charts/ceph-csi-rbd
     urls:
-    - rbd/ceph-csi-rbd-2.0-canary.tgz
+    - https://ceph.github.io/csi-charts/rbd/ceph-csi-rbd-2.0-canary.tgz
     version: 2.0-canary
   - apiVersion: v1
     appVersion: canary
-    created: "2025-02-13T10:30:03.322120579Z"
+    created: "2025-02-13T10:44:31.299705374Z"
     description: Container Storage Interface (CSI) driver, provisioner, snapshotter,
       and attacher for Ceph RBD
     digest: f0435963ff1987762d88bcab10e69a2f341357554392ada76af57321a03c514d
@@ -2044,11 +2044,11 @@ entries:
     sources:
     - https://github.com/ceph/ceph-csi/tree/devel/charts/ceph-csi-rbd
     urls:
-    - rbd/ceph-csi-rbd-1.3.0-canary.tgz
+    - https://ceph.github.io/csi-charts/rbd/ceph-csi-rbd-1.3.0-canary.tgz
     version: 1.3.0-canary
   - apiVersion: v1
     appVersion: 1.2.2
-    created: "2025-02-13T10:30:03.321093289Z"
+    created: "2025-02-13T10:44:31.298708039Z"
     description: Container Storage Interface (CSI) driver, provisioner, snapshotter,
       and attacher for Ceph RBD
     digest: c0e1f6dc424aab7abfe66f1fac52cbd3d30416784b66880fb249dd0495f698ad
@@ -2062,11 +2062,11 @@ entries:
     sources:
     - https://github.com/ceph/ceph-csi/tree/v1.2.2/charts/ceph-csi-rbd
     urls:
-    - rbd/ceph-csi-rbd-1.2.2.tgz
+    - https://ceph.github.io/csi-charts/rbd/ceph-csi-rbd-1.2.2.tgz
     version: 1.2.2
   - apiVersion: v1
     appVersion: 1.2-canary
-    created: "2025-02-13T10:30:03.320026937Z"
+    created: "2025-02-13T10:44:31.298092898Z"
     description: Container Storage Interface (CSI) driver, provisioner, snapshotter,
       and attacher for Ceph RBD
     digest: 0230499b97087291dec679207c83f7f457ea079100fd3f051bc7f616effb6819
@@ -2080,11 +2080,11 @@ entries:
     sources:
     - https://github.com/ceph/ceph-csi/tree/release-v1.2.0/charts/ceph-csi-rbd
     urls:
-    - rbd/ceph-csi-rbd-1.2-canary.tgz
+    - https://ceph.github.io/csi-charts/rbd/ceph-csi-rbd-1.2-canary.tgz
     version: 1.2-canary
   - apiVersion: v1
     appVersion: 1.1.0
-    created: "2025-02-13T10:30:03.319204017Z"
+    created: "2025-02-13T10:44:31.296738377Z"
     description: Container Storage Interface (CSI) driver, provisioner, snapshotter,
       and attacher for Ceph RBD
     digest: 569b922638c6b0e8435d674cc11328d5852c653f2d11cbefc4bf590169a9c08a
@@ -2097,11 +2097,11 @@ entries:
     sources:
     - https://github.com/ceph/ceph-csi/tree/csi-v1.0/deploy/rbd/helm
     urls:
-    - rbd/ceph-csi-rbd-1.1.0.tgz
+    - https://ceph.github.io/csi-charts/rbd/ceph-csi-rbd-1.1.0.tgz
     version: 1.1.0
   - apiVersion: v1
     appVersion: 1.0.0
-    created: "2025-02-13T10:30:03.318784307Z"
+    created: "2025-02-13T10:44:31.296342917Z"
     description: Container Storage Interface (CSI) driver, provisioner, snapshotter,
       and attacher for Ceph RBD
     digest: 29c0b2357031f6b13cf6ac96e5658cbd24011309d896f067575afd33220015cd
@@ -2114,11 +2114,11 @@ entries:
     sources:
     - https://github.com/ceph/ceph-csi/tree/csi-v1.0/deploy/rbd/helm
     urls:
-    - rbd/ceph-csi-rbd-0.8.0.tgz
+    - https://ceph.github.io/csi-charts/rbd/ceph-csi-rbd-0.8.0.tgz
     version: 0.8.0
   - apiVersion: v1
     appVersion: 1.0.0
-    created: "2025-02-13T10:30:03.318394853Z"
+    created: "2025-02-13T10:44:31.295946506Z"
     description: Container Storage Interface (CSI) driver, provisioner, snapshotter,
       and attacher for Ceph RBD
     digest: 8a8b3efb9aca3f71b6a92f942df8820c767d48f3aa73641bf3c0cddbe08b3b8e
@@ -2131,11 +2131,11 @@ entries:
     sources:
     - https://github.com/ceph/ceph-csi/tree/csi-v1.0/deploy/rbd/helm
     urls:
-    - rbd/ceph-csi-rbd-0.7.0.tgz
+    - https://ceph.github.io/csi-charts/rbd/ceph-csi-rbd-0.7.0.tgz
     version: 0.7.0
   - apiVersion: v1
     appVersion: 1.0.0
-    created: "2025-02-13T10:30:03.317996523Z"
+    created: "2025-02-13T10:44:31.295524567Z"
     description: Container Storage Interface (CSI) driver, provisioner, snapshotter,
       and attacher for Ceph RBD
     digest: 2d551f5788b24320d804852a604f29327e9ac6aed7a12f40d6ad948b4f41d364
@@ -2148,11 +2148,11 @@ entries:
     sources:
     - https://github.com/ceph/ceph-csi/tree/csi-v1.0/deploy/rbd/helm
     urls:
-    - rbd/ceph-csi-rbd-0.6.0.tgz
+    - https://ceph.github.io/csi-charts/rbd/ceph-csi-rbd-0.6.0.tgz
     version: 0.6.0
   - apiVersion: v1
     appVersion: 1.0.0
-    created: "2025-02-13T10:30:03.317594516Z"
+    created: "2025-02-13T10:44:31.295129017Z"
     description: Container Storage Interface (CSI) driver, provisioner, snapshotter,
       and attacher for Ceph RBD
     digest: 58337406cd84d9974a2fa7b0f0c84983f89bcb623c6955d3b81681554476daf4
@@ -2165,11 +2165,11 @@ entries:
     sources:
     - https://github.com/ceph/ceph-csi/tree/csi-v1.0/deploy/rbd/helm
     urls:
-    - rbd/ceph-csi-rbd-0.5.3.tgz
+    - https://ceph.github.io/csi-charts/rbd/ceph-csi-rbd-0.5.3.tgz
     version: 0.5.3
   - apiVersion: v1
     appVersion: 1.0.0
-    created: "2025-02-13T10:30:03.317209129Z"
+    created: "2025-02-13T10:44:31.294709964Z"
     description: Container Storage Interface (CSI) driver, provisioner, snapshotter,
       and attacher for Ceph RBD
     digest: e3b5114baafabbfc1c044b23d1c7f8fd15b07b458cf22eb0940e5fcc51b86a8f
@@ -2182,11 +2182,11 @@ entries:
     sources:
     - https://github.com/ceph/ceph-csi/tree/csi-v1.0/deploy/rbd/helm
     urls:
-    - rbd/ceph-csi-rbd-0.5.1.tgz
+    - https://ceph.github.io/csi-charts/rbd/ceph-csi-rbd-0.5.1.tgz
     version: 0.5.1
   - apiVersion: v1
     appVersion: 1.0.0
-    created: "2025-02-13T10:30:03.316798306Z"
+    created: "2025-02-13T10:44:31.294297903Z"
     description: Container Storage Interface (CSI) driver, provisioner, snapshotter,
       and attacher for Ceph RBD
     digest: e55e224cb2b1f0eaa310ddba13685d123a147065c4f88c0a21492bd60c5631aa
@@ -2199,11 +2199,11 @@ entries:
     sources:
     - https://github.com/ceph/ceph-csi/tree/csi-v1.0/deploy/rbd/helm
     urls:
-    - rbd/ceph-csi-rbd-0.5.0.tgz
+    - https://ceph.github.io/csi-charts/rbd/ceph-csi-rbd-0.5.0.tgz
     version: 0.5.0
   - apiVersion: v1
     appVersion: 1.0.0
-    created: "2025-02-13T10:30:03.316409764Z"
+    created: "2025-02-13T10:44:31.293896753Z"
     description: Container Storage Interface (CSI) driver, provisioner, snapshotter,
       and attacher for Ceph RBD
     digest: 78b19238decf920aed0cd3c389c32df3036d85282cfca1a39eadd2ceeb89610c
@@ -2216,11 +2216,11 @@ entries:
     sources:
     - https://github.com/ceph/ceph-csi/tree/csi-v1.0/deploy/rbd/helm
     urls:
-    - rbd/ceph-csi-rbd-0.4.0.tgz
+    - https://ceph.github.io/csi-charts/rbd/ceph-csi-rbd-0.4.0.tgz
     version: 0.4.0
   - apiVersion: v1
     appVersion: 1.0.0
-    created: "2025-02-13T10:30:03.31600956Z"
+    created: "2025-02-13T10:44:31.293480875Z"
     description: Container Storage Interface (CSI) driver, provisioner, and attacher
       for Ceph RBD
     digest: 39a8db5450bf0b01f33600d617841a7374a69892a87ccd66dd3af3595831764a
@@ -2233,6 +2233,6 @@ entries:
     sources:
     - https://github.com/ceph/ceph-csi/tree/master/deploy/rbd/kubernetes
     urls:
-    - rbd/ceph-csi-rbd-0.3.0.tgz
+    - https://ceph.github.io/csi-charts/rbd/ceph-csi-rbd-0.3.0.tgz
     version: 0.3.0
-generated: "2025-02-13T10:30:03.263952013Z"
+generated: "2025-02-13T10:44:31.241171769Z"
