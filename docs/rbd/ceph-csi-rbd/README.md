@@ -22,27 +22,19 @@ cd charts
 
 ### Install chart
 
-To install the Chart into your Kubernetes cluster
+To install the Chart into your Kubernetes cluster(For helm 3.x):
 
-- For helm 2.x
+Create the namespace where Helm should install the components with
 
-    ```bash
-    helm install --namespace "ceph-csi-rbd" --name "ceph-csi-rbd" ceph-csi/ceph-csi-rbd
-    ```
+```bash
+kubectl create namespace "ceph-csi-rbd"
+```
 
-- For helm 3.x
+Run the installation
 
-    Create the namespace where Helm should install the components with
-
-    ```bash
-    kubectl create namespace "ceph-csi-rbd"
-    ```
-
-    Run the installation
-
-    ```bash
-    helm install --namespace "ceph-csi-rbd" "ceph-csi-rbd" ceph-csi/ceph-csi-rbd
-    ```
+```bash
+helm install --namespace "ceph-csi-rbd" "ceph-csi-rbd" ceph-csi/ceph-csi-rbd
+```
 
 After installation succeeds, you can get a status of Chart
 
@@ -84,17 +76,9 @@ compare your currently used values with the new default values.
 
 If you want to delete your Chart, use this command
 
-- For helm 2.x
-
-    ```bash
-    helm delete --purge "ceph-csi-rbd"
-    ```
-
-- For helm 3.x
-
-    ```bash
-    helm uninstall "ceph-csi-rbd" --namespace "ceph-csi-rbd"
-    ```
+```bash
+helm uninstall "ceph-csi-rbd" --namespace "ceph-csi-rbd"
+```
 
 If you want to delete the namespace, use this command
 
@@ -127,7 +111,7 @@ charts and their default values.
 | `nodeplugin.imagePullSecrets`                | Specifies imagePullSecrets for containers                                                                                                        | `[]`                                            |
 | `nodeplugin.profiling.enabled`                 | Specifies whether profiling should be enabled                                                                                                        | `false`                                            |
 | `nodeplugin.registrar.image.repository`        | Node Registrar image repository URL                                                                                                                  | `registry.k8s.io/sig-storage/csi-node-driver-registrar` |
-| `nodeplugin.registrar.image.tag`               | Image tag                                                                                                                                            | `v2.11.1`                                           |
+| `nodeplugin.registrar.image.tag`               | Image tag                                                                                                                                            | `v2.13.0`                                           |
 | `nodeplugin.registrar.image.pullPolicy`        | Image pull policy                                                                                                                                    | `IfNotPresent`                                     |
 | `nodeplugin.plugin.image.repository`           | Nodeplugin image repository URL                                                                                                                      | `quay.io/cephcsi/cephcsi`                          |
 | `nodeplugin.plugin.image.tag`                  | Image tag                                                                                                                                            | `canary`                                           |
@@ -154,7 +138,7 @@ charts and their default values.
 | `provisioner.imagePullSecrets`                | Specifies imagePullSecrets for containers                                                                                                        | `[]`                                            |
 | `provisioner.profiling.enabled`                | Specifies whether profiling should be enabled                                                                                                        | `false`                                            |
 | `provisioner.provisioner.image.repository`     | Specifies the csi-provisioner image repository URL                                                                                                   | `registry.k8s.io/sig-storage/csi-provisioner`           |
-| `provisioner.provisioner.image.tag`            | Specifies image tag                                                                                                                                  | `v5.0.1`                                           |
+| `provisioner.provisioner.image.tag`            | Specifies image tag                                                                                                                                  | `v5.1.0`                                           |
 | `provisioner.provisioner.image.pullPolicy`     | Specifies pull policy                                                                                                                                | `IfNotPresent`                                     |
 | `provisioner.provisioner.args.httpEndpointPort`    | Specifies http server port for diagnostics, health checks and metrics                                                                                    | `""`                                               |
 | `provisioner.provisioner.extraArgs`            | Specifies extra arguments for the provisioner sidecar                                                                                                | `[]`                                               |
@@ -171,7 +155,7 @@ charts and their default values.
 | `provisioner.resizer.name`                     | Specifies the name of csi-resizer sidecar                                                                                                            | `resizer`                                          |
 | `provisioner.resizer.enabled`                  | Specifies whether resizer sidecar is enabled                                                                                                         | `true`                                             |
 | `provisioner.resizer.image.repository`         | Specifies the csi-resizer image repository URL                                                                                                       | `registry.k8s.io/sig-storage/csi-resizer`               |
-| `provisioner.resizer.image.tag`                | Specifies image tag                                                                                                                                  | `v1.11.1`                                           |
+| `provisioner.resizer.image.tag`                | Specifies image tag                                                                                                                                  | `v1.13.1`                                           |
 | `provisioner.resizer.image.pullPolicy`         | Specifies pull policy                                                                                                                                | `IfNotPresent`                                     |
 | `provisioner.resizer.args.httpEndpointPort`        | Specifies http server port for diagnostics, health checks and metrics                                                                                    | `""`                                               |
 | `provisioner.resizer.extraArgs`                | Specifies extra arguments for the resizer sidecar                                                                                                    | `[]`                                               |
