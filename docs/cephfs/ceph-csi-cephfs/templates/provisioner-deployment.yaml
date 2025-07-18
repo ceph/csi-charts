@@ -83,7 +83,6 @@ spec:
             - "--nodeid=$(NODE_ID)"
             - "--type=cephfs"
             - "--controllerserver=true"
-            - "--automaxprocs=true"
             - "--pidlimit=-1"
             - "--endpoint=$(CSI_ENDPOINT)"
             - "--v={{ .Values.logLevel }}"
@@ -161,7 +160,7 @@ spec:
                   fieldPath: status.podIP
           ports:
             - containerPort: {{ .Values.provisioner.provisioner.args.httpEndpointPort }}
-              name: provisioner
+              name: http-endpoint
               protocol: TCP
 {{- end }}
           volumeMounts:
@@ -195,7 +194,7 @@ spec:
                   fieldPath: status.podIP
           ports:
             - containerPort: {{ .Values.provisioner.snapshotter.args.httpEndpointPort }}
-              name: snapshotter
+              name: http-endpoint
               protocol: TCP
 {{- end }}
           volumeMounts:
@@ -231,7 +230,7 @@ spec:
                   fieldPath: status.podIP
           ports:
             - containerPort: {{ .Values.provisioner.resizer.args.httpEndpointPort }}
-              name: resizer
+              name: http-endpoint
               protocol: TCP
 {{- end }}
           volumeMounts:
