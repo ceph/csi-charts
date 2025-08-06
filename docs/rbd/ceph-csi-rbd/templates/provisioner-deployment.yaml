@@ -83,6 +83,7 @@ spec:
             - "--nodeid=$(NODE_ID)"
             - "--type=rbd"
             - "--controllerserver=true"
+            - "--automaxprocs=true"
             - "--pidlimit=-1"
             - "--endpoint=$(CSI_ENDPOINT)"
             - "--csi-addons-endpoint=$(CSI_ADDONS_ENDPOINT)"
@@ -174,7 +175,7 @@ spec:
                   fieldPath: status.podIP
           ports:
             - containerPort: {{ .Values.provisioner.provisioner.args.httpEndpointPort }}
-              name: http-endpoint
+              name: provisioner
               protocol: TCP
 {{- end }}
           volumeMounts:
@@ -210,7 +211,7 @@ spec:
                   fieldPath: status.podIP
           ports:
             - containerPort: {{ .Values.provisioner.resizer.args.httpEndpointPort }}
-              name: http-endpoint
+              name: resizer
               protocol: TCP
 {{- end }}
           volumeMounts:
@@ -245,7 +246,7 @@ spec:
                   fieldPath: status.podIP
           ports:
             - containerPort: {{ .Values.provisioner.snapshotter.args.httpEndpointPort }}
-              name: http-endpoint
+              name: snapshotter
               protocol: TCP
 {{- end }}
           volumeMounts:
@@ -279,7 +280,7 @@ spec:
                   fieldPath: status.podIP
           ports:
             - containerPort: {{ .Values.provisioner.attacher.args.httpEndpointPort }}
-              name: http-endpoint
+              name: attacher
               protocol: TCP
 {{- end }}
           volumeMounts:
