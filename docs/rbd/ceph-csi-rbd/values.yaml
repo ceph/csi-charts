@@ -149,7 +149,7 @@ nodeplugin:
   plugin:
     image:
       repository: quay.io/cephcsi/cephcsi
-      tag: canary
+      tag: v3.15-canary
       pullPolicy: IfNotPresent
     resources: {}
 
@@ -164,9 +164,6 @@ nodeplugin:
   podSecurityContext: {}
 
   podAnnotations: {}
-
-  # enable fencing
-  fencing: false
 
 provisioner:
   name: provisioner
@@ -209,9 +206,6 @@ provisioner:
   # enable hostnetwork for provisioner pod. default is false
   # useful for deployments where the podNetwork has no access to ceph
   enableHostNetwork: false
-
-  # enable fencing
-  fencing: false
 
   httpMetrics:
     # Metrics only available for cephcsi/cephcsi => 1.2.0
@@ -519,8 +513,6 @@ storageClass:
   provisionerSecretNamespace: ""
   controllerExpandSecret: csi-rbd-secret
   controllerExpandSecretNamespace: ""
-  controllerPublishSecret: csi-rbd-secret
-  controllerPublishSecretNamespace: ""
   nodeStageSecret: csi-rbd-secret
   nodeStageSecretNamespace: ""
   # Specify the filesystem type of the volume. If not specified,
