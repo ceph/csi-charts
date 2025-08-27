@@ -138,7 +138,7 @@ nodeplugin:
   plugin:
     image:
       repository: quay.io/cephcsi/cephcsi
-      tag: v3.15-canary
+      tag: canary
       pullPolicy: IfNotPresent
     resources: {}
 
@@ -162,6 +162,9 @@ nodeplugin:
   # example: kernelmountoptions: "recover_session=clean"
   kernelmountoptions: ""
   fusemountoptions: ""
+
+  # enable fencing
+  fencing: false
 
 provisioner:
   name: provisioner
@@ -243,6 +246,9 @@ provisioner:
 
   # set metadata on volume
   setmetadata: true
+
+  # enable fencing
+  fencing: false
 
   attacher:
     name: attacher
@@ -382,6 +388,8 @@ storageClass:
   provisionerSecretNamespace: ""
   controllerExpandSecret: csi-cephfs-secret
   controllerExpandSecretNamespace: ""
+  controllerPublishSecret: csi-cephfs-secret
+  controllerPublishSecretNamespace: ""
   nodeStageSecret: csi-cephfs-secret
   nodeStageSecretNamespace: ""
   reclaimPolicy: Delete
