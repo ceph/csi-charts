@@ -138,7 +138,7 @@ nodeplugin:
   plugin:
     image:
       repository: quay.io/cephcsi/cephcsi
-      tag: v3.14-canary
+      tag: v3.15-canary
       pullPolicy: IfNotPresent
     resources: {}
 
@@ -162,6 +162,9 @@ nodeplugin:
   # example: kernelmountoptions: "recover_session=clean"
   kernelmountoptions: ""
   fusemountoptions: ""
+
+  # enable fencing
+  fencing: false
 
 provisioner:
   name: provisioner
@@ -243,6 +246,26 @@ provisioner:
 
   # set metadata on volume
   setmetadata: true
+
+  # enable fencing
+  fencing: false
+
+  attacher:
+    name: attacher
+    enabled: true
+    image:
+      repository: registry.k8s.io/sig-storage/csi-attacher
+      tag: v4.8.0
+      pullPolicy: IfNotPresent
+    resources: {}
+    args:
+    #   # httpEndpointPort specifies the http server port for
+    #   # diagnostics, health checks and metrics.
+    #   # Uncomment below line to enable the `http-endpoint` arg for sidecar
+    #   httpEndpointPort: 8093
+    ## For further options, check
+    ## https://github.com/kubernetes-csi/external-attacher#command-line-options
+    extraArgs: []
 
   resizer:
     name: resizer
@@ -365,6 +388,8 @@ storageClass:
   provisionerSecretNamespace: ""
   controllerExpandSecret: csi-cephfs-secret
   controllerExpandSecretNamespace: ""
+  controllerPublishSecret: csi-cephfs-secret
+  controllerPublishSecretNamespace: ""
   nodeStageSecret: csi-cephfs-secret
   nodeStageSecretNamespace: ""
   reclaimPolicy: Delete
@@ -374,6 +399,71 @@ storageClass:
   # Example:
   # mountOptions:
   #   - discard
+
+volumeSnapshotClass:
+  # Specifies whether the VolumeSnapshotClass should be created
+  create: false
+  name: csi-cephfsplugin-snapclass
+
+  # Annotations for the VolumeSnapshotClass
+  # Example:
+  # annotations:
+  #   storageclass.kubernetes.io/is-default-class: "true"
+  annotations: {}
+
+  # String representing a Ceph cluster to provision storage snapshot from.
+  # Should be unique across all Ceph clusters in use for provisioning,
+  # cannot be greater than 36 bytes in length, and should remain immutable for
+  # the lifetime of the VolumeSnapshotClass in use.
+  # Ensure to create an entry in the configmap named ceph-csi-config, based on
+  # csi-config-map-sample.yaml, to accompany the string chosen to
+  # represent the Ceph cluster in clusterID below
+  clusterID: <cluster-id>
+
+  # Prefix to use for naming CephFS snapshots.
+  # If omitted, defaults to "csi-snap-".
+  # snapshotNamePrefix: "foo-bar-"
+  snapshotNamePrefix: ""
+
+  # The secrets have to contain user and/or Ceph admin credentials.
+  snapshotterSecret: csi-cephfs-secret
+  # If the Namespaces are not specified, the secrets are assumed to
+  # be in the Release namespace.
+  snapshotterSecretNamespace: ""
+
+  deletionPolicy: Delete
+
+volumeGroupSnapshotClass:
+  # Specifies whether the VolumeGroupSnapshotClass should be created
+  create: false
+  name: csi-cephfsplugin-groupsnapclass
+
+  # Annotations for the VolumeGroupSnapshotClass
+  # Example:
+  # annotations:
+  #   storageclass.kubernetes.io/is-default-class: "true"
+  annotations: {}
+
+  # String representing a Ceph cluster to provision storage from.
+  # Should be unique across all Ceph clusters in use for provisioning,
+  # cannot be greater than 36 bytes in length, and should remain immutable for
+  # the lifetime of the VolumeGroupSnapshotClass in use
+  clusterID: <cluster-id>
+
+  # eg: fsName: myfs
+  fsName: myfs
+
+  # (optional) Prefix to use for naming RBD groups.
+  # If omitted, defaults to "csi-vol-group-".
+  volumeGroupNamePrefix: ""
+
+  # The secrets have to contain user and/or Ceph admin credentials.
+  groupSnapshotterSecret: csi-cephfs-secret
+  # If the Namespaces are not specified, the secrets are assumed to
+  # be in the Release namespace.
+  groupSnapshotterSecretNamespace: ""
+
+  deletionPolicy: Delete
 
 secret:
   # Specifies whether the secret should be created
