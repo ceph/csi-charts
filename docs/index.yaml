@@ -3,7 +3,7 @@ entries:
   ceph-csi-cephfs:
   - apiVersion: v1
     appVersion: 3.18.1
-    created: "2026-10-01T15:02:06.563882417Z"
+    created: "2026-10-01T15:02:08.447023968Z"
     description: Container Storage Interface (CSI) driver, provisioner, snapshotter,
       resizer and attacher for Ceph cephfs
     digest: 01fac42009678ec37b7d3c2f2b313f7d6f4caff1a18e62fb8e763976e26b656d
@@ -21,7 +21,7 @@ entries:
     version: 3.18.1
   - apiVersion: v1
     appVersion: 3.18.0
-    created: "2026-10-01T15:02:06.562069731Z"
+    created: "2026-10-01T15:02:08.446096141Z"
     description: Container Storage Interface (CSI) driver, provisioner, snapshotter,
       resizer and attacher for Ceph cephfs
     digest: 6ea03e4e3c0324fb7858ed2a9ba719cd174e559870f61a702b5bffd0b2207eda
@@ -39,7 +39,7 @@ entries:
     version: 3.18.0
   - apiVersion: v1
     appVersion: 3.18-canary
-    created: "2026-10-01T15:02:06.561141517Z"
+    created: "2026-10-01T15:02:08.445206997Z"
     description: Container Storage Interface (CSI) driver, provisioner, snapshotter,
       resizer and attacher for Ceph cephfs
     digest: 11b5595ab688dbc83021711008732cc1baf69cf7ccb6c6ba06df5c06a8c5ef22
@@ -57,7 +57,7 @@ entries:
     version: 3.18-canary
   - apiVersion: v1
     appVersion: 3.17.1
-    created: "2026-10-01T15:02:06.560215864Z"
+    created: "2026-10-01T15:02:08.444230618Z"
     description: Container Storage Interface (CSI) driver, provisioner, snapshotter,
       resizer and attacher for Ceph cephfs
     digest: 100c00932b1969df63400e5bb477b5ef2701371fb350e5b8cb8c4fb2873aa117
@@ -75,7 +75,7 @@ entries:
     version: 3.17.1
   - apiVersion: v1
     appVersion: 3.17.0
-    created: "2026-10-01T15:02:06.559302771Z"
+    created: "2026-10-01T15:02:08.442925196Z"
     description: Container Storage Interface (CSI) driver, provisioner, snapshotter,
       resizer and attacher for Ceph cephfs
     digest: 8c5c0c5a398e0831ba70b7c1aa0c107674e8ca7ff3648515a1625d9da29a81f0
@@ -93,7 +93,7 @@ entries:
     version: 3.17.0
   - apiVersion: v1
     appVersion: 3.17-canary
-    created: "2026-10-01T15:02:06.55833992Z"
+    created: "2026-10-01T15:02:08.441584845Z"
     description: Container Storage Interface (CSI) driver, provisioner, snapshotter,
       resizer and attacher for Ceph cephfs
     digest: 42a8085eff8e3805b82a15c28cd33e301c564838883f426d750fe68811911b93
@@ -111,7 +111,7 @@ entries:
     version: 3.17-canary
   - apiVersion: v1
     appVersion: 3.16.3
-    created: "2026-10-01T15:02:06.556644208Z"
+    created: "2026-10-01T15:02:08.440646627Z"
     description: Container Storage Interface (CSI) driver, provisioner, snapshotter,
       resizer and attacher for Ceph cephfs
     digest: 1c0822063fa799400c2583ca7d724e00f7a49989467d4f01a81591f898fbe230
@@ -129,7 +129,7 @@ entries:
     version: 3.16.3
   - apiVersion: v1
     appVersion: 3.16.2
-    created: "2026-10-01T15:02:06.555726797Z"
+    created: "2026-10-01T15:02:08.439735449Z"
     description: Container Storage Interface (CSI) driver, provisioner, snapshotter,
       resizer and attacher for Ceph cephfs
     digest: 5514f0dd80a336c40ad6147cc290d53a764f044032689ef4b9bdaf0eb83b0778
@@ -147,7 +147,7 @@ entries:
     version: 3.16.2
   - apiVersion: v1
     appVersion: 3.16.1
-    created: "2026-10-01T15:02:06.554818701Z"
+    created: "2026-10-01T15:02:08.43881157Z"
     description: Container Storage Interface (CSI) driver, provisioner, snapshotter,
       resizer and attacher for Ceph cephfs
     digest: a9a767c9d80908a3f37e9fd0ef5d8c068780b66d5d91cd1e038082d2b241572d
@@ -165,7 +165,7 @@ entries:
     version: 3.16.1
   - apiVersion: v1
     appVersion: 3.16.0
-    created: "2026-10-01T15:02:06.553909439Z"
+    created: "2026-10-01T15:02:08.437018623Z"
     description: Container Storage Interface (CSI) driver, provisioner, snapshotter,
       resizer and attacher for Ceph cephfs
     digest: c7530f51a6eaa53d726c43d60fa4de114cdfc9330dc68480f76026ed1546ce13
@@ -183,7 +183,7 @@ entries:
     version: 3.16.0
   - apiVersion: v1
     appVersion: 3.16-canary
-    created: "2026-10-01T15:02:06.55295681Z"
+    created: "2026-10-01T15:02:08.436102828Z"
     description: Container Storage Interface (CSI) driver, provisioner, snapshotter,
       resizer and attacher for Ceph cephfs
     digest: b54d1d257ea220311be72e648947e5f091fcc72ce7476d314f1f7e58ee1d3216
@@ -201,7 +201,7 @@ entries:
     version: 3.16-canary
   - apiVersion: v1
     appVersion: 3.15.1
-    created: "2026-10-01T15:02:06.551483638Z"
+    created: "2026-10-01T15:02:08.435203892Z"
     description: Container Storage Interface (CSI) driver, provisioner, snapshotter,
       resizer and attacher for Ceph cephfs
     digest: c102c4940f9babfaa46540c305fa9d1004b1fab76ab8abc47d846648ed47140c
@@ -219,7 +219,7 @@ entries:
     version: 3.15.1
   - apiVersion: v1
     appVersion: 3.15.0
-    created: "2026-10-01T15:02:06.550396965Z"
+    created: "2026-10-01T15:02:08.434276045Z"
     description: Container Storage Interface (CSI) driver, provisioner, snapshotter,
       resizer and attacher for Ceph cephfs
     digest: d23cc0d88fda2228dfb55b2b6c167f1e68adcb952700eff1e22ace63535ba97e
@@ -237,7 +237,7 @@ entries:
     version: 3.15.0
   - apiVersion: v1
     appVersion: 3.15-canary
-    created: "2026-10-01T15:02:06.549495044Z"
+    created: "2026-10-01T15:02:08.433334388Z"
     description: Container Storage Interface (CSI) driver, provisioner, snapshotter,
       resizer and attacher for Ceph cephfs
     digest: 6fff81345fc6bb8425078cb898fdec0b32ebcc94975199d014add7d9e8c2a2f8
@@ -255,7 +255,7 @@ entries:
     version: 3.15-canary
   - apiVersion: v1
     appVersion: 3.14.2
-    created: "2026-10-01T15:02:06.548592081Z"
+    created: "2026-10-01T15:02:08.432031051Z"
     description: Container Storage Interface (CSI) driver, provisioner, snapshotter
       and resizer for Ceph cephfs
     digest: e54db5bfb22fe40c2e157e765f7dd86e7eb707d5d91616d614b3359a8b252722
@@ -273,7 +273,7 @@ entries:
     version: 3.14.2
   - apiVersion: v1
     appVersion: 3.14.1
-    created: "2026-10-01T15:02:06.547774128Z"
+    created: "2026-10-01T15:02:08.430756446Z"
     description: Container Storage Interface (CSI) driver, provisioner, snapshotter
       and resizer for Ceph cephfs
     digest: 601f40d9cc75591b14a87fe0fdfadaa4ca51abca86fe1ea4fff39ca5cee53eee
@@ -291,7 +291,7 @@ entries:
     version: 3.14.1
   - apiVersion: v1
     appVersion: 3.14.0
-    created: "2026-10-01T15:02:06.546891553Z"
+    created: "2026-10-01T15:02:08.429951312Z"
     description: Container Storage Interface (CSI) driver, provisioner, snapshotter
       and resizer for Ceph cephfs
     digest: 35c11879a4ce72e288f71d25dc5f462f59ea71390f3c5b166806ce8df85e806a
@@ -309,7 +309,7 @@ entries:
     version: 3.14.0
   - apiVersion: v1
     appVersion: 3.14-canary
-    created: "2026-10-01T15:02:06.545229273Z"
+    created: "2026-10-01T15:02:08.429164339Z"
     description: Container Storage Interface (CSI) driver, provisioner, snapshotter
       and resizer for Ceph cephfs
     digest: bc63e97d3c372baf08d6be1d722260b70ec14d6eee3d2c186b9d2ffc8eaa62f6
@@ -327,7 +327,7 @@ entries:
     version: 3.14-canary
   - apiVersion: v1
     appVersion: 3.13.1
-    created: "2026-10-01T15:02:06.544418682Z"
+    created: "2026-10-01T15:02:08.428354765Z"
     description: Container Storage Interface (CSI) driver, provisioner, snapshotter
       and resizer for Ceph cephfs
     digest: 7fdf6a8d27c1dc89cf58383048b62b7ab07377d50870e63e101620e994b94d8b
@@ -345,7 +345,7 @@ entries:
     version: 3.13.1
   - apiVersion: v1
     appVersion: 3.13.0
-    created: "2026-10-01T15:02:06.54363998Z"
+    created: "2026-10-01T15:02:08.427574187Z"
     description: Container Storage Interface (CSI) driver, provisioner, snapshotter
       and resizer for Ceph cephfs
     digest: 63c39b6ae0d99e5cadfd31dbf597ee35798689a0d36d961eee1a3ae00917072e
@@ -363,7 +363,7 @@ entries:
     version: 3.13.0
   - apiVersion: v1
     appVersion: 3.13-canary
-    created: "2026-10-01T15:02:06.542854065Z"
+    created: "2026-10-01T15:02:08.426733467Z"
     description: Container Storage Interface (CSI) driver, provisioner, snapshotter
       and resizer for Ceph cephfs
     digest: 5165d9be57cdd55016fc304b014dce8424048981fc4162b985bb84242015ffd9
@@ -381,7 +381,7 @@ entries:
     version: 3.13-canary
   - apiVersion: v1
     appVersion: 3.12.3
-    created: "2026-10-01T15:02:06.54205883Z"
+    created: "2026-10-01T15:02:08.42509133Z"
     description: Container Storage Interface (CSI) driver, provisioner, snapshotter
       and resizer for Ceph cephfs
     digest: 635ffec67d0a95a8bffc430826b4b9d8abd99e82cffe76c7613812553ac9d8d7
@@ -399,7 +399,7 @@ entries:
     version: 3.12.3
   - apiVersion: v1
     appVersion: 3.12.2
-    created: "2026-10-01T15:02:06.54127009Z"
+    created: "2026-10-01T15:02:08.424387582Z"
     description: Container Storage Interface (CSI) driver, provisioner, snapshotter
       and resizer for Ceph cephfs
     digest: 3bfaa683c37666467942339e123eccd08c9d768c1d0f5ddb586b8cc7d4add485
@@ -417,7 +417,7 @@ entries:
     version: 3.12.2
   - apiVersion: v1
     appVersion: 3.12.1
-    created: "2026-10-01T15:02:06.540062912Z"
+    created: "2026-10-01T15:02:08.423678119Z"
     description: Container Storage Interface (CSI) driver, provisioner, snapshotter
       and resizer for Ceph cephfs
     digest: 686a8c11ea334dbb9f9ab2247154b7d59d81c4fb0f30d65497ff7da030e51356
@@ -435,7 +435,7 @@ entries:
     version: 3.12.1
   - apiVersion: v1
     appVersion: 3.12.0
-    created: "2026-10-01T15:02:06.538949074Z"
+    created: "2026-10-01T15:02:08.422937826Z"
     description: Container Storage Interface (CSI) driver, provisioner, snapshotter
       and resizer for Ceph cephfs
     digest: a84b881dbcaf44ce2db56a22b0f6467bc6c5d94b9f39af08a4a3df436e3ac7bd
@@ -453,7 +453,7 @@ entries:
     version: 3.12.0
   - apiVersion: v1
     appVersion: 3.12-canary
-    created: "2026-10-01T15:02:06.538223318Z"
+    created: "2026-10-01T15:02:08.422228657Z"
     description: Container Storage Interface (CSI) driver, provisioner, snapshotter
       and resizer for Ceph cephfs
     digest: 50da4d8946f2c10830d39912ca53a78399fd1f39109a97ffcb84394d99868fdf
@@ -471,7 +471,7 @@ entries:
     version: 3.12-canary
   - apiVersion: v1
     appVersion: 3.11.0
-    created: "2026-10-01T15:02:06.53752872Z"
+    created: "2026-10-01T15:02:08.42144465Z"
     description: Container Storage Interface (CSI) driver, provisioner, snapshotter
       and resizer for Ceph cephfs
     digest: 56c5d5fc9574746eb25d37861d752bdd8ce7a6b77b3362c3b77d15146c4c255e
@@ -489,7 +489,7 @@ entries:
     version: 3.11.0
   - apiVersion: v1
     appVersion: 3.11-canary
-    created: "2026-10-01T15:02:06.536798754Z"
+    created: "2026-10-01T15:02:08.420289191Z"
     description: Container Storage Interface (CSI) driver, provisioner, snapshotter
       and resizer for Ceph cephfs
     digest: 0904370096e5b52adaabbaf6eee408f4225dff6cda12a4687ed0bc525deaa17c
@@ -507,7 +507,7 @@ entries:
     version: 3.11-canary
   - apiVersion: v1
     appVersion: 3.10.2
-    created: "2026-10-01T15:02:06.536066959Z"
+    created: "2026-10-01T15:02:08.419102709Z"
     description: Container Storage Interface (CSI) driver, provisioner, snapshotter
       and resizer for Ceph cephfs
     digest: 277b10f03f773501bdf1fa7ee894234a54a22b65f1a20e005eb834c2ef61e8a4
@@ -525,7 +525,7 @@ entries:
     version: 3.10.2
   - apiVersion: v1
     appVersion: 3.10.1
-    created: "2026-10-01T15:02:06.535325997Z"
+    created: "2026-10-01T15:02:08.418442481Z"
     description: Container Storage Interface (CSI) driver, provisioner, snapshotter
       and resizer for Ceph cephfs
     digest: f6523ac579952f1b145d5ebf6d84ceb2df2362e80ba9095f50564fd8fba42d65
@@ -543,7 +543,7 @@ entries:
     version: 3.10.1
   - apiVersion: v1
     appVersion: 3.10.0
-    created: "2026-10-01T15:02:06.533879209Z"
+    created: "2026-10-01T15:02:08.417779702Z"
     description: Container Storage Interface (CSI) driver, provisioner, snapshotter
       and resizer for Ceph cephfs
     digest: 4695907280172a1cf249e4967a1fb5995e4e2fa1ebc67dc0daa48b7abe3eb1b3
@@ -561,7 +561,7 @@ entries:
     version: 3.10.0
   - apiVersion: v1
     appVersion: 3.10-canary
-    created: "2026-10-01T15:02:06.533133893Z"
+    created: "2026-10-01T15:02:08.417086148Z"
     description: Container Storage Interface (CSI) driver, provisioner, snapshotter
       and resizer for Ceph cephfs
     digest: c3126250263f85dc1717036283077dc57255f3ad199c7ed18c156b330f3aedb8
@@ -579,7 +579,7 @@ entries:
     version: 3.10-canary
   - apiVersion: v1
     appVersion: 3.9.0
-    created: "2026-10-01T15:02:06.581229074Z"
+    created: "2026-10-01T15:02:08.464549333Z"
     description: Container Storage Interface (CSI) driver, provisioner, snapshotter
       and resizer for Ceph cephfs
     digest: 7b009a58cb94f07f8a6d37543605aa0bd7bdfaa00a5231b16fe2c10ba1da6eb9
@@ -597,7 +597,7 @@ entries:
     version: 3.9.0
   - apiVersion: v1
     appVersion: 3.9-canary
-    created: "2026-10-01T15:02:06.58057102Z"
+    created: "2026-10-01T15:02:08.463915604Z"
     description: Container Storage Interface (CSI) driver, provisioner, snapshotter
       and resizer for Ceph cephfs
     digest: 178ddf40ddb2be1676841fee9a192a51a299b0a19d0f6b48379fcc3c670a7baa
@@ -615,7 +615,7 @@ entries:
     version: 3.9-canary
   - apiVersion: v1
     appVersion: 3.8.1
-    created: "2026-10-01T15:02:06.579821186Z"
+    created: "2026-10-01T15:02:08.463278537Z"
     description: Container Storage Interface (CSI) driver, provisioner, snapshotter
       and resizer for Ceph cephfs
     digest: 637ef79251048617106e4ab43c08c0abec825014d1dd1187f8d1258f543b3820
@@ -633,7 +633,7 @@ entries:
     version: 3.8.1
   - apiVersion: v1
     appVersion: 3.8.0
-    created: "2026-10-01T15:02:06.578375933Z"
+    created: "2026-10-01T15:02:08.462623636Z"
     description: Container Storage Interface (CSI) driver, provisioner, snapshotter
       and resizer for Ceph cephfs
     digest: eb102c5970e3b036ebdf7fa54832694d94a42afe3f43b4542b6b5193d111afac
@@ -651,7 +651,7 @@ entries:
     version: 3.8.0
   - apiVersion: v1
     appVersion: 3.8-canary
-    created: "2026-10-01T15:02:06.577736092Z"
+    created: "2026-10-01T15:02:08.46197313Z"
     description: Container Storage Interface (CSI) driver, provisioner, snapshotter
       and resizer for Ceph cephfs
     digest: 2f8313b307c4c271838ff1432b8e2330203b04cb0be37dbf2ecc2db85d08726a
@@ -669,7 +669,7 @@ entries:
     version: 3.8-canary
   - apiVersion: v1
     appVersion: 3.7.2
-    created: "2026-10-01T15:02:06.577086735Z"
+    created: "2026-10-01T15:02:08.46131589Z"
     description: Container Storage Interface (CSI) driver, provisioner, snapshotter
       and resizer for Ceph cephfs
     digest: de1068b7ae48b12718c448c4be050a99b6ddbb5f3fc62089bf9aeb0946720c99
@@ -687,7 +687,7 @@ entries:
     version: 3.7.2
   - apiVersion: v1
     appVersion: 3.7.1
-    created: "2026-10-01T15:02:06.576398033Z"
+    created: "2026-10-01T15:02:08.460617324Z"
     description: Container Storage Interface (CSI) driver, provisioner, snapshotter
       and resizer for Ceph cephfs
     digest: 9b795fefc022503f4722c459155d2d5e911ee27951d9884696bc71fc1f6963d1
@@ -705,7 +705,7 @@ entries:
     version: 3.7.1
   - apiVersion: v1
     appVersion: 3.7.0
-    created: "2026-10-01T15:02:06.575761846Z"
+    created: "2026-10-01T15:02:08.45919817Z"
     description: Container Storage Interface (CSI) driver, provisioner, snapshotter
       and resizer for Ceph cephfs
     digest: 72d99e41d5098b6d9252337100e001c19a4e20b12d8c712a5ab982bcc8a1aaaa
@@ -723,7 +723,7 @@ entries:
     version: 3.7.0
   - apiVersion: v1
     appVersion: 3.7-canary
-    created: "2026-10-01T15:02:06.575083774Z"
+    created: "2026-10-01T15:02:08.45850927Z"
     description: Container Storage Interface (CSI) driver, provisioner, snapshotter
       and resizer for Ceph cephfs
     digest: bc76b315f41733cd51fbffa7f60c77eebab657b6c7b1c55ff4b7694856fdf650
@@ -741,7 +741,7 @@ entries:
     version: 3.7-canary
   - apiVersion: v1
     appVersion: 3.6.2
-    created: "2026-10-01T15:02:06.574417508Z"
+    created: "2026-10-01T15:02:08.457893289Z"
     description: Container Storage Interface (CSI) driver, provisioner, snapshotter
       and attacher for Ceph cephfs
     digest: 27b9b2a6945999e2c7b57a08c6a8b63734233f762890e7163342f408a6b44fbe
@@ -759,7 +759,7 @@ entries:
     version: 3.6.2
   - apiVersion: v1
     appVersion: 3.6.1
-    created: "2026-10-01T15:02:06.573053182Z"
+    created: "2026-10-01T15:02:08.457198991Z"
     description: Container Storage Interface (CSI) driver, provisioner, snapshotter
       and attacher for Ceph cephfs
     digest: 5af43bad1a30d9244ecc5f9970575e4297138c7e1b65f663afa29b70e24bd8ee
@@ -777,7 +777,7 @@ entries:
     version: 3.6.1
   - apiVersion: v1
     appVersion: 3.6.0
-    created: "2026-10-01T15:02:06.572393808Z"
+    created: "2026-10-01T15:02:08.456537008Z"
     description: Container Storage Interface (CSI) driver, provisioner, snapshotter
       and attacher for Ceph cephfs
     digest: 535ac099829c511cede1cd6ab142b8e88a13bf1f30afd18c0670c878237206cd
@@ -795,7 +795,7 @@ entries:
     version: 3.6.0
   - apiVersion: v1
     appVersion: 3.6-canary
-    created: "2026-10-01T15:02:06.571724073Z"
+    created: "2026-10-01T15:02:08.455829505Z"
     description: Container Storage Interface (CSI) driver, provisioner, snapshotter
       and attacher for Ceph cephfs
     digest: 2c19f225abd6a5bf2f9e70defe604648e5638a352e14e4cc87b3ea930e1868e4
@@ -813,7 +813,7 @@ entries:
     version: 3.6-canary
   - apiVersion: v1
     appVersion: 3.5.1
-    created: "2026-10-01T15:02:06.571030768Z"
+    created: "2026-10-01T15:02:08.455053729Z"
     description: Container Storage Interface (CSI) driver, provisioner, snapshotter
       and attacher for Ceph cephfs
     digest: ab01238df72f73e1f25ff806b391b9939b48f1dd194251539b0f9a0566465684
@@ -831,7 +831,7 @@ entries:
     version: 3.5.1
   - apiVersion: v1
     appVersion: 3.5.0
-    created: "2026-10-01T15:02:06.570359226Z"
+    created: "2026-10-01T15:02:08.453558145Z"
     description: Container Storage Interface (CSI) driver, provisioner, snapshotter
       and attacher for Ceph cephfs
     digest: 1c3ed3565b2c2499381e022cd0b93e81e36e57ff62965cc816f40251da0a5832
@@ -849,7 +849,7 @@ entries:
     version: 3.5.0
   - apiVersion: v1
     appVersion: 3.5-canary
-    created: "2026-10-01T15:02:06.569686108Z"
+    created: "2026-10-01T15:02:08.452896395Z"
     description: Container Storage Interface (CSI) driver, provisioner, snapshotter
       and attacher for Ceph cephfs
     digest: ee467188db7efd4756bd8694f3e8aa53227677092dfc5c2a49ad28d31ff90930
@@ -867,7 +867,7 @@ entries:
     version: 3.5-canary
   - apiVersion: v1
     appVersion: v3.4.0
-    created: "2026-10-01T15:02:06.568945838Z"
+    created: "2026-10-01T15:02:08.452235099Z"
     description: Container Storage Interface (CSI) driver, provisioner, snapshotter
       and attacher for Ceph cephfs
     digest: ba96da786eb51dfe7ab0107abb179e544afc532f84f094e8bbfeb89de76b1e29
@@ -885,7 +885,7 @@ entries:
     version: 3.4.0
   - apiVersion: v1
     appVersion: 3.4-canary
-    created: "2026-10-01T15:02:06.567473036Z"
+    created: "2026-10-01T15:02:08.45158765Z"
     description: Container Storage Interface (CSI) driver, provisioner, snapshotter
       and attacher for Ceph cephfs
     digest: bf2fe42e92543cddb474fa4de4361ef02564b5c86ac7e1a0190c56cabeef332b
@@ -903,7 +903,7 @@ entries:
     version: 3.4-canary
   - apiVersion: v1
     appVersion: v3.3.1
-    created: "2026-10-01T15:02:06.566830297Z"
+    created: "2026-10-01T15:02:08.450907061Z"
     description: Container Storage Interface (CSI) driver, provisioner, snapshotter
       and attacher for Ceph cephfs
     digest: a916607ac12a77ea8327dffdb54e3ad650e191c92fa24412c617a102a14738fd
@@ -921,7 +921,7 @@ entries:
     version: 3.3.1
   - apiVersion: v1
     appVersion: 3.3-canary
-    created: "2026-10-01T15:02:06.566360708Z"
+    created: "2026-10-01T15:02:08.450393171Z"
     description: Container Storage Interface (CSI) driver, provisioner, snapshotter
       and attacher for Ceph cephfs
     digest: d5c4d3b8297c61683d00457ec097b33122a2c88bcbbf82aec3e5b249e4f99358
@@ -939,7 +939,7 @@ entries:
     version: 3.3-canary
   - apiVersion: v1
     appVersion: v3.2.2
-    created: "2026-10-01T15:02:06.565860973Z"
+    created: "2026-10-01T15:02:08.449882989Z"
     description: Container Storage Interface (CSI) driver, provisioner, snapshotter
       and attacher for Ceph cephfs
     digest: b056e11557312324c352798ed24377b64a93b15ce9a990ea157b9a571a921bc5
@@ -957,7 +957,7 @@ entries:
     version: 3.2.2
   - apiVersion: v1
     appVersion: v3.2.1
-    created: "2026-10-01T15:02:06.56540195Z"
+    created: "2026-10-01T15:02:08.449343189Z"
     description: Container Storage Interface (CSI) driver, provisioner, snapshotter
       and attacher for Ceph cephfs
     digest: 7e6539e74ece5e0e916916b6d365d42a7b9a963c8fc62b3d569439c41eb75fa2
@@ -975,7 +975,7 @@ entries:
     version: 3.2.1
   - apiVersion: v1
     appVersion: v3.2.0
-    created: "2026-10-01T15:02:06.564928719Z"
+    created: "2026-10-01T15:02:08.447985709Z"
     description: Container Storage Interface (CSI) driver, provisioner, snapshotter
       and attacher for Ceph cephfs
     digest: bc529b2ef8e498942acf4bb8451ec0fc9a4a2c7e09a660ea1564853db590ddee
@@ -993,7 +993,7 @@ entries:
     version: 3.2.0
   - apiVersion: v1
     appVersion: 3.2-canary
-    created: "2026-10-01T15:02:06.564438712Z"
+    created: "2026-10-01T15:02:08.447508845Z"
     description: Container Storage Interface (CSI) driver, provisioner, snapshotter
       and attacher for Ceph cephfs
     digest: d2c66f62ceaec1c7b9384bf6fca339d1f051b73e0aec4ea449d7059bf40cf113
@@ -1011,7 +1011,7 @@ entries:
     version: 3.2-canary
   - apiVersion: v1
     appVersion: v3.1.2
-    created: "2026-10-01T15:02:06.532425423Z"
+    created: "2026-10-01T15:02:08.416361182Z"
     description: Container Storage Interface (CSI) driver, provisioner, snapshotter
       and attacher for Ceph cephfs
     digest: b1b642888854315bcbedeb1694cf1f5f57f865a0a1a99aa0e7c728a11f9c308c
@@ -1029,7 +1029,7 @@ entries:
     version: 3.1.2
   - apiVersion: v1
     appVersion: v3.1.1
-    created: "2026-10-01T15:02:06.531895302Z"
+    created: "2026-10-01T15:02:08.415893086Z"
     description: Container Storage Interface (CSI) driver, provisioner, snapshotter
       and attacher for Ceph cephfs
     digest: 6410eb001569942872ee60124038a5de102c50095ab01fd1dea8a21920616a5b
@@ -1047,7 +1047,7 @@ entries:
     version: 3.1.1
   - apiVersion: v1
     appVersion: v3.1.0
-    created: "2026-10-01T15:02:06.531398007Z"
+    created: "2026-10-01T15:02:08.415359601Z"
     description: Container Storage Interface (CSI) driver, provisioner, snapshotter
       and attacher for Ceph cephfs
     digest: a0077a68805294d0b82288ea45a214ea10298bdbf1eaeca591891c0654eb8e9c
@@ -1065,7 +1065,7 @@ entries:
     version: 3.1.0
   - apiVersion: v1
     appVersion: 3.1-canary
-    created: "2026-10-01T15:02:06.530890007Z"
+    created: "2026-10-01T15:02:08.414362338Z"
     description: Container Storage Interface (CSI) driver, provisioner, snapshotter
       and attacher for Ceph cephfs
     digest: 2f00a983bd0d308c905cad06e38bd0a3537cc73d5e02b710e01c13bd38a89857
@@ -1083,7 +1083,7 @@ entries:
     version: 3.1-canary
   - apiVersion: v1
     appVersion: v3.0.0
-    created: "2026-10-01T15:02:06.530406314Z"
+    created: "2026-10-01T15:02:08.413636766Z"
     description: Container Storage Interface (CSI) driver, provisioner, and attacher
       for Ceph cephfs
     digest: 0686e5ade62d59ee5822e73ec43f2390d9f878afe516304dceba4144f549b553
@@ -1101,10 +1101,10 @@ entries:
     version: 3.0.0
   - apiVersion: v1
     appVersion: canary
-    created: "2026-10-01T15:02:06.529408893Z"
+    created: "2026-10-01T15:02:08.412681829Z"
     description: Container Storage Interface (CSI) driver, provisioner, snapshotter,
       resizer and attacher for Ceph cephfs
-    digest: 1b7dbefae9aaf11168d118a2d5ffc2ff1061fbdf059030d92efa2b768d35698d
+    digest: 99f3eaa80d83589da7f65c18c1f728daa788303b10f56f92f1cc2dbac36ca9d3
     home: https://github.com/ceph/ceph-csi
     icon: https://raw.githubusercontent.com/ceph/ceph-csi/devel/docs/assets/ceph-logo.png
     keywords:
@@ -1119,7 +1119,7 @@ entries:
     version: 3-canary
   - apiVersion: v1
     appVersion: 3.0-canary
-    created: "2026-10-01T15:02:06.529917433Z"
+    created: "2026-10-01T15:02:08.413163066Z"
     description: Container Storage Interface (CSI) driver, provisioner, and attacher
       for Ceph cephfs
     digest: 40f0897c6ca777a6df936862737fa2b5726969c6b705d41d57fb1e7f04a2a71d
@@ -1137,7 +1137,7 @@ entries:
     version: 3.0-canary
   - apiVersion: v1
     appVersion: v2.1.2
-    created: "2026-10-01T15:02:06.527708413Z"
+    created: "2026-10-01T15:02:08.411756064Z"
     description: Container Storage Interface (CSI) driver, provisioner, and attacher
       for Ceph cephfs
     digest: 22f74ef164ece766a223694223737988f682778d94e369783f135df74c70c586
@@ -1155,7 +1155,7 @@ entries:
     version: 2.1.2
   - apiVersion: v1
     appVersion: v2.1.1
-    created: "2026-10-01T15:02:06.527061582Z"
+    created: "2026-10-01T15:02:08.411300278Z"
     description: Container Storage Interface (CSI) driver, provisioner, and attacher
       for Ceph cephfs
     digest: 05efffcab7165e164ce8342a85098573fbf052e81d3802d1dbc9e0d38c0cc2e4
@@ -1173,7 +1173,7 @@ entries:
     version: 2.1.1
   - apiVersion: v1
     appVersion: 2.1.0
-    created: "2026-10-01T15:02:06.526608953Z"
+    created: "2026-10-01T15:02:08.4108213Z"
     description: Container Storage Interface (CSI) driver, provisioner, and attacher
       for Ceph cephfs
     digest: d053c122fa83e5e57ceca1a36cb9a67e326e6bf6525b28145a0f5e1150a153ce
@@ -1191,7 +1191,7 @@ entries:
     version: 2.1.0
   - apiVersion: v1
     appVersion: 2.1-canary
-    created: "2026-10-01T15:02:06.526115835Z"
+    created: "2026-10-01T15:02:08.410313214Z"
     description: Container Storage Interface (CSI) driver, provisioner, and attacher
       for Ceph cephfs
     digest: 9b03b9738c8332f41017e435d08c8c7e536fd50472ef4fe308bf019ebd22329c
@@ -1209,7 +1209,7 @@ entries:
     version: 2.1-canary
   - apiVersion: v1
     appVersion: v2.0.1
-    created: "2026-10-01T15:02:06.525594275Z"
+    created: "2026-10-01T15:02:08.40975877Z"
     description: Container Storage Interface (CSI) driver, provisioner, and attacher
       for Ceph cephfs
     digest: fda361984faea2304a36d23a3aa2a6d64fbdd84ca31f5322f0da167d4158f295
@@ -1227,7 +1227,7 @@ entries:
     version: 2.0.1
   - apiVersion: v1
     appVersion: v2.0.0
-    created: "2026-10-01T15:02:06.525093754Z"
+    created: "2026-10-01T15:02:08.408411484Z"
     description: Container Storage Interface (CSI) driver, provisioner, and attacher
       for Ceph cephfs
     digest: 9b0acc9caf8318bf1cdee55eab37c178dcd9bd74e7e296f9d7940616a57fa56b
@@ -1245,7 +1245,7 @@ entries:
     version: 2.0.0
   - apiVersion: v1
     appVersion: 2.0-canary
-    created: "2026-10-01T15:02:06.524621849Z"
+    created: "2026-10-01T15:02:08.407927194Z"
     description: Container Storage Interface (CSI) driver, provisioner, and attacher
       for Ceph cephfs
     digest: 573295019b7040fe1057de86f11e8b9a6b185b78619379e0db7dd74ccfbcbbc8
@@ -1263,7 +1263,7 @@ entries:
     version: 2.0-canary
   - apiVersion: v1
     appVersion: canary
-    created: "2026-10-01T15:02:06.524087681Z"
+    created: "2026-10-01T15:02:08.40741627Z"
     description: Container Storage Interface (CSI) driver, provisioner, snapshotter
       and attacher for Ceph cephfs
     digest: f93922b0459f89e026d2f87aa57abbcd4c00cedda8229e230ff21276b53c7af4
@@ -1281,7 +1281,7 @@ entries:
     version: 1.3.0-canary
   - apiVersion: v1
     appVersion: 1.2.2
-    created: "2026-10-01T15:02:06.523336978Z"
+    created: "2026-10-01T15:02:08.406694117Z"
     description: Container Storage Interface (CSI) driver, provisioner, and attacher
       for Ceph cephfs
     digest: b0447a8b2ecd5b7a175f742b9b8e53e887d0c66a0f16748f38a7f2972d788f53
@@ -1299,7 +1299,7 @@ entries:
     version: 1.2.2
   - apiVersion: v1
     appVersion: 1.2-canary
-    created: "2026-10-01T15:02:06.522178109Z"
+    created: "2026-10-01T15:02:08.406188548Z"
     description: Container Storage Interface (CSI) driver, provisioner, and attacher
       for Ceph cephfs
     digest: 0e3956c53bd6040402a7e300e88edf1d161a5b1e918d705476e7445c41af7173
@@ -1317,7 +1317,7 @@ entries:
     version: 1.2-canary
   - apiVersion: v1
     appVersion: 1.1.0
-    created: "2026-10-01T15:02:06.52145951Z"
+    created: "2026-10-01T15:02:08.405676126Z"
     description: Container Storage Interface (CSI) driver, provisioner, and attacher
       for Ceph cephfs
     digest: deefe1fa96404e011a3212bd35018a63ad71d8410bf9e7e6f0701a1f7ff54765
@@ -1334,7 +1334,7 @@ entries:
     version: 1.1.0
   - apiVersion: v1
     appVersion: 1.0.0
-    created: "2026-10-01T15:02:06.521153485Z"
+    created: "2026-10-01T15:02:08.405342546Z"
     description: Container Storage Interface (CSI) driver, provisioner, and attacher
       for Ceph cephfs
     digest: 08ccdad029e374e06310233134a896df0b93c6de98012968b1731b040653ca61
@@ -1351,7 +1351,7 @@ entries:
     version: 0.8.0
   - apiVersion: v1
     appVersion: 1.0.0
-    created: "2026-10-01T15:02:06.520865337Z"
+    created: "2026-10-01T15:02:08.405042805Z"
     description: Container Storage Interface (CSI) driver, provisioner, and attacher
       for Ceph cephfs
     digest: 991303608d80b49700e3ff7c38439c6e44ae1d28971dc006f3549c4d546aab6d
@@ -1368,7 +1368,7 @@ entries:
     version: 0.7.0
   - apiVersion: v1
     appVersion: 1.0.0
-    created: "2026-10-01T15:02:06.520553038Z"
+    created: "2026-10-01T15:02:08.4047141Z"
     description: Container Storage Interface (CSI) driver, provisioner, and attacher
       for Ceph cephfs
     digest: 7f3fe2e65670bb11015b0a404653c7c189198a57b00f127dc6ba8680c7c807e7
@@ -1385,7 +1385,7 @@ entries:
     version: 0.6.0
   - apiVersion: v1
     appVersion: 1.0.0
-    created: "2026-10-01T15:02:06.520196712Z"
+    created: "2026-10-01T15:02:08.404307693Z"
     description: Container Storage Interface (CSI) driver, provisioner, and attacher
       for Ceph cephfs
     digest: be9a82ec2dcd529f747fee39abaea0c0acd5ef8305224a5f8c8bf2741352d29e
@@ -1402,7 +1402,7 @@ entries:
     version: 0.5.3
   - apiVersion: v1
     appVersion: 1.0.0
-    created: "2026-10-01T15:02:06.519884611Z"
+    created: "2026-10-01T15:02:08.402928003Z"
     description: Container Storage Interface (CSI) driver, provisioner, and attacher
       for Ceph cephfs
     digest: 0f5bd8542139951d93ac26fef23011eb8a0d789c9d25aeca137ea47f3bc6d56f
@@ -1419,7 +1419,7 @@ entries:
     version: 0.5.1
   - apiVersion: v1
     appVersion: 1.0.0
-    created: "2026-10-01T15:02:06.519546658Z"
+    created: "2026-10-01T15:02:08.402603661Z"
     description: Container Storage Interface (CSI) driver, provisioner, and attacher
       for Ceph cephfs
     digest: 3b1a8129b85b09146c33454a8817fa6362a866be947478224d1ccbdff9a6c2b3
@@ -1436,7 +1436,7 @@ entries:
     version: 0.5.0
   - apiVersion: v1
     appVersion: 1.0.0
-    created: "2026-10-01T15:02:06.51918336Z"
+    created: "2026-10-01T15:02:08.402233341Z"
     description: Container Storage Interface (CSI) driver, provisioner, and attacher
       for Ceph cephfs
     digest: f9afd37af2b5d38a2580324e13ab4ed8f637baf9c14ef93bdb920d8fa5b11a62
@@ -1454,7 +1454,7 @@ entries:
   ceph-csi-rbd:
   - apiVersion: v1
     appVersion: 3.18.1
-    created: "2026-10-01T15:02:06.633389787Z"
+    created: "2026-10-01T15:02:08.515047448Z"
     description: Container Storage Interface (CSI) driver, provisioner, snapshotter,
       resizer and attacher for Ceph RBD
     digest: ad9e98ac5501cb647b7f18342492f2e49e5cb1c9ff308ef759bd74ef5b4b3e99
@@ -1472,7 +1472,7 @@ entries:
     version: 3.18.1
   - apiVersion: v1
     appVersion: 3.18.0
-    created: "2026-10-01T15:02:06.63233741Z"
+    created: "2026-10-01T15:02:08.514031195Z"
     description: Container Storage Interface (CSI) driver, provisioner, snapshotter,
       resizer and attacher for Ceph RBD
     digest: bd4eb2bf4947f73aa5de3999b5f8d9393f12364818d19e05f4d3c4c564a65c60
@@ -1490,7 +1490,7 @@ entries:
     version: 3.18.0
   - apiVersion: v1
     appVersion: 3.18-canary
-    created: "2026-10-01T15:02:06.631327392Z"
+    created: "2026-10-01T15:02:08.512984912Z"
     description: Container Storage Interface (CSI) driver, provisioner, snapshotter,
       resizer and attacher for Ceph RBD
     digest: 5a4396a679b7eab4d6afc3ac7911876d3ded84008b1134bf51c781f449b18f42
@@ -1508,7 +1508,7 @@ entries:
     version: 3.18-canary
   - apiVersion: v1
     appVersion: 3.17.1
-    created: "2026-10-01T15:02:06.630304507Z"
+    created: "2026-10-01T15:02:08.511285847Z"
     description: Container Storage Interface (CSI) driver, provisioner, snapshotter,
       resizer and attacher for Ceph RBD
     digest: 75527adefcdf248e9acd2e9759205ddf4fd444824157e3e1914cf9659544bffc
@@ -1526,7 +1526,7 @@ entries:
     version: 3.17.1
   - apiVersion: v1
     appVersion: 3.17.0
-    created: "2026-10-01T15:02:06.629239083Z"
+    created: "2026-10-01T15:02:08.510302628Z"
     description: Container Storage Interface (CSI) driver, provisioner, snapshotter,
       resizer and attacher for Ceph RBD
     digest: 6f3153012e0a00d0febc1d17bd89967912551d44123e165efa416470e588b785
@@ -1544,7 +1544,7 @@ entries:
     version: 3.17.0
   - apiVersion: v1
     appVersion: 3.17-canary
-    created: "2026-10-01T15:02:06.627497792Z"
+    created: "2026-10-01T15:02:08.509307458Z"
     description: Container Storage Interface (CSI) driver, provisioner, snapshotter,
       resizer and attacher for Ceph RBD
     digest: 10ba588269186191e1b85b192791c981375d98458746f10cfb39bac6d5daf05a
@@ -1562,7 +1562,7 @@ entries:
     version: 3.17-canary
   - apiVersion: v1
     appVersion: 3.16.3
-    created: "2026-10-01T15:02:06.626482762Z"
+    created: "2026-10-01T15:02:08.508292467Z"
     description: Container Storage Interface (CSI) driver, provisioner, snapshotter,
       resizer and attacher for Ceph RBD
     digest: 569f75c5e71e122975431a3d8427fdd2c2770ef3cc0db9e5201ba1c9ac3243bd
@@ -1580,7 +1580,7 @@ entries:
     version: 3.16.3
   - apiVersion: v1
     appVersion: 3.16.2
-    created: "2026-10-01T15:02:06.625501091Z"
+    created: "2026-10-01T15:02:08.507207485Z"
     description: Container Storage Interface (CSI) driver, provisioner, snapshotter,
       resizer and attacher for Ceph RBD
     digest: e275818120fb656387e8fd7472f19663a62c3230c6b4fe717851bf90ccb5ac9a
@@ -1598,7 +1598,7 @@ entries:
     version: 3.16.2
   - apiVersion: v1
     appVersion: 3.16.1
-    created: "2026-10-01T15:02:06.624478152Z"
+    created: "2026-10-01T15:02:08.505440199Z"
     description: Container Storage Interface (CSI) driver, provisioner, snapshotter,
       resizer and attacher for Ceph RBD
     digest: e4027c542111d0351a446539fd3b41db539b48cd03d65d9b453a0efa454215d2
@@ -1616,7 +1616,7 @@ entries:
     version: 3.16.1
   - apiVersion: v1
     appVersion: 3.16.0
-    created: "2026-10-01T15:02:06.623311869Z"
+    created: "2026-10-01T15:02:08.504412806Z"
     description: Container Storage Interface (CSI) driver, provisioner, snapshotter,
       resizer and attacher for Ceph RBD
     digest: 11ae3960363e7466ac9f8571900f5cdfc46f6934eb662ebf85fc1fc68a0fa455
@@ -1634,7 +1634,7 @@ entries:
     version: 3.16.0
   - apiVersion: v1
     appVersion: 3.16-canary
-    created: "2026-10-01T15:02:06.621463283Z"
+    created: "2026-10-01T15:02:08.503385288Z"
     description: Container Storage Interface (CSI) driver, provisioner, snapshotter,
       resizer and attacher for Ceph RBD
     digest: 92db68a18f9f5c2da0633b0eb8efffa8da481e7861c1a824fd748a9055b0bc31
@@ -1652,7 +1652,7 @@ entries:
     version: 3.16-canary
   - apiVersion: v1
     appVersion: 3.15.1
-    created: "2026-10-01T15:02:06.620407964Z"
+    created: "2026-10-01T15:02:08.502389384Z"
     description: Container Storage Interface (CSI) driver, provisioner, snapshotter,
       resizer and attacher for Ceph RBD
     digest: 85ac6faad38693a972e4b05d6ca22d71ee769015ace376f5ce5388fe859e28ec
@@ -1670,7 +1670,7 @@ entries:
     version: 3.15.1
   - apiVersion: v1
     appVersion: 3.15.0
-    created: "2026-10-01T15:02:06.619407287Z"
+    created: "2026-10-01T15:02:08.50132682Z"
     description: Container Storage Interface (CSI) driver, provisioner, snapshotter,
       resizer and attacher for Ceph RBD
     digest: 3a0a60571280c3a143f0c1d6c6e7db6157ad00249db9c52a5bee7072a5bee2e8
@@ -1688,7 +1688,7 @@ entries:
     version: 3.15.0
   - apiVersion: v1
     appVersion: 3.15-canary
-    created: "2026-10-01T15:02:06.618296234Z"
+    created: "2026-10-01T15:02:08.499932772Z"
     description: Container Storage Interface (CSI) driver, provisioner, snapshotter,
       resizer and attacher for Ceph RBD
     digest: 3d9ac40ea60e92cf12ba88f2b622bf8c2bef2fd760926d50d0f57ced0acac37d
@@ -1706,7 +1706,7 @@ entries:
     version: 3.15-canary
   - apiVersion: v1
     appVersion: 3.14.2
-    created: "2026-10-01T15:02:06.617070701Z"
+    created: "2026-10-01T15:02:08.498582701Z"
     description: Container Storage Interface (CSI) driver, provisioner, snapshotter,
       resizer and attacher for Ceph RBD
     digest: 867525969a6703e453a8c0950c9635593621a8c94c059acb5c150acdebb75fd9
@@ -1724,7 +1724,7 @@ entries:
     version: 3.14.2
   - apiVersion: v1
     appVersion: 3.14.1
-    created: "2026-10-01T15:02:06.616036209Z"
+    created: "2026-10-01T15:02:08.497624468Z"
     description: Container Storage Interface (CSI) driver, provisioner, snapshotter,
       resizer and attacher for Ceph RBD
     digest: c43ee82ea8819f438e5002413e5122919c9343c9a575030dc91fd1fb62fda7a5
@@ -1742,7 +1742,7 @@ entries:
     version: 3.14.1
   - apiVersion: v1
     appVersion: 3.14.0
-    created: "2026-10-01T15:02:06.614514391Z"
+    created: "2026-10-01T15:02:08.496707187Z"
     description: Container Storage Interface (CSI) driver, provisioner, snapshotter,
       resizer and attacher for Ceph RBD
     digest: a0df28974d79ae6c389427de25e66e8fa0070870c74dae2914e82926f51a744a
@@ -1760,7 +1760,7 @@ entries:
     version: 3.14.0
   - apiVersion: v1
     appVersion: 3.14-canary
-    created: "2026-10-01T15:02:06.612298335Z"
+    created: "2026-10-01T15:02:08.495788454Z"
     description: Container Storage Interface (CSI) driver, provisioner, snapshotter,
       resizer and attacher for Ceph RBD
     digest: 618ab3b9c522a56a84620606a3327b64e29b1d5ab740217424ef094970a6b6b1
@@ -1778,7 +1778,7 @@ entries:
     version: 3.14-canary
   - apiVersion: v1
     appVersion: 3.13.1
-    created: "2026-10-01T15:02:06.611415336Z"
+    created: "2026-10-01T15:02:08.494832455Z"
     description: Container Storage Interface (CSI) driver, provisioner, snapshotter,
       resizer and attacher for Ceph RBD
     digest: 606c2e3a9794a07d844b1aad9d5daaeb7f0879f5e471a0477feaf0a7a42b8ed4
@@ -1796,7 +1796,7 @@ entries:
     version: 3.13.1
   - apiVersion: v1
     appVersion: 3.13.0
-    created: "2026-10-01T15:02:06.61047747Z"
+    created: "2026-10-01T15:02:08.493161118Z"
     description: Container Storage Interface (CSI) driver, provisioner, snapshotter,
       resizer and attacher for Ceph RBD
     digest: 5ff5bdd0baeadf440e5a47d0cb69de6d70b504e27edb254c7d666fb0db573044
@@ -1814,7 +1814,7 @@ entries:
     version: 3.13.0
   - apiVersion: v1
     appVersion: 3.13-canary
-    created: "2026-10-01T15:02:06.609579445Z"
+    created: "2026-10-01T15:02:08.492255287Z"
     description: Container Storage Interface (CSI) driver, provisioner, snapshotter,
       resizer and attacher for Ceph RBD
     digest: da6a1550d093f17a3b738f23293b025432129039ecaabc1336c8b90bdedc1e6a
@@ -1832,7 +1832,7 @@ entries:
     version: 3.13-canary
   - apiVersion: v1
     appVersion: 3.12.3
-    created: "2026-10-01T15:02:06.608649232Z"
+    created: "2026-10-01T15:02:08.491350305Z"
     description: Container Storage Interface (CSI) driver, provisioner, snapshotter,
       resizer and attacher for Ceph RBD
     digest: 486ea9c308593989692c9d1ffedd0827c1d8f7672767838ea9f74db676218ea6
@@ -1850,7 +1850,7 @@ entries:
     version: 3.12.3
   - apiVersion: v1
     appVersion: 3.12.2
-    created: "2026-10-01T15:02:06.60765559Z"
+    created: "2026-10-01T15:02:08.490498848Z"
     description: Container Storage Interface (CSI) driver, provisioner, snapshotter,
       resizer and attacher for Ceph RBD
     digest: 9c951dd989a2f7848db838f079c267bea03fca3888d1f75d1718f4f272bd95de
@@ -1868,7 +1868,7 @@ entries:
     version: 3.12.2
   - apiVersion: v1
     appVersion: 3.12.1
-    created: "2026-10-01T15:02:06.605778824Z"
+    created: "2026-10-01T15:02:08.489605039Z"
     description: Container Storage Interface (CSI) driver, provisioner, snapshotter,
       resizer and attacher for Ceph RBD
     digest: b0112c133b1d19032272a16cfdb251f144a72f747f2ac711ca45e20ff4ac86b1
@@ -1886,7 +1886,7 @@ entries:
     version: 3.12.1
   - apiVersion: v1
     appVersion: 3.12.0
-    created: "2026-10-01T15:02:06.604859657Z"
+    created: "2026-10-01T15:02:08.488579664Z"
     description: Container Storage Interface (CSI) driver, provisioner, snapshotter,
       resizer and attacher for Ceph RBD
     digest: 5d4d2562578791314cdf6c57c2c175221348e228cecb60d3ccc3678efc00ddd7
@@ -1904,7 +1904,7 @@ entries:
     version: 3.12.0
   - apiVersion: v1
     appVersion: 3.12-canary
-    created: "2026-10-01T15:02:06.603958124Z"
+    created: "2026-10-01T15:02:08.486773046Z"
     description: Container Storage Interface (CSI) driver, provisioner, snapshotter,
       resizer and attacher for Ceph RBD
     digest: e34ccd9db82e956f630a6e83962a4aae0871ff4f706a78431647c60d8c0a0ef5
@@ -1922,7 +1922,7 @@ entries:
     version: 3.12-canary
   - apiVersion: v1
     appVersion: 3.11.0
-    created: "2026-10-01T15:02:06.603036532Z"
+    created: "2026-10-01T15:02:08.48590403Z"
     description: Container Storage Interface (CSI) driver, provisioner, snapshotter,
       resizer and attacher for Ceph RBD
     digest: 512947ec22cc6360f1bf191beb4da6d1dc8552d1dcc82b2104aae737a2e904e2
@@ -1940,7 +1940,7 @@ entries:
     version: 3.11.0
   - apiVersion: v1
     appVersion: 3.11-canary
-    created: "2026-10-01T15:02:06.602101678Z"
+    created: "2026-10-01T15:02:08.485039221Z"
     description: Container Storage Interface (CSI) driver, provisioner, snapshotter,
       resizer and attacher for Ceph RBD
     digest: 37158c914fde3aa20178eb98635ad60a1c8872192a9d32cd5be2510aa33d423a
@@ -1958,7 +1958,7 @@ entries:
     version: 3.11-canary
   - apiVersion: v1
     appVersion: 3.10.2
-    created: "2026-10-01T15:02:06.600313347Z"
+    created: "2026-10-01T15:02:08.484145903Z"
     description: Container Storage Interface (CSI) driver, provisioner, snapshotter,
       resizer and attacher for Ceph RBD
     digest: 6dfc66d7da993a457a2ebc3931283b1e2fc0c39ae9178855bef7d6a2329e2585
@@ -1976,7 +1976,7 @@ entries:
     version: 3.10.2
   - apiVersion: v1
     appVersion: 3.10.1
-    created: "2026-10-01T15:02:06.599441137Z"
+    created: "2026-10-01T15:02:08.483289705Z"
     description: Container Storage Interface (CSI) driver, provisioner, snapshotter,
       resizer and attacher for Ceph RBD
     digest: 68fd973ed1548c5175affdcbbbe0b12993f570ef20ed6917d8a0a084afc08758
@@ -1994,7 +1994,7 @@ entries:
     version: 3.10.1
   - apiVersion: v1
     appVersion: 3.10.0
-    created: "2026-10-01T15:02:06.598590552Z"
+    created: "2026-10-01T15:02:08.482384675Z"
     description: Container Storage Interface (CSI) driver, provisioner, snapshotter,
       resizer and attacher for Ceph RBD
     digest: bc4e578197cf369fb02d52f3561641642a0694f7b3a9bad05f69d107c5f95175
@@ -2012,7 +2012,7 @@ entries:
     version: 3.10.0
   - apiVersion: v1
     appVersion: 3.10-canary
-    created: "2026-10-01T15:02:06.597710516Z"
+    created: "2026-10-01T15:02:08.480696209Z"
     description: Container Storage Interface (CSI) driver, provisioner, snapshotter,
       resizer and attacher for Ceph RBD
     digest: 874cdd90d9b6a45260dd1d35f84908fb2df77041d1fe29c9e56623204d849836
@@ -2030,7 +2030,7 @@ entries:
     version: 3.10-canary
   - apiVersion: v1
     appVersion: 3.9.0
-    created: "2026-10-01T15:02:06.654155242Z"
+    created: "2026-10-01T15:02:08.535193634Z"
     description: Container Storage Interface (CSI) driver, provisioner, snapshotter,
       resizer and attacher for Ceph RBD
     digest: bbc6e392c8f51dbf645c96b17ae10122f3c93a30154f5652e3f481e07ee8e59d
@@ -2048,7 +2048,7 @@ entries:
     version: 3.9.0
   - apiVersion: v1
     appVersion: 3.9-canary
-    created: "2026-10-01T15:02:06.653278554Z"
+    created: "2026-10-01T15:02:08.534400791Z"
     description: Container Storage Interface (CSI) driver, provisioner, snapshotter,
       resizer and attacher for Ceph RBD
     digest: 39bec6caea73b4f496ac5ebca3bd102e695f11ee33eba40865c15021722baa90
@@ -2066,7 +2066,7 @@ entries:
     version: 3.9-canary
   - apiVersion: v1
     appVersion: 3.8.1
-    created: "2026-10-01T15:02:06.652424622Z"
+    created: "2026-10-01T15:02:08.533609689Z"
     description: Container Storage Interface (CSI) driver, provisioner, snapshotter,
       resizer and attacher for Ceph RBD
     digest: ee40fbcac22e63a589b9da5c81ed5cb63f31ed99c5c322a8fec053fe290eb2eb
@@ -2084,7 +2084,7 @@ entries:
     version: 3.8.1
   - apiVersion: v1
     appVersion: 3.8.0
-    created: "2026-10-01T15:02:06.650842052Z"
+    created: "2026-10-01T15:02:08.532801175Z"
     description: Container Storage Interface (CSI) driver, provisioner, snapshotter,
       resizer and attacher for Ceph RBD
     digest: 4b2060da0ed56ae924e53b913ceed11545eed9e0a3fa8d1e4f9b52e917b5e4c9
@@ -2102,7 +2102,7 @@ entries:
     version: 3.8.0
   - apiVersion: v1
     appVersion: 3.8-canary
-    created: "2026-10-01T15:02:06.650042472Z"
+    created: "2026-10-01T15:02:08.532009093Z"
     description: Container Storage Interface (CSI) driver, provisioner, snapshotter,
       resizer and attacher for Ceph RBD
     digest: e0d20c196e5994e28556786e717a6cb692a780156047380c12e88a59aa7b06f3
@@ -2120,7 +2120,7 @@ entries:
     version: 3.8-canary
   - apiVersion: v1
     appVersion: 3.7.2
-    created: "2026-10-01T15:02:06.649260174Z"
+    created: "2026-10-01T15:02:08.531160321Z"
     description: Container Storage Interface (CSI) driver, provisioner, snapshotter,
       resizer and attacher for Ceph RBD
     digest: 2cca33be5c98367e53ca1c1b7d936ff30d4758d92b5dcf3e58f175d577576a12
@@ -2138,7 +2138,7 @@ entries:
     version: 3.7.2
   - apiVersion: v1
     appVersion: 3.7.1
-    created: "2026-10-01T15:02:06.648484788Z"
+    created: "2026-10-01T15:02:08.530064142Z"
     description: Container Storage Interface (CSI) driver, provisioner, snapshotter,
       resizer and attacher for Ceph RBD
     digest: ba9a142404e26544fea6b052cdfac88eff200b6c909e2112ca3fcd127ca81a6d
@@ -2156,7 +2156,7 @@ entries:
     version: 3.7.1
   - apiVersion: v1
     appVersion: 3.7.0
-    created: "2026-10-01T15:02:06.647683506Z"
+    created: "2026-10-01T15:02:08.528837369Z"
     description: Container Storage Interface (CSI) driver, provisioner, snapshotter,
       resizer and attacher for Ceph RBD
     digest: ff377b196584db26bd458e5c7486b49f0a0a70876ef7c07e23aab59430e622a2
@@ -2174,7 +2174,7 @@ entries:
     version: 3.7.0
   - apiVersion: v1
     appVersion: 3.7-canary
-    created: "2026-10-01T15:02:06.646839307Z"
+    created: "2026-10-01T15:02:08.528019359Z"
     description: Container Storage Interface (CSI) driver, provisioner, snapshotter,
       resizer and attacher for Ceph RBD
     digest: e87a6a47b94762b46b5b3031bf50f5ebbf294fc066152fc88c84d3377182be75
@@ -2192,7 +2192,7 @@ entries:
     version: 3.7-canary
   - apiVersion: v1
     appVersion: 3.6.2
-    created: "2026-10-01T15:02:06.645629308Z"
+    created: "2026-10-01T15:02:08.527240408Z"
     description: Container Storage Interface (CSI) driver, provisioner, snapshotter,
       and attacher for Ceph RBD
     digest: 8f6f2cd49f5057910b571b2e878602d16cf07f312363a340b8460c4e4697fa6a
@@ -2210,7 +2210,7 @@ entries:
     version: 3.6.2
   - apiVersion: v1
     appVersion: 3.6.1
-    created: "2026-10-01T15:02:06.644545375Z"
+    created: "2026-10-01T15:02:08.526439376Z"
     description: Container Storage Interface (CSI) driver, provisioner, snapshotter,
       and attacher for Ceph RBD
     digest: 289f0a8b8d354b20ddcd679bcb7fac3d4bbe645aa9d43764f20fe8b790186816
@@ -2228,7 +2228,7 @@ entries:
     version: 3.6.1
   - apiVersion: v1
     appVersion: 3.6.0
-    created: "2026-10-01T15:02:06.643745117Z"
+    created: "2026-10-01T15:02:08.525614497Z"
     description: Container Storage Interface (CSI) driver, provisioner, snapshotter,
       and attacher for Ceph RBD
     digest: cbda2f26a603cd916ccbb0ae2e16351a0060c5f478dea01c4895e094bc7c4eba
@@ -2246,7 +2246,7 @@ entries:
     version: 3.6.0
   - apiVersion: v1
     appVersion: 3.6-canary
-    created: "2026-10-01T15:02:06.642940684Z"
+    created: "2026-10-01T15:02:08.524719267Z"
     description: Container Storage Interface (CSI) driver, provisioner, snapshotter,
       and attacher for Ceph RBD
     digest: 7deab14b7c80af81962ed03b61fbe91e36981a439c299d1f024b6cdb93fdb9cf
@@ -2264,7 +2264,7 @@ entries:
     version: 3.6-canary
   - apiVersion: v1
     appVersion: 3.5.1
-    created: "2026-10-01T15:02:06.642161683Z"
+    created: "2026-10-01T15:02:08.523079318Z"
     description: Container Storage Interface (CSI) driver, provisioner, snapshotter,
       and attacher for Ceph RBD
     digest: 8bf10cac48c9aba6a6ba8cc2938effaa54fd70f996f01a76c06aee76317e1ae2
@@ -2282,7 +2282,7 @@ entries:
     version: 3.5.1
   - apiVersion: v1
     appVersion: 3.5.0
-    created: "2026-10-01T15:02:06.641353145Z"
+    created: "2026-10-01T15:02:08.522154577Z"
     description: Container Storage Interface (CSI) driver, provisioner, snapshotter,
       and attacher for Ceph RBD
     digest: a520279908a91bf31a6c4a09dc8c0617b738fbde840aa7c3316208af40a6575e
@@ -2300,7 +2300,7 @@ entries:
     version: 3.5.0
   - apiVersion: v1
     appVersion: 3.5-canary
-    created: "2026-10-01T15:02:06.64051388Z"
+    created: "2026-10-01T15:02:08.521360131Z"
     description: Container Storage Interface (CSI) driver, provisioner, snapshotter,
       and attacher for Ceph RBD
     digest: 7815abeaf348d900b0ad012b4d5efc4a542ffee7e8e9171957d0fad8fbaf7fee
@@ -2318,7 +2318,7 @@ entries:
     version: 3.5-canary
   - apiVersion: v1
     appVersion: v3.4.0
-    created: "2026-10-01T15:02:06.638868259Z"
+    created: "2026-10-01T15:02:08.520560937Z"
     description: Container Storage Interface (CSI) driver, provisioner, snapshotter,
       and attacher for Ceph RBD
     digest: b9ae35ea8c270dcc4740301849920a7c696c186248d1cab6fac21a72f42c3fea
@@ -2336,7 +2336,7 @@ entries:
     version: 3.4.0
   - apiVersion: v1
     appVersion: 3.4-canary
-    created: "2026-10-01T15:02:06.638144882Z"
+    created: "2026-10-01T15:02:08.519838717Z"
     description: Container Storage Interface (CSI) driver, provisioner, snapshotter,
       and attacher for Ceph RBD
     digest: 969d6713501460cfeef948fafed9943ce4b6c8e62b545814f7f786f89e280c46
@@ -2354,7 +2354,7 @@ entries:
     version: 3.4-canary
   - apiVersion: v1
     appVersion: v3.3.1
-    created: "2026-10-01T15:02:06.637424178Z"
+    created: "2026-10-01T15:02:08.519066307Z"
     description: Container Storage Interface (CSI) driver, provisioner, snapshotter,
       and attacher for Ceph RBD
     digest: ef37876240c0a2aa43eb64f6f66b33390b0bef9dea0fa2aefae205f1258f1424
@@ -2372,7 +2372,7 @@ entries:
     version: 3.3.1
   - apiVersion: v1
     appVersion: 3.3-canary
-    created: "2026-10-01T15:02:06.636904583Z"
+    created: "2026-10-01T15:02:08.518485696Z"
     description: Container Storage Interface (CSI) driver, provisioner, snapshotter,
       and attacher for Ceph RBD
     digest: da199fcb472c9aec8036edf097d546791faabae5f65fb413fd009bc75ea38d58
@@ -2390,7 +2390,7 @@ entries:
     version: 3.3-canary
   - apiVersion: v1
     appVersion: v3.2.2
-    created: "2026-10-01T15:02:06.636355877Z"
+    created: "2026-10-01T15:02:08.517081288Z"
     description: Container Storage Interface (CSI) driver, provisioner, snapshotter,
       and attacher for Ceph RBD
     digest: 6a6edfbe1fb790b5247b6038168ed97d2594754fc7ca6e4b8357faf16cad4c15
@@ -2408,7 +2408,7 @@ entries:
     version: 3.2.2
   - apiVersion: v1
     appVersion: v3.2.1
-    created: "2026-10-01T15:02:06.635860737Z"
+    created: "2026-10-01T15:02:08.516582285Z"
     description: Container Storage Interface (CSI) driver, provisioner, snapshotter,
       and attacher for Ceph RBD
     digest: 2553add1c06fa92431079a6c9f4b72d70212f3b01ab013a9210fa2fb84fbd90c
@@ -2426,7 +2426,7 @@ entries:
     version: 3.2.1
   - apiVersion: v1
     appVersion: v3.2.0
-    created: "2026-10-01T15:02:06.635282904Z"
+    created: "2026-10-01T15:02:08.51607086Z"
     description: Container Storage Interface (CSI) driver, provisioner, snapshotter,
       and attacher for Ceph RBD
     digest: 9a6676ac7dc94886837b43614f2b05d17cefa257bcd6fdc896f9777d1e50cfdd
@@ -2444,7 +2444,7 @@ entries:
     version: 3.2.0
   - apiVersion: v1
     appVersion: 3.2-canary
-    created: "2026-10-01T15:02:06.634715964Z"
+    created: "2026-10-01T15:02:08.515570215Z"
     description: Container Storage Interface (CSI) driver, provisioner, snapshotter,
       and attacher for Ceph RBD
     digest: 3d24a2c3a64489f765738c7280b520c22b47adf930680ac0e19bb6a0a9b59d42
@@ -2462,7 +2462,7 @@ entries:
     version: 3.2-canary
   - apiVersion: v1
     appVersion: v3.1.2
-    created: "2026-10-01T15:02:06.596818937Z"
+    created: "2026-10-01T15:02:08.479824982Z"
     description: Container Storage Interface (CSI) driver, provisioner, snapshotter,
       and attacher for Ceph RBD
     digest: faf481365aa1e09aa2b8630f4ec48f11f10026de143337589558b8d7abd18895
@@ -2480,7 +2480,7 @@ entries:
     version: 3.1.2
   - apiVersion: v1
     appVersion: v3.1.1
-    created: "2026-10-01T15:02:06.596246841Z"
+    created: "2026-10-01T15:02:08.479315968Z"
     description: Container Storage Interface (CSI) driver, provisioner, snapshotter,
       and attacher for Ceph RBD
     digest: a0d56e633348ecf86d71fca88443ad6f09fe7df269fe6768e9c364a4478ee2cb
@@ -2498,7 +2498,7 @@ entries:
     version: 3.1.1
   - apiVersion: v1
     appVersion: v3.1.0
-    created: "2026-10-01T15:02:06.594814296Z"
+    created: "2026-10-01T15:02:08.478829055Z"
     description: Container Storage Interface (CSI) driver, provisioner, snapshotter,
       and attacher for Ceph RBD
     digest: 33225ca00306aba6331dedab4f66e8bdf23c55276bcf5b8378946d1f4127bffa
@@ -2516,7 +2516,7 @@ entries:
     version: 3.1.0
   - apiVersion: v1
     appVersion: 3.1-canary
-    created: "2026-10-01T15:02:06.594331189Z"
+    created: "2026-10-01T15:02:08.478329815Z"
     description: Container Storage Interface (CSI) driver, provisioner, snapshotter,
       and attacher for Ceph RBD
     digest: 399bcaca90783835d8ab62bdfab68487133e007f9a40d659e335aa6120d47cae
@@ -2534,7 +2534,7 @@ entries:
     version: 3.1-canary
   - apiVersion: v1
     appVersion: v3.0.0
-    created: "2026-10-01T15:02:06.593841887Z"
+    created: "2026-10-01T15:02:08.477830687Z"
     description: Container Storage Interface (CSI) driver, provisioner, snapshotter,
       and attacher for Ceph RBD
     digest: 12ec4b9027720cdad05579c6b43f3d423c5306b40526fbf438c380ae04470933
@@ -2552,7 +2552,7 @@ entries:
     version: 3.0.0
   - apiVersion: v1
     appVersion: 3.0-canary
-    created: "2026-10-01T15:02:06.59334721Z"
+    created: "2026-10-01T15:02:08.477292387Z"
     description: Container Storage Interface (CSI) driver, provisioner, snapshotter,
       and attacher for Ceph RBD
     digest: a5b0c7b0f23794c1b15726ff46c399162972bd252129fe779dc8ecc020fc109f
@@ -2570,7 +2570,7 @@ entries:
     version: 3.0-canary
   - apiVersion: v1
     appVersion: canary
-    created: "2026-10-01T15:02:06.592837187Z"
+    created: "2026-10-01T15:02:08.475990105Z"
     description: Container Storage Interface (CSI) driver, provisioner, snapshotter,
       resizer and attacher for Ceph RBD
     digest: b5f4541ebee0a1b0d3cd20d876d2ac5b7421de24ba063eea46872db12601ccf2
@@ -2588,7 +2588,7 @@ entries:
     version: 3-canary
   - apiVersion: v1
     appVersion: v2.1.2
-    created: "2026-10-01T15:02:06.591817628Z"
+    created: "2026-10-01T15:02:08.474884875Z"
     description: Container Storage Interface (CSI) driver, provisioner, snapshotter,
       and attacher for Ceph RBD
     digest: 2fc32ce6d9560b750a7d4122a40b2491900ade0c2b4b63dab23ae5994e4ecc69
@@ -2606,7 +2606,7 @@ entries:
     version: 2.1.2
   - apiVersion: v1
     appVersion: v2.1.1
-    created: "2026-10-01T15:02:06.591277156Z"
+    created: "2026-10-01T15:02:08.474426472Z"
     description: Container Storage Interface (CSI) driver, provisioner, snapshotter,
       and attacher for Ceph RBD
     digest: 8c3b3b84ce21f0a34d9bafb05529cf714209e437ae4b012cd1d8d6ee56976b32
@@ -2624,7 +2624,7 @@ entries:
     version: 2.1.1
   - apiVersion: v1
     appVersion: 2.1.0
-    created: "2026-10-01T15:02:06.590742656Z"
+    created: "2026-10-01T15:02:08.473930259Z"
     description: Container Storage Interface (CSI) driver, provisioner, snapshotter,
       and attacher for Ceph RBD
     digest: 2b514e9e1301e8c87c070366d603364c6a714025dbe987c07f1879585b5c3f35
@@ -2642,7 +2642,7 @@ entries:
     version: 2.1.0
   - apiVersion: v1
     appVersion: 2.1-canary
-    created: "2026-10-01T15:02:06.58936254Z"
+    created: "2026-10-01T15:02:08.473435777Z"
     description: Container Storage Interface (CSI) driver, provisioner, snapshotter,
       and attacher for Ceph RBD
     digest: 6057d401e20a48cf3b2786de4be2718077825ecfb9ceaffa9bf17ac46d141b5a
@@ -2660,7 +2660,7 @@ entries:
     version: 2.1-canary
   - apiVersion: v1
     appVersion: v2.0.1
-    created: "2026-10-01T15:02:06.588900313Z"
+    created: "2026-10-01T15:02:08.472953309Z"
     description: Container Storage Interface (CSI) driver, provisioner, snapshotter,
       and attacher for Ceph RBD
     digest: 3eee0048b0b5f53f17bc4de94fa7f2ed37732af4d583eb76bfda17cac092bd92
@@ -2678,7 +2678,7 @@ entries:
     version: 2.0.1
   - apiVersion: v1
     appVersion: v2.0.0
-    created: "2026-10-01T15:02:06.58841175Z"
+    created: "2026-10-01T15:02:08.472462352Z"
     description: Container Storage Interface (CSI) driver, provisioner, snapshotter,
       and attacher for Ceph RBD
     digest: b6aebdd27ab7b170d988dfd66188a339478fa7dd7f8a32fb1cb4352f58831d44
@@ -2696,7 +2696,7 @@ entries:
     version: 2.0.0
   - apiVersion: v1
     appVersion: 2.0-canary
-    created: "2026-10-01T15:02:06.587929446Z"
+    created: "2026-10-01T15:02:08.471972585Z"
     description: Container Storage Interface (CSI) driver, provisioner, snapshotter,
       and attacher for Ceph RBD
     digest: d301d71225d11bb21582447f3c336d397de00e7cad99722058a799caa6b9c980
@@ -2714,7 +2714,7 @@ entries:
     version: 2.0-canary
   - apiVersion: v1
     appVersion: canary
-    created: "2026-10-01T15:02:06.587408403Z"
+    created: "2026-10-01T15:02:08.471359607Z"
     description: Container Storage Interface (CSI) driver, provisioner, snapshotter,
       and attacher for Ceph RBD
     digest: f0435963ff1987762d88bcab10e69a2f341357554392ada76af57321a03c514d
@@ -2732,7 +2732,7 @@ entries:
     version: 1.3.0-canary
   - apiVersion: v1
     appVersion: 1.2.2
-    created: "2026-10-01T15:02:06.586583643Z"
+    created: "2026-10-01T15:02:08.469714515Z"
     description: Container Storage Interface (CSI) driver, provisioner, snapshotter,
       and attacher for Ceph RBD
     digest: c0e1f6dc424aab7abfe66f1fac52cbd3d30416784b66880fb249dd0495f698ad
@@ -2750,7 +2750,7 @@ entries:
     version: 1.2.2
   - apiVersion: v1
     appVersion: 1.2-canary
-    created: "2026-10-01T15:02:06.586121127Z"
+    created: "2026-10-01T15:02:08.469256221Z"
     description: Container Storage Interface (CSI) driver, provisioner, snapshotter,
       and attacher for Ceph RBD
     digest: 0230499b97087291dec679207c83f7f457ea079100fd3f051bc7f616effb6819
@@ -2768,7 +2768,7 @@ entries:
     version: 1.2-canary
   - apiVersion: v1
     appVersion: 1.1.0
-    created: "2026-10-01T15:02:06.585634711Z"
+    created: "2026-10-01T15:02:08.468790743Z"
     description: Container Storage Interface (CSI) driver, provisioner, snapshotter,
       and attacher for Ceph RBD
     digest: 569b922638c6b0e8435d674cc11328d5852c653f2d11cbefc4bf590169a9c08a
@@ -2785,7 +2785,7 @@ entries:
     version: 1.1.0
   - apiVersion: v1
     appVersion: 1.0.0
-    created: "2026-10-01T15:02:06.585260944Z"
+    created: "2026-10-01T15:02:08.468491607Z"
     description: Container Storage Interface (CSI) driver, provisioner, snapshotter,
       and attacher for Ceph RBD
     digest: 29c0b2357031f6b13cf6ac96e5658cbd24011309d896f067575afd33220015cd
@@ -2802,7 +2802,7 @@ entries:
     version: 0.8.0
   - apiVersion: v1
     appVersion: 1.0.0
-    created: "2026-10-01T15:02:06.584499808Z"
+    created: "2026-10-01T15:02:08.468195461Z"
     description: Container Storage Interface (CSI) driver, provisioner, snapshotter,
       and attacher for Ceph RBD
     digest: 8a8b3efb9aca3f71b6a92f942df8820c767d48f3aa73641bf3c0cddbe08b3b8e
@@ -2819,7 +2819,7 @@ entries:
     version: 0.7.0
   - apiVersion: v1
     appVersion: 1.0.0
-    created: "2026-10-01T15:02:06.583872696Z"
+    created: "2026-10-01T15:02:08.467897271Z"
     description: Container Storage Interface (CSI) driver, provisioner, snapshotter,
       and attacher for Ceph RBD
     digest: 2d551f5788b24320d804852a604f29327e9ac6aed7a12f40d6ad948b4f41d364
@@ -2836,7 +2836,7 @@ entries:
     version: 0.6.0
   - apiVersion: v1
     appVersion: 1.0.0
-    created: "2026-10-01T15:02:06.583557755Z"
+    created: "2026-10-01T15:02:08.467599555Z"
     description: Container Storage Interface (CSI) driver, provisioner, snapshotter,
       and attacher for Ceph RBD
     digest: 58337406cd84d9974a2fa7b0f0c84983f89bcb623c6955d3b81681554476daf4
@@ -2853,7 +2853,7 @@ entries:
     version: 0.5.3
   - apiVersion: v1
     appVersion: 1.0.0
-    created: "2026-10-01T15:02:06.583251075Z"
+    created: "2026-10-01T15:02:08.46728418Z"
     description: Container Storage Interface (CSI) driver, provisioner, snapshotter,
       and attacher for Ceph RBD
     digest: e3b5114baafabbfc1c044b23d1c7f8fd15b07b458cf22eb0940e5fcc51b86a8f
@@ -2870,7 +2870,7 @@ entries:
     version: 0.5.1
   - apiVersion: v1
     appVersion: 1.0.0
-    created: "2026-10-01T15:02:06.582940863Z"
+    created: "2026-10-01T15:02:08.466968746Z"
     description: Container Storage Interface (CSI) driver, provisioner, snapshotter,
       and attacher for Ceph RBD
     digest: e55e224cb2b1f0eaa310ddba13685d123a147065c4f88c0a21492bd60c5631aa
@@ -2887,7 +2887,7 @@ entries:
     version: 0.5.0
   - apiVersion: v1
     appVersion: 1.0.0
-    created: "2026-10-01T15:02:06.582535652Z"
+    created: "2026-10-01T15:02:08.466652472Z"
     description: Container Storage Interface (CSI) driver, provisioner, snapshotter,
       and attacher for Ceph RBD
     digest: 78b19238decf920aed0cd3c389c32df3036d85282cfca1a39eadd2ceeb89610c
@@ -2904,7 +2904,7 @@ entries:
     version: 0.4.0
   - apiVersion: v1
     appVersion: 1.0.0
-    created: "2026-10-01T15:02:06.58220893Z"
+    created: "2026-10-01T15:02:08.466276882Z"
     description: Container Storage Interface (CSI) driver, provisioner, and attacher
       for Ceph RBD
     digest: 39a8db5450bf0b01f33600d617841a7374a69892a87ccd66dd3af3595831764a
@@ -2919,4 +2919,4 @@ entries:
     urls:
     - https://ceph.github.io/csi-charts/rbd/ceph-csi-rbd-0.3.0.tgz
     version: 0.3.0
-generated: "2026-10-01T15:02:06.518705207Z"
+generated: "2026-10-01T15:02:08.401759206Z"
