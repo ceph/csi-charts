@@ -138,7 +138,7 @@ nodeplugin:
   plugin:
     image:
       repository: quay.io/cephcsi/cephcsi
-      tag: canary
+      tag: v3.18-canary
       pullPolicy: IfNotPresent
     resources: {}
 
@@ -243,6 +243,9 @@ provisioner:
     ## For further options, check
     ## https://github.com/kubernetes-csi/external-provisioner#command-line-options
     extraArgs: []
+
+  # set metadata on volume
+  setmetadata: true
 
   # deployController to enable or disable the deployment of controller which
   # sets the CSI metadata on CephFS subvolumes.
