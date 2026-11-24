@@ -88,12 +88,6 @@ nodeplugin:
   # set user created priorityclassName for csi plugin pods. default is
   # system-node-critical which is highest priority
   priorityClassName: system-node-critical
-  # Set to true when using netNamespaceFilePath (deprecated). Required when
-  # externallyManagedConfigmap is true and the external ConfigMap sets
-  # cephFS.netNamespaceFilePath, because the chart cannot detect that from
-  # csiConfig. Also set automatically when csiConfig includes
-  # cephFS.netNamespaceFilePath.
-  hostPID: false
 
   httpMetrics:
     # Metrics only available for cephcsi/cephcsi => 1.2.0
@@ -144,7 +138,7 @@ nodeplugin:
   plugin:
     image:
       repository: quay.io/cephcsi/cephcsi
-      tag: canary
+      tag: v3.18-canary
       pullPolicy: IfNotPresent
     resources: {}
 
@@ -249,6 +243,9 @@ provisioner:
     ## For further options, check
     ## https://github.com/kubernetes-csi/external-provisioner#command-line-options
     extraArgs: []
+
+  # set metadata on volume
+  setmetadata: true
 
   # deployController to enable or disable the deployment of controller which
   # sets the CSI metadata on CephFS subvolumes.
